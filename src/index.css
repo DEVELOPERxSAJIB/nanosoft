@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.owl-carousel {
+  display: block !important;
+}
+
+.phone-menu {
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  right: 20px;
+  height: auto;
+  background-image: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+  z-index: 99;
+  display: none;
+  -webkit-box-shadow: 0px 0 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-name: sticky-animation;
+  animation-name: sticky-animation;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  .cross-btn {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0px 0;
+
+    li {
+      a {
+        display: block;
+        padding: 8px 0;
+        padding-left: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 21px;
+        text-decoration: none;
+      }
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+.rs-banner.style3.modify1 {
+  padding: 0px 0px 0px;
+}
+
+.rs-banner.style3 {
+  padding: 0px 0px 0px;
+}
+
+.rs-videos .animate-border.white-color.style3 .popup-border {
+  bottom: -120px;
+}
+
+.service-bg-common:hover {
+  background-image: linear-gradient(90deg, #1672de 0%, #071f6b 58%);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .rs-menu {
+    display: none !important;
+  }
+
+  .full-width-header .rs-header .menu-area {
+    transition: all 0.3s ease;
+    background: #fff;
+  }
+
+  .phone-menu {
+    display: block;
+  }
+}

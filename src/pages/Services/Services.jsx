@@ -1,0 +1,497 @@
+import Layout from "../../components/Layout/Layout";
+
+import price1 from "../../assets/images/pricing/main-home/icons/1.png";
+import price2 from "../../assets/images/pricing/main-home/icons/2.png";
+import price3 from "../../assets/images/pricing/main-home/icons/3.png";
+
+import png1 from "../../assets/images/services/style2/main-img/1.png";
+import png2 from "../../assets/images/services/style2/main-img/2.png";
+import png3 from "../../assets/images/services/style2/main-img/3.png";
+import png4 from "../../assets/images/services/style2/main-img/4.png";
+import png5 from "../../assets/images/services/style2/main-img/5.png";
+import png6 from "../../assets/images/services/style2/main-img/6.png";
+
+import png1hover from "../../assets/images/services/style2/hover-img/1.png";
+import png2hover from "../../assets/images/services/style2/hover-img/2.png";
+import png3hover from "../../assets/images/services/style2/hover-img/3.png";
+import png4hover from "../../assets/images/services/style2/hover-img/4.png";
+import png5hover from "../../assets/images/services/style2/hover-img/5.png";
+import png6hover from "../../assets/images/services/style2/hover-img/6.png";
+import { Link } from "react-router-dom";
+
+const Services = () => {
+  return (
+    <>
+      <Layout>
+        <div>
+          {/* Breadcrumbs Start */}
+          <div className="rs-breadcrumbs img3">
+            <div className="breadcrumbs-inner text-center">
+              <h1 className="page-title">Our Services</h1>
+              <ul>
+                <li>
+                  <Link className="active" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>Services</li>
+              </ul>
+            </div>
+          </div>
+          {/* Breadcrumbs End */}
+          {/* Services Section Start */}
+
+          <div className="rs-services style3 pt-80 pb-80 md-pt-75 md-pb-80">
+            <div className="container">
+              <div className="sec-title2 text-center mb-45">
+                <div className="sub-text style-bg">Services</div>
+                <h2 className="title testi-title">Our Featured Services</h2>
+              </div>
+              <div className="row">
+                <div className="col-lg-4 col-md-6 mb-20">
+                  <div className="services-item">
+                    <div className="services-icon">
+                      <div className="image-part">
+                        <img className="main-img" src={png1} alt />
+                        <img className="hover-img" src={png1hover} alt />
+                      </div>
+                    </div>
+                    <div className="services-content">
+                      <div className="services-text">
+                        <h3 className="title">
+                          <Link to="/services/web-development">
+                            Web Developemt
+                          </Link>
+                        </h3>
+                      </div>
+                      <div className="services-desc">
+                        <p>
+                          At vero eos et accusamus etiusto odio praesentium
+                          accusamus etiusto odio data center for managing
+                          database.
+                        </p>
+                      </div>
+                      <div className="serial-number">01</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6 mb-20">
+                  <div className="services-item pink-bg">
+                    <div className="services-icon">
+                      <div className="image-part">
+                        <img className="main-img" src={png2} alt />
+                        <img className="hover-img" src={png2hover} alt />
+                      </div>
+                    </div>
+                    <div className="services-content">
+                      <div className="services-text">
+                        <h3 className="title">
+                          <Link to="/services/software-development">
+                            {" "}
+                            Software Development
+                          </Link>
+                        </h3>
+                      </div>
+                      <div className="services-desc">
+                        <p>
+                          At vero eos et accusamus etiusto odio praesentium
+                          accusamus etiusto odio data center for managing
+                          database.
+                        </p>
+                      </div>
+                      <div className="serial-number">02</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6 mb-20">
+                  <div className="services-item aqua-bg">
+                    <div className="services-icon">
+                      <div className="image-part">
+                        <img className="main-img" src={png3} alt />
+                        <img className="hover-img" src={png3hover} alt />
+                      </div>
+                    </div>
+                    <div className="services-content">
+                      <div className="services-text">
+                        <h3 className="title">
+                          <Link to="/services/custom-crm-srm">
+                            Customised CRM/SRM
+                          </Link>
+                        </h3>
+                      </div>
+                      <div className="services-desc">
+                        <p>
+                          At vero eos et accusamus etiusto odio praesentium
+                          accusamus etiusto odio data center for managing
+                          database.
+                        </p>
+                      </div>
+                      <div className="serial-number">03</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6 sm-mb-20">
+                  <div className="services-item paste-bg">
+                    <div className="services-icon">
+                      <div className="image-part">
+                        <img className="main-img" src={png4} alt />
+                        <img className="hover-img" src={png4hover} alt />
+                      </div>
+                    </div>
+                    <div className="services-content">
+                      <div className="services-text">
+                        <h3 className="title">
+                          <Link to="/services/ecommerce-development">
+                            E-commerce Development
+                          </Link>
+                        </h3>
+                      </div>
+                      <div className="services-desc">
+                        <p>
+                          At vero eos et accusamus etiusto odio praesentium
+                          accusamus etiusto odio data center for managing
+                          database.
+                        </p>
+                      </div>
+                      <div className="serial-number">04</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6 sm-mb-20">
+                  <div className="services-item purple-bg">
+                    <div className="services-icon">
+                      <div className="image-part">
+                        <img className="main-img" src={png5} alt />
+                        <img className="hover-img" src={png5hover} alt />
+                      </div>
+                    </div>
+                    <div className="services-content">
+                      <div className="services-text">
+                        <h3 className="title">
+                          <Link to="/services/cloud-and-devops">
+                            Clould &amp; DevOps
+                          </Link>
+                        </h3>
+                      </div>
+                      <div className="services-desc">
+                        <p>
+                          At vero eos et accusamus etiusto odio praesentium
+                          accusamus etiusto odio data center for managing
+                          database.
+                        </p>
+                      </div>
+                      <div className="serial-number">05</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 col-md-6">
+                  <div className="services-item green-bg">
+                    <div className="services-icon">
+                      <div className="image-part">
+                        <img className="main-img" src={png6} alt />
+                        <img className="hover-img" src={png6hover} alt />
+                      </div>
+                    </div>
+                    <div className="services-content">
+                      <div className="services-text">
+                        <h3 className="title">
+                          <a href="web-development.html">
+                            Database Administrator
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="services-desc">
+                        <p>
+                          At vero eos et accusamus etiusto odio praesentium
+                          accusamus etiusto odio data center for managing
+                          database.
+                        </p>
+                      </div>
+                      <div className="serial-number">06</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Services Section End */}
+          {/* Process Section Start */}
+          <div className="rs-process style5 bg7 pt-120 pb-120 md-pt-80 md-pb-65">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-4 md-pb-50">
+                  <div className="process-wrap bg3">
+                    <div className="sec-title mb-30">
+                      <div className="sub-text new">Working Process</div>
+                      <h2 className="title white-color">
+                        Our Working Process - How We Work For Our Customers
+                      </h2>
+                    </div>
+                    <div className="btn-part mt-40">
+                      <a className="readon learn-more" href="contact.html">
+                        Contact Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-8 pl-30 md-pl-15">
+                  <div className="row">
+                    <div className="col-md-6 mb-40">
+                      <div className="rs-addon-number">
+                        <div className="number-text">
+                          <div className="number-area">1.</div>
+                          <div className="number-title">
+                            <h3 className="title"> Discovery</h3>
+                          </div>
+                          <p className="number-txt">
+                            {" "}
+                            Quisque placerat vitae lacus ut scelerisque. Fusce
+                            luctus odio ac nibh luctus, in porttitor theo lacus
+                            egestas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 mb-40">
+                      <div className="rs-addon-number">
+                        <div className="number-text">
+                          <div className="number-area">2.</div>
+                          <div className="number-title">
+                            <h3 className="title">Planning</h3>
+                          </div>
+                          <p className="number-txt">
+                            Quisque placerat vitae lacus ut scelerisque. Fusce
+                            luctus odio ac nibh luctus, in porttitor theo lacus
+                            egestas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="rs-addon-number">
+                        <div className="number-text">
+                          <div className="number-area">3.</div>
+                          <div className="number-title">
+                            <h3 className="title">Execute</h3>
+                          </div>
+                          <p className="number-txt">
+                            Quisque placerat vitae lacus ut scelerisque. Fusce
+                            luctus odio ac nibh luctus, in porttitor theo lacus
+                            egestas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="rs-addon-number">
+                        <div className="number-text">
+                          <div className="number-area">4.</div>
+                          <div className="number-title">
+                            <h3 className="title">Deliver</h3>
+                          </div>
+                          <p className="number-txt">
+                            Quisque placerat vitae lacus ut scelerisque. Fusce
+                            luctus odio ac nibh luctus, in porttitor theo lacus
+                            egestas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Process Section End */}
+          {/* Pricing section start */}
+          <div className="rs-pricing style2 pt-120 pb-143 md-pt-80 md-pb-80">
+            <div className="container">
+              <div className="sec-title2 text-center mb-45">
+                <span className="sub-text style-bg">Pricing</span>
+                <h2 className="title">Our Pricing Plan</h2>
+              </div>
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="pricing-table">
+                    <div className="pricing-badge">Silver</div>
+                    <div className="pricing-icon">
+                      <img src={price1} alt />
+                    </div>
+                    <div className="pricing-table-price">
+                      <div className="pricing-table-bags">
+                        <span className="pricing-currency">$</span>
+                        <span className="table-price-text">1,499</span>
+                        <span className="table-period">Starting from</span>
+                      </div>
+                    </div>
+                    <div className="pricing-table-body">
+                      <ul>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Up to 20 Pages Designed (responsive layout)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Fully Responsive Design (Optimized for all devices)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>SEO-Friendly Design</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Source Code with Detailed Comments</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Basic On-Page SEO</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>1 Month Free Maintenance & Support</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="btn-part">
+                      <Link className="readon buy-now" to="/contact">
+                        Buy Now
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4 md-pb-30 md-pt-30">
+                  <div className="pricing-table primary-bg">
+                    <div className="pricing-badge white-color-bg">Gold</div>
+                    <div className="pricing-icon">
+                      <img src={price2} alt />
+                    </div>
+                    <div className="pricing-table-price">
+                      <div className="pricing-table-bags">
+                        <span className="pricing-currency">$</span>
+                        <span className="table-price-text">3,999</span>
+                        <span className="table-period">Starting from</span>
+                      </div>
+                    </div>
+                    <div className="pricing-table-body">
+                      <ul>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Custom Web Development (Frontend & Backend)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Database Integration</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Advanced Web Application Features (Interactive multimedia, user authentication)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Custom API Integration</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>E-commerce Functionality (Optional)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Powerful Admin Panel (For content and user management)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>3 Months Free Maintenance & Support</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="btn-part">
+                      <Link className="readon buy-now" to="/contact">
+                        Buy Now
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="pricing-table">
+                    <div className="pricing-badge">Platinum</div>
+                    <div className="pricing-icon">
+                      <img src={price3} alt />
+                    </div>
+                    <div className="pricing-table-price">
+                      <div className="pricing-table-bags">
+                        <span className="pricing-currency">$</span>
+                        <span className="table-price-text">7,999</span>
+                        <span className="table-period">Monthly Package</span>
+                      </div>
+                    </div>
+                    <div className="pricing-table-body">
+                      <ul>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Custom CRM/SRM Software Development</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Advanced Features (Client management, task management, financial tracking)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Third-Party Integrations (Payment gateways, email services)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Mobile App Integration (Android options available)</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Admin Dashboard for System Control</span>
+                        </li>
+                        <li>
+                          <i className="fa fa-check" />
+                          <span>Priority Maintenance & Support (3 Months Free)</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="btn-part">
+                      <Link className="readon buy-now" to="/contact">
+                        Buy Now
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Pricing section end */}
+          {/* Cta section start */}
+          <div className="rs-cta style1 bg7 pt-80 pb-80">
+            <div className="container">
+              <div className="cta-wrap">
+                <div className="row align-items-center">
+                  <div className="col-lg-9 col-md-12 md-mb-30">
+                    <span>Plan to Start a Project</span>
+                    <div className="title-wrap">
+                      <h2 className="epx-title">
+                        Our Experts Ready to Help You
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 text-right col-md-12">
+                    <div className="button-wrap">
+                      <Link className="readon learn-more" to="/contact">
+                        Get In Touch
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Cta section end */}
+        </div>
+      </Layout>
+    </>
+  );
+};
+
+export default Services;
