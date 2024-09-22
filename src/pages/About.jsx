@@ -14,9 +14,9 @@ import team6 from "../assets/images/team/style1/6.jpg";
 import team7 from "../assets/images/team/style1/7.jpg";
 import team8 from "../assets/images/team/style1/8.jpg";
 
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -111,7 +111,7 @@ const About = () => {
           </div>
           {/* About Section End */}
           {/* Team Section */}
-          <div
+          {/* <div
             id="rs-team"
             className="rs-team style2 pt-110 pb-120 md-pt-75 md-pb-80"
           >
@@ -405,7 +405,7 @@ const About = () => {
                 </div>
               </OwlCarousel>
             </div>
-          </div>
+          </div> */}
           {/* Team Section */}
         </div>
       </Layout>
