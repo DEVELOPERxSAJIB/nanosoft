@@ -59,9 +59,9 @@ import partner4 from "../assets/images/partner/4.png";
 import partner5 from "../assets/images/partner/5.png";
 import { Link } from "react-router-dom";
 
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Home = () => {
   
@@ -779,7 +779,7 @@ const Home = () => {
         {/* Industry End */}
 
         {/* Team Section */}
-        <div
+        {/* <div
           id="rs-team"
           className="rs-team style2 pt-110 pb-120 md-pt-75 md-pb-80"
         >
@@ -1073,7 +1073,7 @@ const Home = () => {
               </div>
             </OwlCarousel>
           </div>
-        </div>
+        </div> */}
         {/* Team Section */}
 
         {/* Technology Section Start */}
