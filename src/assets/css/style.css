@@ -4061,6 +4061,25 @@ body .search-modal .close:hover {
   background-position: bottom center;
   object-fit: cover;
 }
+.rs-breadcrumbs.img7 {
+  background: url(../images/breadcrumbs/webdevelopment.png);
+  background-position: center center;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.rs-breadcrumbs.img7::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(2, 39, 158, 0.8);
+  z-index: 2;
+}
+
 /* ------------------------------------
     08. Slider Section CSS
 ---------------------------------------*/

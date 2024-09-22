@@ -61,32 +61,6 @@ const CustomCrmSrm = () => {
               </div>
               <div className="col-lg-4 pl-32 md-pl-15">
                 <MenuList />
-                {/* <div className="services-add mb-50 mt-50">
-            <div className="address-item mb-35">
-              <div className="address-icon">
-                <i className="fa fa-phone" />
-              </div>
-            </div>
-            <h2 className="title">
-              Have any Questions? <br /> Call us Today!
-            </h2>
-            <div className="contact">
-              <a href="tel:123222-8888">(123) 222-8888</a>
-            </div>
-          </div>
-          <div className="brochures">
-            <h3>Brochures</h3>
-            <p>
-              Cras enim urna, interdum nec por ttitor vitae, sollicitudin eu
-              erosen. Praesent eget mollis nulla sollicitudin.
-            </p>
-            <div className="pdf-btn">
-              <a className="readon learn-more pdf" href="contact.html">
-                Download Now
-                <i className="fa fa-file-pdf-o" />
-              </a>
-            </div>
-          </div> */}
               </div>
             </div>
           </div>

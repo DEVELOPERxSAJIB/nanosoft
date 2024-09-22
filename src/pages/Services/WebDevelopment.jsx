@@ -1,29 +1,36 @@
-import service1 from "../../assets/images/services/single/1.jpg";
+import service1 from "../../assets/images/gif/webdev.gif";
 import service2 from "../../assets/images/services/single/2.jpg";
 import service3 from "../../assets/images/services/single/3.jpg";
 import quoat from "../../assets/images/testimonial/main-home/quote-white2.png";
 import reviewer from "../../assets/images/testimonial/main-home/5.jpg";
 import MenuList from "../../components/Services/MenuList";
 import Layout from "../../components/Layout/Layout";
+import { Link } from "react-router-dom";
 
 const WebDevelopment = () => {
   return (
     <Layout>
       <div>
         {/* Breadcrumbs Start */}
-        <div className="rs-breadcrumbs img3">
-          <div className="breadcrumbs-inner text-center">
+        <div className="rs-breadcrumbs img7">
+          <div
+            style={{
+              position: "relative",
+              zIndex: "3",
+            }}
+            className="breadcrumbs-inner text-center"
+          >
             <h1 className="page-title">Web Development</h1>
             <ul>
               <li title="Braintech - IT Solutions and Technology Startup HTML Template">
-                <a className="active" href="index.html">
+                <Link className="active" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li title="Go To Services">
-                <a className="active" href="index.html">
+                <Link className="active" to="/services">
                   Services
-                </a>
+                </Link>
               </li>
               <li>Web Development</li>
             </ul>
@@ -38,39 +45,41 @@ const WebDevelopment = () => {
                 <div className="services-img">
                   <img src={service1} alt />
                 </div>
-                <h2 className="mt-34">Responsive Pixel Perfect Design</h2>
+                <h2 className="mt-34">Web application development</h2>
                 <p>
-                  Cras enim urna, interdum nec porttitor vitae, sollicitudin eu
-                  eros. Praesent eget mollis nulla, non lacinia urna. Donec sit
-                  amet neque auctor, ornare dui rutrum, condimentum justo. Duis
-                  dictum, ex accumsan eleifend eleifend, ex justo aliquam nunc,
-                  in ultrices ante quam eget massa. Sed scelerisque, odio eu
-                  tempor pulvinar, magna tortor finibus lorem, ut mattis tellus
-                  nunc ut quam. Curabitur quis ornare leo. Suspendisse bibendum
-                  nibh non turpis vestibulum pellentesque.
+                  An engaging and well-structured website is essential for every
+                  business’s online success. By developing a seamless and
+                  intuitive site, companies can attract more customers and
+                  encourage them to stay longer.
                 </p>
                 <ul className="listing-style">
                   <li>
                     <i className="fa fa-check-circle" />
-                    <span>Sed ut perspiciatis unde omnis iste natus error</span>
-                  </li>
-                  <li>
-                    <i className="fa fa-check-circle" />
                     <span>
-                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                      We build custom, scalable web applications tailored to
+                      meet your unique business needs.
                     </span>
                   </li>
                   <li>
                     <i className="fa fa-check-circle" />
                     <span>
-                      Accusamus et iusto odio dignissimos ducimus qui blanditiis
+                      Our focus is on delivering high-performance solutions that
+                      enhance user experience and efficiency.
                     </span>
                   </li>
                   <li>
                     <i className="fa fa-check-circle" />
                     <span>
-                      Nam libero tempore, cum soluta nobis est eligendi optio
-                      cumque
+                      We prioritize security and reliability to ensure your
+                      application is robust and trustworthy.
+                    </span>
+                  </li>
+                  <li>
+                    <i className="fa fa-check-circle" />
+                    <span>
+                      Flexibility and innovation are at the core of our
+                      approach, allowing businesses to adapt and grow with their
+                      digital solutions.
                     </span>
                   </li>
                 </ul>
@@ -141,12 +150,14 @@ const WebDevelopment = () => {
                 {/* Skillbar Section End */}
                 <h3 className="mt-30">24/7 Smart Support</h3>
                 <p className="mt-20 mb-50">
-                  Cras enim urna, interdum nec porttitor vitae, sollicitudin eu
-                  eros. Praesent eget mollis nulla, non lacinia urna. Donec sit
-                  amet neque auctor, ornare dui rutrum, condimentum justo. Duis
-                  dictum, ex accumsan eleifend eleifend, ex justo aliquam nunc,
-                  in ultrices ante quam eget massa. Sed scelerisque, odio eu
-                  tempor pulvinar, magna tortor finibus lorem.
+                  Experience seamless, round-the-clock support tailored to your
+                  needs. Whether you need assistance troubleshooting or managing
+                  your digital platforms, our team is always ready to help. With
+                  a focus on efficiency and quick response times, we ensure that
+                  issues are resolved promptly, keeping your operations running
+                  smoothly. Our intelligent support system adapts to your
+                  requirements, providing reliable and personalized assistance
+                  whenever you need it.
                 </p>
                 <div className="row mb-80">
                   <div className="col-lg-6 col-md-12 md-mb-30">
@@ -163,18 +174,23 @@ const WebDevelopment = () => {
                       <img src={quoat} alt />
                     </div>
                     <p>
-                      At vero eos et accusamus et iusto odio dignissimos ducimus
-                      qui blanditiis praesentium voluptatum deleniti atque
-                      corrupti quos dolores et quas molestias data.
+                      NanoSoft&#x2019;s exceptional service and attention to detail
+                      made a world of difference for our project. They
+                      seamlessly transformed our vision into a user-friendly,
+                      high-performance web application. The team&#x2019;s technical
+                      expertise, combined with their commitment to meeting
+                      deadlines, made the entire process smooth and stress-free.
+                      I’m thrilled with the outcome and would definitely partner
+                      with them again.
                     </p>
                     <div className="testi-content">
                       <div className="testi-img">
                         <img src={reviewer} alt />
                       </div>
                       <div className="author-part">
-                        <div className="name">Brick John</div>
+                        <div className="name">William Lee</div>
                         <span className="designation">
-                          CEO, Brick Consulting
+                          Founder & CTO, TechWave Solutions
                         </span>
                       </div>
                     </div>
@@ -194,20 +210,7 @@ const WebDevelopment = () => {
                     Have any Questions? <br /> Call us Today!
                   </h2>
                   <div className="contact">
-                    <a href="tel:123222-8888">(123) 222-8888</a>
-                  </div>
-                </div>
-                <div className="brochures">
-                  <h3>Brochures</h3>
-                  <p>
-                    Cras enim urna, interdum nec por ttitor vitae, sollicitudin
-                    eu erosen. Praesent eget mollis nulla sollicitudin.
-                  </p>
-                  <div className="pdf-btn">
-                    <a className="readon learn-more pdf" href="contact.html">
-                      Download Now
-                      <i className="fa fa-file-pdf-o" />
-                    </a>
+                    <Link to="tel:01789557538">01789-557538</Link>
                   </div>
                 </div>
               </div>

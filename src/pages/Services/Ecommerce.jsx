@@ -200,19 +200,6 @@ const Ecommerce = () => {
                     <a href="tel:123222-8888">(123) 222-8888</a>
                   </div>
                 </div>
-                <div className="brochures">
-                  <h3>Brochures</h3>
-                  <p>
-                    Cras enim urna, interdum nec por ttitor vitae, sollicitudin
-                    eu erosen. Praesent eget mollis nulla sollicitudin.
-                  </p>
-                  <div className="pdf-btn">
-                    <a className="readon learn-more pdf" href="contact.html">
-                      Download Now
-                      <i className="fa fa-file-pdf-o" />
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
