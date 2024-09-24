@@ -1,4 +1,4 @@
-import about1 from "../../assets/images/about/about-us/1.jpg";
+import { Link } from "react-router-dom";
 import serviceImg1 from "../../assets/images/services/style7/1.png";
 import serviceImg2 from "../../assets/images/services/style7/2.png";
 import serviceImg3 from "../../assets/images/services/style7/3.png";
@@ -10,21 +10,21 @@ const CloudAndDevOps = () => {
     <Layout>
       <div>
         {/* Breadcrumbs Start */}
-        <div className="rs-breadcrumbs img2">
+        <div className="rs-breadcrumbs img9">
           <div className="breadcrumbs-inner text-center">
-            <h1 className="page-title">Customised CRM / SRM</h1>
+            <h1 className="page-title">Cloud and DevOps</h1>
             <ul>
-              <li title="Braintech - IT Solutions and Technology Startup HTML Template">
-                <a className="active" href="index.html">
+              <li title="">
+                <Link className="active" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li title="Go To Services">
-                <a className="active" href="index.html">
+                <Link className="active" to="/services">
                   Services
-                </a>
+                </Link>
               </li>
-              <li>Customised CRM or SRM</li>
+              <li>Cloud and DevOps</li>
             </ul>
           </div>
         </div>
@@ -35,58 +35,42 @@ const CloudAndDevOps = () => {
             <div className="row align-items-center">
               <div className="col-lg-8 pr-40 md-pr-15 md-mb-50">
                 <div className="sec-title4">
-                  <span className="sub-text">Software Development</span>
+                  <span className="sub-text">Cloud and DevOps Solutions</span>
                   <h2 className="title">
-                    We Help to Implement Your Ideas into Automation
+                    Optimize Your Infrastructure with Cloud & DevOps Services
                   </h2>
                   <div className="heading-line" />
                   <div className="desc desc-big">
-                    We donec pulvinar magna id leoersi pellentesque impered
-                    dignissim rhoncus euismod euismod eros vitae best consulting
-                    &amp; financial services theme .
+                    Leverage our Cloud and DevOps services to streamline your
+                    operations, enhance scalability, and automate workflows. We
+                    provide robust solutions tailored to ensure faster
+                    deployment, efficient resource management, and seamless
+                    collaboration.
                   </div>
                   <div className="desc">
-                    Business ipsum dolor sit amet nsectetur cing elit. Suspe
-                    ndisse suscipit sagittis leo sit met entum is not estibulum
-                    dignity sim posuere cubilia durae. Leo sit met entum cubilia
-                    crae. At vero eos accusamus et iusto odio dignissimos
-                    provident nam libero tempore, cum soluta.
+                    We help you choose the right cloud platform (AWS, Azure,
+                    Google Cloud) and implement CI/CD pipelines to automate
+                    testing, integration, and deployment, ensuring quick and
+                    reliable software delivery. Our DevOps solutions foster
+                    collaboration between your development and operations teams,
+                    optimizing performance and minimizing downtime.
+                  </div>
+                  <div className="desc mt-3">
+                    By adopting our Cloud and DevOps strategies, your business
+                    can rapidly scale, improve system reliability, and achieve
+                    greater operational efficiency while reducing costs. Let us
+                    help you transform your operations with cutting-edge cloud
+                    technologies and streamlined DevOps workflows.
                   </div>
                   <div className="btn-part mt-45">
-                    <a className="readon learn-more" href="contact.html">
+                    <Link className="readon learn-more" to="/contact">
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 pl-32 md-pl-15">
                 <MenuList />
-                {/* <div className="services-add mb-50 mt-50">
-          <div className="address-item mb-35">
-            <div className="address-icon">
-              <i className="fa fa-phone" />
-            </div>
-          </div>
-          <h2 className="title">
-            Have any Questions? <br /> Call us Today!
-          </h2>
-          <div className="contact">
-            <a href="tel:123222-8888">(123) 222-8888</a>
-          </div>
-        </div>
-        <div className="brochures">
-          <h3>Brochures</h3>
-          <p>
-            Cras enim urna, interdum nec por ttitor vitae, sollicitudin eu
-            erosen. Praesent eget mollis nulla sollicitudin.
-          </p>
-          <div className="pdf-btn">
-            <a className="readon learn-more pdf" href="contact.html">
-              Download Now
-              <i className="fa fa-file-pdf-o" />
-            </a>
-          </div>
-        </div> */}
               </div>
             </div>
           </div>
@@ -101,10 +85,12 @@ const CloudAndDevOps = () => {
                     </div>
                     <div className="services-content">
                       <h3 className="services-title">
-                        <a href="web-development.html">Expert Peoples</a>
+                        <a href="web-development.html">Expert Teams</a>
                       </h3>
                       <p className="services-desc">
-                        At vero eos et accusamus etiusto odio praesentium.
+                        Our skilled professionals provide tailored Cloud and
+                        DevOps solutions that optimize your operations and
+                        enhance system performance
                       </p>
                     </div>
                   </div>
@@ -116,10 +102,12 @@ const CloudAndDevOps = () => {
                     </div>
                     <div className="services-content">
                       <h3 className="services-title">
-                        <a href="web-development.html">First Growing Process</a>
+                        <a href="web-development.html">Seamless Growth</a>
                       </h3>
                       <p className="services-desc">
-                        At vero eos et accusamus etiusto odio praesentium.
+                        Automate processes and scale efficiently with our Cloud
+                        and DevOps services, ensuring smooth, uninterrupted
+                        growth.
                       </p>
                     </div>
                   </div>
@@ -131,10 +119,12 @@ const CloudAndDevOps = () => {
                     </div>
                     <div className="services-content">
                       <h3 className="services-title">
-                        <a href="web-development.html">Creative Ideas</a>
+                        <a href="web-development.html">Innovative Solutions</a>
                       </h3>
                       <p className="services-desc">
-                        At vero eos et accusamus etiusto odio praesentium.
+                        We deliver cutting-edge, customized solutions to
+                        streamline your cloud infrastructure and accelerate
+                        development.
                       </p>
                     </div>
                   </div>
@@ -142,64 +132,9 @@ const CloudAndDevOps = () => {
               </div>
             </div>
           </div>
-          {/* Services Section End */}
         </div>
-        {/* About Section End */}
-        {/* About Section Start */}
-        <div id="rs-about" className="rs-about pt-120 pb-120 md-pt-80 md-pb-60">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 pr-45 md-pr-15 md-mb-50">
-                <div className="choose-img">
-                  <img src={about1} alt="images" />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="sec-title mb-30">
-                  <div className="sub-text choose">Why Choose Us</div>
-                  <h2 className="title pb-20">
-                    We Are Increasing Business Success With Technology
-                  </h2>
-                  <div className="desc">
-                    Over 25 years working in IT services developing software
-                    applications and mobile apps for clients all over the world.
-                  </div>
-                </div>
-                {/* Skillbar Section Start */}
-                <div className="rs-skillbar style1 modify1">
-                  <div className="cl-skill-bar">
-                    {/* Start Skill Bar */}
-                    <span className="skillbar-title">Software Development</span>
-                    <div className="skillbar" data-percent={92}>
-                      <p className="skillbar-bar" />
-                      <span className="skill-bar-percent" />
-                    </div>
-                    {/* Start Skill Bar */}
-                    <span className="skillbar-title">Web Development</span>
-                    <div className="skillbar" data-percent={80}>
-                      <p className="skillbar-bar" />
-                      <span className="skill-bar-percent" />
-                    </div>
-                    {/* Start Skill Bar */}
-                    <span className="skillbar-title">SEO Analysis</span>
-                    <div className="skillbar" data-percent={95}>
-                      <p className="skillbar-bar" />
-                      <span className="skill-bar-percent" />
-                    </div>
-                    {/* Start Skill Bar */}
-                    <span className="skillbar-title">Cyber Security</span>
-                    <div className="skillbar" data-percent={78}>
-                      <p className="skillbar-bar" />
-                      <span className="skill-bar-percent" />
-                    </div>
-                  </div>
-                </div>
-                {/* Skillbar Section End */}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* About Section End */}
+        {/* Services Section End */}
+
         {/* Counter Section Start */}
         <div className="rs-counter style3 modify1 pt-90 pb-80">
           <div className="container">

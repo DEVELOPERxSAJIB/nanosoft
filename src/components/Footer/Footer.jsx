@@ -11,13 +11,13 @@ const Footer = () => {
               <div className="col-lg-3 col-md-12 col-sm-12 footer-widget">
                 <div className="footer-logo mb-30">
                   <Link to="/">
-                    <img style={{ objectFit : "cover"}} src={footerLogo} alt />
+                    <img style={{ objectFit: "cover" }} src={footerLogo} alt />
                   </Link>
                 </div>
                 <div className="textwidget pb-30">
                   <p>
-                    Sedut perspiciatis unde omnis iste natus error sitlutem acc
-                    usantium doloremque denounce with illo inventore veritatis
+                    Your success is our mission. Connect with us for
+                    cutting-edge development, web design, and support services.
                   </p>
                 </div>
                 <ul className="footer-social md-mb-30">
@@ -48,16 +48,22 @@ const Footer = () => {
                 <h3 className="widget-title">IT Services</h3>
                 <ul className="site-map">
                   <li>
-                    <Link to="/services/software-development">Software Development</Link>
+                    <Link to="/services/software-development">
+                      Software Development
+                    </Link>
                   </li>
                   <li>
                     <Link to="/services/custom-crm-srm">Custom ERM SRM</Link>
                   </li>
                   <li>
-                    <Link to="/services/ecommerce-development">E-commerce Development</Link>
+                    <Link to="/services/ecommerce-development">
+                      E-commerce Development
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/services/cloud-and-devops">Cloud and DevOps</Link>
+                    <Link to="/services/cloud-and-devops">
+                      Cloud and DevOps
+                    </Link>
                   </li>
                   <li>
                     <Link to="/services/web-design">Web Design</Link>
@@ -82,7 +88,9 @@ const Footer = () => {
                   <li>
                     <i className="flaticon-email" />
                     <div className="desc">
-                      <a href="mailto:info@nanosoft.agency">info@nanosoft.agency</a>
+                      <a href="mailto:contact@nanosoft.agency">
+                        contact@nanosoft.agency
+                      </a>
                     </div>
                   </li>
                   <li>
@@ -94,8 +102,8 @@ const Footer = () => {
               <div className="col-lg-3 col-md-12 col-sm-12">
                 <h3 className="widget-title">Newsletter</h3>
                 <p className="widget-desc">
-                  We denounce with righteous and in and dislike men who are so
-                  beguiled and demo realized.
+                  Stay updated with the latest in software development and digital solutions. Subscribe to the NanoSoft
+                  newsletter to your inbox.
                 </p>
                 <p>
                   <input
@@ -138,7 +146,8 @@ const Footer = () => {
               <div className="col-lg-6">
                 <div className="copyright">
                   <p>
-                    © <span id="current-year">2024</span> All Rights Reserved By Team <a href="https://www.nanosoft.agency/">NanoSoft</a>
+                    © <span id="current-year">2024</span> All Rights Reserved By
+                    Team <a href="https://www.nanosoft.agency/">NanoSoft</a>
                   </p>
                 </div>
               </div>

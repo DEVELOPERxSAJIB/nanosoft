@@ -43,8 +43,8 @@ const Navbar = () => {
                     <i className="flaticon-email" />
                     <span className="contact-info">
                       <span>E-mail</span>
-                      <a href="mailto:info@nanosoft.agency">
-                        info@nanosoft.agency
+                      <a href="mailto:info@contact.agency">
+                        contact@nanosoft.agency
                       </a>
                     </span>
                   </li>

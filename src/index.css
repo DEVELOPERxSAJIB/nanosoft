@@ -84,6 +84,12 @@
   display: none;
 }
 
+.custom-progressbar {
+  background-color: #DFEDFE !important;
+  height: 10px; 
+  border-radius: 0;
+}
+
 @media (max-width: 991px) {
   .rs-menu {
     display: none !important;

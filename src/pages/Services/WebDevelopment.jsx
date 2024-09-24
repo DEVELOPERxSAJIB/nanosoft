@@ -1,11 +1,8 @@
-import service1 from "../../assets/images/gif/webdev.gif";
-import service2 from "../../assets/images/services/single/2.jpg";
-import service3 from "../../assets/images/services/single/3.jpg";
-import quoat from "../../assets/images/testimonial/main-home/quote-white2.png";
-import reviewer from "../../assets/images/testimonial/main-home/5.jpg";
+import service1 from "../../assets/images/blog/inner/1.jpg";
 import MenuList from "../../components/Services/MenuList";
 import Layout from "../../components/Layout/Layout";
 import { Link } from "react-router-dom";
+
 
 const WebDevelopment = () => {
   return (
@@ -42,7 +39,32 @@ const WebDevelopment = () => {
           <div className="container">
             <div className="row">
               <div className="col-lg-8 md-mb-50">
-                <div className="services-img">
+                <div className="sec-title4">
+                  <span className="sub-text">Web Application Development</span>
+                  <h2 className="title">
+                    Build Scalable, Secure, and Dynamic Web Applications
+                  </h2>
+                  <div className="heading-line" />
+                  <div className="desc desc-big">
+                    Our web application development services are designed to
+                    create robust, secure, and scalable web solutions that grow
+                    with your business. From intuitive user interfaces to
+                    powerful backend functionality, we build custom web
+                    applications that streamline processes and enhance user
+                    experiences. Partner with us to transform your ideas into
+                    dynamic web applications that drive results.
+                  </div>
+                  <div className="desc">
+                    At NanoSoft, we deliver custom web applications tailored to
+                    your business needs. Whether it's an e-commerce platform, a
+                    complex enterprise solution, or a simple web portal, our
+                    team focuses on functionality, performance, and security. We
+                    use modern frameworks and technologies to ensure your web
+                    application is fast, secure, and user-friendly, providing
+                    your users with a seamless experience across devices.
+                  </div>
+                </div>
+                <div className="services-img mt-5">
                   <img src={service1} alt />
                 </div>
                 <h2 className="mt-34">Web application development</h2>
@@ -83,71 +105,6 @@ const WebDevelopment = () => {
                     </span>
                   </li>
                 </ul>
-                <h3 className="mt-34">Why Work With Us</h3>
-                {/* Skillbar Section Start */}
-                <div className="rs-skillbar style1 modify1">
-                  <div className="cl-skill-bar">
-                    <div className="row">
-                      <div className="col-lg-6">
-                        {/* Start Skill Bar */}
-                        <span className="skillbar-title">
-                          Software Development
-                        </span>
-                        <div className="skillbar" data-percent={92}>
-                          <p className="skillbar-bar" />
-                          <span className="skill-bar-percent" />
-                        </div>
-                        {/* Start Skill Bar */}
-                      </div>
-                      <div className="col-lg-6">
-                        {/* Start Skill Bar */}
-                        <span className="skillbar-title">Web Development</span>
-                        <div className="skillbar" data-percent={90}>
-                          <p className="skillbar-bar" />
-                          <span className="skill-bar-percent" />
-                        </div>
-                        {/* Start Skill Bar */}
-                      </div>
-                      <div className="col-lg-6">
-                        {/* Start Skill Bar */}
-                        <span className="skillbar-title">SEO Analysis</span>
-                        <div className="skillbar" data-percent={85}>
-                          <p className="skillbar-bar" />
-                          <span className="skill-bar-percent" />
-                        </div>
-                        {/* Start Skill Bar */}
-                      </div>
-                      <div className="col-lg-6">
-                        {/* Start Skill Bar */}
-                        <span className="skillbar-title">Cyber Security</span>
-                        <div className="skillbar" data-percent={92}>
-                          <p className="skillbar-bar" />
-                          <span className="skill-bar-percent" />
-                        </div>
-                        {/* Start Skill Bar */}
-                      </div>
-                      <div className="col-lg-6">
-                        {/* Start Skill Bar */}
-                        <span className="skillbar-title">Clean Code</span>
-                        <div className="skillbar" data-percent={92}>
-                          <p className="skillbar-bar" />
-                          <span className="skill-bar-percent" />
-                        </div>
-                        {/* Start Skill Bar */}
-                      </div>
-                      <div className="col-lg-6">
-                        {/* Start Skill Bar */}
-                        <span className="skillbar-title">App Development</span>
-                        <div className="skillbar" data-percent={92}>
-                          <p className="skillbar-bar" />
-                          <span className="skill-bar-percent" />
-                        </div>
-                        {/* Start Skill Bar */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Skillbar Section End */}
                 <h3 className="mt-30">24/7 Smart Support</h3>
                 <p className="mt-20 mb-50">
                   Experience seamless, round-the-clock support tailored to your
@@ -159,44 +116,14 @@ const WebDevelopment = () => {
                   requirements, providing reliable and personalized assistance
                   whenever you need it.
                 </p>
-                <div className="row mb-80">
+                {/* <div className="row mb-80">
                   <div className="col-lg-6 col-md-12 md-mb-30">
                     <img className="bdru-4" src={service2} alt />
                   </div>
                   <div className="col-lg-6 col-md-12">
                     <img className="bdru-4" src={service3} alt />
                   </div>
-                </div>
-                {/* Testimonial Section Start */}
-                <div className="rs-testimonial style5">
-                  <div className="testi-item">
-                    <div className="testi-img">
-                      <img src={quoat} alt />
-                    </div>
-                    <p>
-                      NanoSoft&#x2019;s exceptional service and attention to detail
-                      made a world of difference for our project. They
-                      seamlessly transformed our vision into a user-friendly,
-                      high-performance web application. The team&#x2019;s technical
-                      expertise, combined with their commitment to meeting
-                      deadlines, made the entire process smooth and stress-free.
-                      I’m thrilled with the outcome and would definitely partner
-                      with them again.
-                    </p>
-                    <div className="testi-content">
-                      <div className="testi-img">
-                        <img src={reviewer} alt />
-                      </div>
-                      <div className="author-part">
-                        <div className="name">William Lee</div>
-                        <span className="designation">
-                          Founder & CTO, TechWave Solutions
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Section End */}
+                </div> */}
               </div>
               <div className="col-lg-4 pl-32 md-pl-15">
                 <MenuList />

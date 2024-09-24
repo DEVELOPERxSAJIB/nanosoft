@@ -4080,6 +4080,11 @@ body .search-modal .close:hover {
   z-index: 2;
 }
 
+.rs-breadcrumbs.img9 {
+  background: url(../images/breadcrumbs/devops.png);
+  background-position: center center;
+}
+
 /* ------------------------------------
     08. Slider Section CSS
 ---------------------------------------*/

@@ -16,16 +16,7 @@ const MenuList = () => {
             Web Development
           </Link>
         </li>
-        <li>
-          <Link
-            className={
-              pathname === "/services/custom-crm-srm" ? "active" : null
-            }
-            to="/services/custom-crm-srm"
-          >
-            Custom CRM SRM
-          </Link>
-        </li>
+
         <li>
           <Link
             className={
@@ -34,6 +25,16 @@ const MenuList = () => {
             to="/services/software-development"
           >
             Software Development
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={
+              pathname === "/services/custom-crm-srm" ? "active" : null
+            }
+            to="/services/custom-crm-srm"
+          >
+            Custom CRM SRM
           </Link>
         </li>
         <li>
@@ -65,6 +66,7 @@ const MenuList = () => {
           </Link>
         </li>
       </ul>
+
 
     </div>
   );
