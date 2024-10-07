@@ -22,24 +22,27 @@ const Footer = () => {
                 </div>
                 <ul className="footer-social md-mb-30">
                   <li>
-                    <a href="#" target="_blank">
-                      <span>
-                        <i className="fa fa-facebook" />
-                      </span>
+                    <a
+                      target="_blank"
+                      href="https://web.facebook.com/nanosoft.agency"
+                    >
+                      <i className="fa fa-facebook" />
                     </a>
                   </li>
                   <li>
-                    <a href="# " target="_blank">
-                      <span>
-                        <i className="fa fa-linkedin" />
-                      </span>
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/nanosoftagency"
+                    >
+                      <i className="fa fa-linkedin" />
                     </a>
                   </li>
                   <li>
-                    <a href="# " target="_blank">
-                      <span>
-                        <i className="fa fa-instagram" />
-                      </span>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/nanosoft.agency"
+                    >
+                      <i className="fa fa-instagram" />
                     </a>
                   </li>
                 </ul>
@@ -102,8 +105,9 @@ const Footer = () => {
               <div className="col-lg-3 col-md-12 col-sm-12">
                 <h3 className="widget-title">Newsletter</h3>
                 <p className="widget-desc">
-                  Stay updated with the latest in software development and digital solutions. Subscribe to the NanoSoft
-                  newsletter to your inbox.
+                  Stay updated with the latest in software development and
+                  digital solutions. Subscribe to the NanoSoft newsletter to
+                  your inbox.
                 </p>
                 <p>
                   <input

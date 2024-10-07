@@ -210,18 +210,24 @@ const Navbar = () => {
                   <li>
                     <a
                       target="_blank"
-                      href="https://www.facebook.com/nanosoft.agency"
+                      href="https://web.facebook.com/nanosoft.agency"
                     >
                       <i className="fa fa-facebook" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/nanosoftagency"
+                    >
                       <i className="fa fa-linkedin" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/nanosoft.agency"
+                    >
                       <i className="fa fa-instagram" />
                     </a>
                   </li>

@@ -38,10 +38,10 @@ import service5 from "../assets/images/services/main-home/icons/5.png";
 import service6 from "../assets/images/services/main-home/icons/6.png";
 import imgS2 from "../assets/images/services/s2.png";
 
-import process1 from "../assets/images/process/1.png";
-import process2 from "../assets/images/process/2.png";
-import process3 from "../assets/images/process/3.png";
-import process4 from "../assets/images/process/4.png";
+import process1 from "../assets/images/process/discover.jpg";
+import process2 from "../assets/images/process/planning.jpg";
+import process3 from "../assets/images/process/execute.jpg";
+import process4 from "../assets/images/process/calender.png";
 
 import team1 from "../assets/images/team/style1/1.jpg";
 import team2 from "../assets/images/team/style1/2.jpg";
@@ -57,33 +57,125 @@ import partner2 from "../assets/images/partner/2.png";
 import partner3 from "../assets/images/partner/3.png";
 import partner4 from "../assets/images/partner/4.png";
 import partner5 from "../assets/images/partner/5.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { RxCross1 } from "react-icons/rx";
 
 // import OwlCarousel from "react-owl-carousel";
 // import "owl.carousel/dist/assets/owl.carousel.css";
 // import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Home = () => {
-  
-  const options = {
-    loop: true,
-    margin: 30,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    smartSpeed: 800,
-    dots: true,
-    nav: false,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 3,
-      },
-    },
+  // const options = {
+  //   loop: true,
+  //   margin: 30,
+  //   autoplay: true,
+  //   autoplayTimeout: 5000,
+  //   smartSpeed: 800,
+  //   dots: true,
+  //   nav: false,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     600: {
+  //       items: 2,
+  //     },
+  //     1000: {
+  //       items: 3,
+  //     },
+  //   },
+  // };
+
+  const schema = yup.object().shape({
+    name: yup.string().required("Name is required"),
+    message: yup
+      .string("Optional")
+      .max(500, "Message cannot exceed 500 characters"),
+    phone: yup.string().required("Phone number is required"),
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+  });
+
+  const contactSchema = yup.object().shape({
+    firstName: yup.string().required("Fist name is required"),
+    lastName: yup.string().required("Last name is required"),
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    phone: yup.string().required("Phone number is required"),
+    message: yup
+      .string("Optional")
+      .max(500, "Message cannot exceed 500 characters"),
+  });
+
+  // const heroSectionRef = useRef(null);
+
+  // const scrollToHeroSection = () => {
+  //   heroSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  // };
+
+  const { pathname } = useLocation();
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  // second form
+  const {
+    register: registerContact,
+    handleSubmit: handleSubmitContact,
+    formState: { errors: contactErrors },
+    reset: resetContactForm,
+  } = useForm({
+    resolver: yupResolver(contactSchema),
+  });
+
+  const form = useRef();
+  const contactForm = useRef();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const [successMessage, setSucessMessage] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = () => {
+    setLoading(true);
+    emailjs
+      .sendForm("service_3kfcfro", "template_egs2j9b", form.current, {
+        publicKey: "GAQ_Vq4tSYF9xubIj",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setSucessMessage(true);
+          reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -99,11 +191,11 @@ const Home = () => {
               <div className="col-lg-7 col-md-12 pr-140 md-mb-140 md-pr-15">
                 <div className="banner-content">
                   <h1 className="title">
-                    We Are Digital Agency &amp; Technology Solution{" "}
+                    We Build Software that Shapes Tomorrow
                   </h1>
                   <p className="desc">
-                    We are leading technology solutions providing company all
-                    over the world doing over 40 years.
+                    We deliver top-notch web solutions worldwide, driving
+                    success with creativity and technical mastery.
                   </p>
                   {/* <ul className="banner-btn">
                     <li>
@@ -117,7 +209,7 @@ const Home = () => {
                     <div className="animate-border white-color style3">
                       <a
                         className="popup-border popup-videos"
-                        href="https://www.youtube.com/watch?v=YLN1Argi7ik"
+                        // href="https://www.youtube.com/watch?v=YLN1Argi7ik"
                       >
                         <i className="fa fa-play" />
                       </a>
@@ -128,18 +220,42 @@ const Home = () => {
               <div className="col-lg-5 col-md-12 pl-70 md-pl-15">
                 <div className="rs-contact">
                   <div className="contact-wrap">
-                    <div className="content-part mb-25">
-                      <h2 className="title mb-15">Schedule Your Appointment</h2>
-                      <p className="desc">
-                        We here to help you 24/7 with experts
-                      </p>
-                    </div>
+                    {successMessage ? (
+                      <div className="d-flex justify-content-between alert alert-success text-center">
+                        {successMessage ? (
+                          <span
+                            className="text-success"
+                            style={{ fontWeight: "700px" }}
+                          >
+                            Thanks for contac with us. You will get an Email
+                            from us soon.
+                          </span>
+                        ) : null}
+                        <span
+                          style={{ cursor: "pointer", paddingLeft: "3px" }}
+                          onClick={() => setSucessMessage(false)}
+                        >
+                          <RxCross1 color="#000" />
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="content-part mb-25">
+                        <h2 className="title mb-15">
+                          Schedule Your Appointment!
+                        </h2>
+                        <p className="desc">
+                          Our experts are available 24/7 to assist you.
+                        </p>
+                      </div>
+                    )}
+
                     <div id="appointment-messages" />
                     <form
+                      ref={form}
+                      onSubmit={handleSubmit(sendEmail)}
                       id="appointment-form"
-                      method="post"
-                      action="https://rstheme.com/products/html/braintech/appointment.php"
                     >
+                      <div className="my-3"></div>
                       <fieldset>
                         <div className="row">
                           <div className="col-lg-12 mb-15">
@@ -147,48 +263,62 @@ const Home = () => {
                               className="from-control"
                               type="text"
                               id="appointment_name"
-                              name="appointment_name"
                               placeholder="Name"
-                              required
+                              {...register("name")}
                             />
+                            {errors.name && (
+                              <div className="text-danger pl-2">
+                                {errors.name.message} *
+                              </div>
+                            )}
                           </div>
                           <div className="col-lg-12 mb-15">
                             <input
                               className="from-control"
                               type="text"
                               id="appointment_email"
-                              name="appointment_email"
                               placeholder="E-Mail"
-                              required
+                              {...register("email")}
                             />
+                            {errors.email && (
+                              <div className="text-danger pl-2">
+                                {errors.email.message} *
+                              </div>
+                            )}
                           </div>
                           <div className="col-lg-12 mb-15">
                             <input
                               className="from-control"
                               type="text"
                               id="appointment_phone"
-                              name="appointment_phone"
-                              placeholder="Phone Number"
-                              required
+                              placeholder="Phone"
+                              {...register("phone")}
                             />
+                            {errors.phone && (
+                              <div className="text-danger pl-2">
+                                {errors.phone.message} *
+                              </div>
+                            )}
                           </div>
                           <div className="col-lg-12 mb-25">
                             <input
                               className="from-control"
                               type="text"
                               id="appointment_website"
-                              name="appointment_website"
-                              placeholder="Your Website"
-                              required
+                              placeholder="Your Message"
+                              {...register("message")}
                             />
+                            {errors.message && (
+                              <div className="text-danger pl-2">
+                                {errors.message.message} *
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="form-group mb-0">
-                          <input
-                            className="submit-btn"
-                            type="submit"
-                            defaultValue="Submit Now"
-                          />
+                          <button className="submit-btn" type="submit">
+                            {loading ? "Sending Email . . ." : "Submit Now"}
+                          </button>
                         </div>
                       </fieldset>
                     </form>
@@ -212,14 +342,22 @@ const Home = () => {
             <div className="sec-title2 text-center mb-45">
               <span className="sub-text style-bg">About Us</span>
               <h2 className="title">
-                We Are Increasing Business Success With Technology
+                Empowering Business Growth with Technology
               </h2>
             </div>
             <div className="row align-items-center">
               <div className="col-lg-6 md-mb-30">
                 <div className="rs-animation-shape">
-                  <div className="images">
-                    <img src={about3} alt />
+                  <div style={{}} className="images">
+                    <img
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        borderRadius: "50%",
+                      }}
+                      src={about3}
+                      alt
+                    />
                   </div>
                   <div className="middle-image2">
                     <img className="dance" src={aboutEffect1} alt />
@@ -230,18 +368,21 @@ const Home = () => {
                 <div className="contact-wrap">
                   <div className="sec-title mb-30">
                     <div className="desc pb-35">
-                      Over 25 years working in IT services developing software
-                      applications and mobile apps for clients all over the
-                      world.
+                      At NanoSoft, we are passionate about leveraging technology
+                      to drive business success. We specialize in developing
+                      tailored software solutions and mobile applications that
+                      help our clients streamline operations, boost
+                      productivity, and achieve their goals. Our approach
+                      combines innovation, dedication, and a deep understanding
+                      of industry needs to deliver exceptional results.
                     </div>
-                    <p className="margin-0 pb-15">
-                      We denounce with righteous indignation and dislike men who
-                      are so beguiled and demoralized by the charms of pleasure
-                      of the moment, so blinded by desire, that they cannot
-                      foresee the pain and trouble that are bound to ensue; and
-                      equal blame belongs to those who fail in their duty
-                      through weakness of will, which is the same as saying.
-                    </p>
+                    <div className="desc pb-35">
+                      We pride ourselves on building long-lasting partnerships
+                      with our clients, focusing on their unique challenges and
+                      turning them into opportunities for growth. Let’s work
+                      together to bring your vision to life and pave the way for
+                      a successful future.
+                    </div>
                   </div>
                   <div className="btn-part">
                     <Link
@@ -269,7 +410,7 @@ const Home = () => {
             <div className="sec-title2 text-center mb-45">
               <span className="sub-text style-bg">Services</span>
               <h2 className="title">
-                We Are Offering All Kinds of IT Solutions Services
+                Your Trusted IT Partner for Innovative Solutions{" "}
               </h2>
             </div>
             <div className="row">
@@ -290,8 +431,8 @@ const Home = () => {
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            We create engaging and responsive websites that
+                            enhance user experience and drive business growth.
                           </p>
                         </div>
                       </div>
@@ -308,8 +449,9 @@ const Home = () => {
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Our web development services focus on building
+                            dynamic, user-friendly websites that effectively
+                            represent your brand.
                           </p>
                         </div>
                         <div className="back-btn-part">
@@ -344,8 +486,8 @@ const Home = () => {
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            We deliver custom, scalable software that drives
+                            efficiency and success in the digital world.
                           </p>
                         </div>
                       </div>
@@ -361,8 +503,11 @@ const Home = () => {
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Our software development services are tailored to
+                            meet your business needs, providing scalable and
+                            secure solutions. We focus on innovation and
+                            efficiency to ensure your success in the digital
+                            landscape.
                           </p>
                         </div>
                         <div className="back-btn-part">
@@ -395,8 +540,8 @@ const Home = () => {
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Tailored CRM/SRM solutions to enhance customer
+                            relationships and streamline management.{" "}
                           </p>
                         </div>
                       </div>
@@ -412,8 +557,10 @@ const Home = () => {
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Our Custom CRM/SRM services provide powerful tools
+                            to manage interactions, track customer data, and
+                            drive growth. Learn how we can transform your
+                            business operations.
                           </p>
                         </div>
                         <div className="back-btn-part">
@@ -448,8 +595,9 @@ const Home = () => {
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            E-commerce development solutions designed to
+                            engaging online stores that boost sales and enhance
+                            user experience{" "}
                           </p>
                         </div>
                       </div>
@@ -467,9 +615,10 @@ const Home = () => {
                         <a href="data-center.html">
                           <div className="back-desc-part">
                             <p className="back-desc">
-                              We denounce with righteous indignation and dislike
-                              men who are so beguiled and demo ralized your
-                              data.
+                              Our e-commerce development services deliver
+                              tailored platforms for seamless transactions and
+                              customer satisfaction, helping your business
+                              succeed online.
                             </p>
                           </div>
                         </a>
@@ -504,8 +653,9 @@ const Home = () => {
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Streamline your operations with our Cloud and DevOps
+                            solutions, designed to enhance scalability and
+                            efficiency.
                           </p>
                         </div>
                       </div>
@@ -521,8 +671,10 @@ const Home = () => {
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Our Cloud and DevOps services optimize
+                            infrastructure, automate processes, and improve
+                            deployment speed, driving your business forward.
+                            Discover how we can help you scale efficiently.
                           </p>
                         </div>
                         <div className="back-btn-part">
@@ -557,8 +709,8 @@ const Home = () => {
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Creative website design solutions that captivate
+                            users and represent your brand with style.
                           </p>
                         </div>
                       </div>
@@ -574,8 +726,10 @@ const Home = () => {
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
-                            We denounce with righteous indignation and dislike
-                            men who are so beguiled and demo ralized your data.
+                            Our website design services focus on creating
+                            visually stunning and user-friendly websites that
+                            leave a lasting impression. Get in touch to bring
+                            your vision to life.
                           </p>
                         </div>
                         <div className="back-btn-part">
@@ -583,7 +737,7 @@ const Home = () => {
                             className="readon view-more"
                             to="/services/web-design"
                           >
-                            Get In Touch
+                            Learn More
                           </Link>
                         </div>
                       </div>
@@ -637,7 +791,13 @@ const Home = () => {
                 <div className="addon-process">
                   <div className="process-wrap">
                     <div className="process-img">
-                      <img src={process3} alt />
+                      <img
+                        style={{
+                          filter: "sepia(50) saturate(1000%) brightness(90%)",
+                        }}
+                        src={process3}
+                        alt=""
+                      />
                     </div>
                     <div className="process-text">
                       <h3 className="title">Execute</h3>
@@ -669,8 +829,10 @@ const Home = () => {
         >
           <div className="container">
             <div className="sec-title2 text-center mb-45">
-              <span className="sub-text style-bg">Work For Any Industry</span>
-              <h2 className="title">Best Solutions, For All Organizations</h2>
+              <span className="sub-text style-bg">Industry Solutions</span>
+              <h2 className="title">
+                Delivering the Best to Every Organization
+              </h2>
             </div>
             <div className="all-services">
               <div className="services-item">
@@ -1081,9 +1243,9 @@ const Home = () => {
           <div className="rs-technology style2 bg11 pt-110 pb-115 md-pt-75 md-pb-80">
             <div className="container">
               <div className="sec-title2 text-center mb-45">
-                <span className="sub-text white-color">Technology Index</span>
+                <span className="sub-text white-color">Technology Stack</span>
                 <h2 className="title title2 white-color">
-                  What Technology We Are Using For Our Valued Customers
+                  Powering Innovation for Our Valued Customers
                 </h2>
               </div>
               <div className="row">
@@ -1241,11 +1403,14 @@ const Home = () => {
               <div className="col-lg-4">
                 <div className="contact-box">
                   <div className="sec-title mb-45">
-                    <span className="sub-text style-bg white-color">
+                    <span
+                      style={{ padding: "0" }}
+                      className="sub-text style-bg white-color"
+                    >
                       Let&quot;s Talk
                     </span>
                     <h2 className="title white-color">
-                      Speak With Expert Engineers.
+                      Talk with Our Expert Engineers!
                     </h2>
                   </div>
 
@@ -1255,7 +1420,7 @@ const Home = () => {
                     </div>
                     <div className="address-text">
                       <span className="label">Email:</span>
-                      <a href="mailto:123222-8888">info@nanosoft.agency</a>
+                      <a href="mailto:123222-8888">contact@nanosoft.agency</a>
                     </div>
                   </div>
                   <div className="address-box mb-25">
@@ -1282,16 +1447,14 @@ const Home = () => {
                 <div className="contact-widget onepage-style">
                   <div className="sec-title2 mb-40">
                     <span className="sub-text style-bg contact mb-15">
-                      Get In Touch
+                      Contact Us
                     </span>
-                    <h2 className="title testi-title">Fill The Form Below</h2>
+                    <h2 className="title testi-title">
+                      We'd Love to Hear From You!
+                    </h2>
                   </div>
                   <div id="form-messages" />
-                  <form
-                    id="contact-form"
-                    method="post"
-                    action="https://rstheme.com/products/html/braintech/mailer.php"
-                  >
+                  <form ref={contactForm} onSubmit={handleSubmitContact(onSubmit)} id="contact-form">
                     <fieldset>
                       <div className="row">
                         <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
@@ -1299,50 +1462,69 @@ const Home = () => {
                             className="from-control"
                             type="text"
                             id="name"
-                            name="name"
-                            placeholder="Name"
-                            required
+                            placeholder="First Name"
+                            {...registerContact("firstName")}
                           />
+                          {contactErrors.firstName && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.firstName.message} *
+                            </div>
+                          )}
+                        </div>
+                        <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
+                          <input
+                            className="from-control"
+                            type="text"
+                            id="name"
+                            placeholder="Last Name"
+                            {...registerContact("lastName")}
+                          />
+                          {contactErrors.lastName && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.lastName.message} *
+                            </div>
+                          )}
                         </div>
                         <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
                           <input
                             className="from-control"
                             type="text"
                             id="email"
-                            name="email"
                             placeholder="E-Mail"
-                            required
+                            {...registerContact("email")}
                           />
+                          {contactErrors.email && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.email.message} *
+                            </div>
+                          )}
                         </div>
                         <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
                           <input
                             className="from-control"
                             type="text"
                             id="phone"
-                            name="phone"
                             placeholder="Phone Number"
-                            required
+                            {...registerContact("phone")}
                           />
-                        </div>
-                        <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
-                          <input
-                            className="from-control"
-                            type="text"
-                            id="website"
-                            name="website"
-                            placeholder="Your Website"
-                            required
-                          />
+                          {contactErrors.phone && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.phone.message} *
+                            </div>
+                          )}
                         </div>
                         <div className="col-lg-12 mb-30">
                           <textarea
                             className="from-control"
                             id="message"
-                            name="message"
                             placeholder="Your message Here"
-                            required
-                            defaultValue={""}
+                            {...registerContact("message")}
                           />
+                          {contactErrors.message && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.message.message} *
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div className="btn-part">
