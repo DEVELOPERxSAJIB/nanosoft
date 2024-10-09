@@ -43,27 +43,14 @@ import process2 from "../assets/images/process/planning.jpg";
 import process3 from "../assets/images/process/execute.jpg";
 import process4 from "../assets/images/process/calender.png";
 
-import team1 from "../assets/images/team/style1/1.jpg";
-import team2 from "../assets/images/team/style1/2.jpg";
-import team3 from "../assets/images/team/style1/3.jpg";
-import team4 from "../assets/images/team/style1/4.jpg";
-import team5 from "../assets/images/team/style1/5.jpg";
-import team6 from "../assets/images/team/style1/6.jpg";
-import team7 from "../assets/images/team/style1/7.jpg";
-import team8 from "../assets/images/team/style1/8.jpg";
-
-import partner1 from "../assets/images/partner/1.png";
-import partner2 from "../assets/images/partner/2.png";
-import partner3 from "../assets/images/partner/3.png";
-import partner4 from "../assets/images/partner/4.png";
-import partner5 from "../assets/images/partner/5.png";
 import { Link, useLocation } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { RxCross1 } from "react-icons/rx";
+import PageTitle from "../components/PageTitle";
 
 // import OwlCarousel from "react-owl-carousel";
 // import "owl.carousel/dist/assets/owl.carousel.css";
@@ -178,9 +165,34 @@ const Home = () => {
       });
   };
 
+  const [contactLoading, setContactLoading] = useState(false);
+  const [successMessageContact, setSucessMessageContact] = useState(false);
+
+  const sendContactEmail = () => {
+    setContactLoading(true);
+    emailjs
+      .sendForm("service_3kfcfro", "template_zm4w45p", contactForm.current, {
+        publicKey: "GAQ_Vq4tSYF9xubIj",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setSucessMessageContact(true);
+          resetContactForm();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      )
+      .finally(() => {
+        setContactLoading(false);
+      });
+  };
+
   return (
     <>
       <Layout>
+        <PageTitle title={"NanoSoft - Home"}/>
         {/* Bannar Start */}
         <div className="rs-banner style3 rs-rain-animate modify1">
           <div className="container">
@@ -205,7 +217,7 @@ const Home = () => {
                     </li>
                   </ul> */}
 
-                  <div className="rs-videos">
+                  {/* <div className="rs-videos">
                     <div className="animate-border white-color style3">
                       <a
                         className="popup-border popup-videos"
@@ -214,7 +226,7 @@ const Home = () => {
                         <i className="fa fa-play" />
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-lg-5 col-md-12 pl-70 md-pl-15">
@@ -1449,12 +1461,35 @@ const Home = () => {
                     <span className="sub-text style-bg contact mb-15">
                       Contact Us
                     </span>
-                    <h2 className="title testi-title">
-                      We'd Love to Hear From You!
-                    </h2>
+                    {successMessageContact ? (
+                      <div className="d-flex mt-3 justify-content-between alert alert-success text-center">
+                        <span
+                          className="text-success"
+                          style={{ fontWeight: "700px" }}
+                        >
+                          Thanks for contac with us. You will get an Email from
+                          us soon.
+                        </span>
+
+                        <span
+                          style={{ cursor: "pointer", paddingLeft: "3px" }}
+                          onClick={() => setSucessMessageContact(false)}
+                        >
+                          <RxCross1 color="#000" />
+                        </span>
+                      </div>
+                    ) : (
+                      <h2 className="title testi-title">
+                        We'd Love to Hear From You!
+                      </h2>
+                    )}
                   </div>
                   <div id="form-messages" />
-                  <form ref={contactForm} onSubmit={handleSubmitContact(onSubmit)} id="contact-form">
+                  <form
+                    ref={contactForm}
+                    onSubmit={handleSubmitContact(sendContactEmail)}
+                    id="contact-form"
+                  >
                     <fieldset>
                       <div className="row">
                         <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
@@ -1529,11 +1564,12 @@ const Home = () => {
                       </div>
                       <div className="btn-part">
                         <div className="form-group mb-0">
-                          <input
+                          <button
                             className="readon learn-more submit"
                             type="submit"
-                            defaultValue="Submit Now"
-                          />
+                          >
+                            {contactLoading ? "Sending Email . . ." : "Submit Now"}
+                          </button>
                         </div>
                       </div>
                     </fieldset>

@@ -18,11 +18,13 @@ import png4hover from "../../assets/images/services/style2/hover-img/4.png";
 import png5hover from "../../assets/images/services/style2/hover-img/5.png";
 import png6hover from "../../assets/images/services/style2/hover-img/6.png";
 import { Link } from "react-router-dom";
+import PageTitle from "../../components/PageTitle";
 
 const Services = () => {
   return (
     <>
       <Layout>
+        <PageTitle title={"NanoSoft - Services"} />
         <div>
           {/* Breadcrumbs Start */}
           <div className="rs-breadcrumbs img3">
@@ -66,9 +68,8 @@ const Services = () => {
                       </div>
                       <div className="services-desc">
                         <p>
-                          At vero eos et accusamus etiusto odio praesentium
-                          accusamus etiusto odio data center for managing
-                          database.
+                          We create engaging and responsive websites that
+                          enhance user experience and drive business growth.
                         </p>
                       </div>
                       <div className="serial-number">01</div>
@@ -94,9 +95,8 @@ const Services = () => {
                       </div>
                       <div className="services-desc">
                         <p>
-                          At vero eos et accusamus etiusto odio praesentium
-                          accusamus etiusto odio data center for managing
-                          database.
+                          We deliver custom, scalable software that drives
+                          efficiency and success in the digital world.
                         </p>
                       </div>
                       <div className="serial-number">02</div>
@@ -121,9 +121,8 @@ const Services = () => {
                       </div>
                       <div className="services-desc">
                         <p>
-                          At vero eos et accusamus etiusto odio praesentium
-                          accusamus etiusto odio data center for managing
-                          database.
+                          Tailored CRM/SRM solutions to enhance customer
+                          relationships and streamline management.
                         </p>
                       </div>
                       <div className="serial-number">03</div>
@@ -148,9 +147,9 @@ const Services = () => {
                       </div>
                       <div className="services-desc">
                         <p>
-                          At vero eos et accusamus etiusto odio praesentium
-                          accusamus etiusto odio data center for managing
-                          database.
+                          E-commerce development solutions designed to engaging
+                          online stores that boost sales and enhance user
+                          experience
                         </p>
                       </div>
                       <div className="serial-number">04</div>
@@ -175,9 +174,9 @@ const Services = () => {
                       </div>
                       <div className="services-desc">
                         <p>
-                          At vero eos et accusamus etiusto odio praesentium
-                          accusamus etiusto odio data center for managing
-                          database.
+                          Streamline your operations with our Cloud and DevOps
+                          solutions, designed to enhance scalability and
+                          efficiency.
                         </p>
                       </div>
                       <div className="serial-number">05</div>
@@ -202,9 +201,8 @@ const Services = () => {
                       </div>
                       <div className="services-desc">
                         <p>
-                          At vero eos et accusamus etiusto odio praesentium
-                          accusamus etiusto odio data center for managing
-                          database.
+                          Creative website design solutions that captivate users
+                          and represent your brand with style.
                         </p>
                       </div>
                       <div className="serial-number">06</div>
@@ -228,9 +226,9 @@ const Services = () => {
                       </h2>
                     </div>
                     <div className="btn-part mt-40">
-                      <a className="readon learn-more" href="contact.html">
+                      <Link className="readon learn-more" to="/contact">
                         Contact Us
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -245,9 +243,9 @@ const Services = () => {
                           </div>
                           <p className="number-txt">
                             {" "}
-                            Quisque placerat vitae lacus ut scelerisque. Fusce
-                            luctus odio ac nibh luctus, in porttitor theo lacus
-                            egestas.
+                            We begin by understanding your unique business
+                            needs, analyzing the market, and identifying the
+                            best strategies to ensure a successful project.
                           </p>
                         </div>
                       </div>
@@ -260,9 +258,9 @@ const Services = () => {
                             <h3 className="title">Planning</h3>
                           </div>
                           <p className="number-txt">
-                            Quisque placerat vitae lacus ut scelerisque. Fusce
-                            luctus odio ac nibh luctus, in porttitor theo lacus
-                            egestas.
+                            Our team creates a detailed plan tailored to your
+                            objectives, outlining each phase of the project to
+                            ensure smooth progress and timely completion.
                           </p>
                         </div>
                       </div>
@@ -275,9 +273,9 @@ const Services = () => {
                             <h3 className="title">Execute</h3>
                           </div>
                           <p className="number-txt">
-                            Quisque placerat vitae lacus ut scelerisque. Fusce
-                            luctus odio ac nibh luctus, in porttitor theo lacus
-                            egestas.
+                            With the plan in place, we move into development,
+                            applying industry-leading tools and practices to
+                            build a solution that meets your expectations.
                           </p>
                         </div>
                       </div>
@@ -290,9 +288,9 @@ const Services = () => {
                             <h3 className="title">Deliver</h3>
                           </div>
                           <p className="number-txt">
-                            Quisque placerat vitae lacus ut scelerisque. Fusce
-                            luctus odio ac nibh luctus, in porttitor theo lacus
-                            egestas.
+                            After rigorous testing and review, we deliver the
+                            final product, ensuring it aligns with your vision
+                            and performs seamlessly across all platforms.
                           </p>
                         </div>
                       </div>
@@ -328,11 +326,15 @@ const Services = () => {
                       <ul>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Up to 20 Pages Designed (responsive layout)</span>
+                          <span>
+                            Up to 20 Pages Designed (responsive layout)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Fully Responsive Design (Optimized for all devices)</span>
+                          <span>
+                            Fully Responsive Design (Optimized for all devices)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
@@ -353,9 +355,12 @@ const Services = () => {
                       </ul>
                     </div>
                     <div className="btn-part">
-                      <Link className="readon buy-now" to="/contact">
+                      <a
+                        className="readon buy-now"
+                        href="https://forms.gle/t3DWM7pHoqNw7BCb7"
+                      >
                         Buy Now
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -376,7 +381,9 @@ const Services = () => {
                       <ul>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Custom Web Development (Frontend & Backend)</span>
+                          <span>
+                            Custom Web Development (Frontend & Backend)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
@@ -384,7 +391,10 @@ const Services = () => {
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Advanced Web Application Features (Interactive multimedia, user authentication)</span>
+                          <span>
+                            Advanced Web Application Features (Interactive
+                            multimedia, user authentication)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
@@ -396,7 +406,10 @@ const Services = () => {
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Powerful Admin Panel (For content and user management)</span>
+                          <span>
+                            Powerful Admin Panel (For content and user
+                            management)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
@@ -405,9 +418,12 @@ const Services = () => {
                       </ul>
                     </div>
                     <div className="btn-part">
-                      <Link className="readon buy-now" to="/contact">
+                      <a
+                        className="readon buy-now"
+                        href="https://forms.gle/t3DWM7pHoqNw7BCb7"
+                      >
                         Buy Now
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -432,15 +448,23 @@ const Services = () => {
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Advanced Features (Client management, task management, financial tracking)</span>
+                          <span>
+                            Advanced Features (Client management, task
+                            management, financial tracking)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Third-Party Integrations (Payment gateways, email services)</span>
+                          <span>
+                            Third-Party Integrations (Payment gateways, email
+                            services)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Mobile App Integration (Android options available)</span>
+                          <span>
+                            Mobile App Integration (Android options available)
+                          </span>
                         </li>
                         <li>
                           <i className="fa fa-check" />
@@ -448,14 +472,19 @@ const Services = () => {
                         </li>
                         <li>
                           <i className="fa fa-check" />
-                          <span>Priority Maintenance & Support (3 Months Free)</span>
+                          <span>
+                            Priority Maintenance & Support (3 Months Free)
+                          </span>
                         </li>
                       </ul>
                     </div>
                     <div className="btn-part">
-                      <Link className="readon buy-now" to="/contact">
+                      <a
+                        className="readon buy-now"
+                        href="https://forms.gle/t3DWM7pHoqNw7BCb7"
+                      >
                         Buy Now
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

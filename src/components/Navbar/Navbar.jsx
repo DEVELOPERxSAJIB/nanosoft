@@ -111,7 +111,13 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        pathname === "/services/software-development"
+                        pathname === "/services" ||
+                        pathname === "/services/web-development" ||
+                        pathname === "/services/software-development" ||
+                        pathname === "/services/custom-crm-srm" ||
+                        pathname === "/services/ecommerce-development" ||
+                        pathname === "/services/cloud-and-devops" ||
+                        pathname === "/services/web-design"
                           ? "current-menu-item menu-item-has-children"
                           : "menu-item-has-children"
                       }
@@ -147,7 +153,7 @@ const Navbar = () => {
                               : null
                           }
                         >
-                          <Link to="/services/software-development">
+                          <Link to="/services/custom-crm-srm">
                             Custom ERM SRM System
                           </Link>{" "}
                         </li>
@@ -186,7 +192,7 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        pathname === "our-team" ? "current-menu-item" : null
+                        pathname === "/our-team" ? "current-menu-item" : null
                       }
                     >
                       <Link to="/our-team">Team</Link>
@@ -343,7 +349,7 @@ const Navbar = () => {
               <div className="line"></div>
 
               <li
-                className={pathname === "our-team" ? "current-menu-item" : null}
+                className={pathname === "/our-team" ? "current-menu-item" : null}
               >
                 <Link to="/our-team">Team</Link>
               </li>

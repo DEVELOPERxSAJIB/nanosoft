@@ -2,11 +2,13 @@ import service1 from "../../assets/images/blog/inner/1.jpg";
 import MenuList from "../../components/Services/MenuList";
 import Layout from "../../components/Layout/Layout";
 import { Link } from "react-router-dom";
-
+import PageTitle from "../../components/PageTitle";
 
 const WebDevelopment = () => {
   return (
     <Layout>
+      <PageTitle title={"NanoSoft - Services | Web development"} />
+
       <div>
         {/* Breadcrumbs Start */}
         <div className="rs-breadcrumbs img7">
@@ -19,7 +21,7 @@ const WebDevelopment = () => {
           >
             <h1 className="page-title">Web Development</h1>
             <ul>
-              <li title="Braintech - IT Solutions and Technology Startup HTML Template">
+              <li>
                 <Link className="active" to="/">
                   Home
                 </Link>
@@ -158,9 +160,9 @@ const WebDevelopment = () => {
                 </div>
                 <div className="col-lg-3 text-right col-md-12">
                   <div className="button-wrap">
-                    <a className="readon learn-more" href="contact.html">
+                    <Link className="readon learn-more" to="/contact">
                       Get In Touch
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

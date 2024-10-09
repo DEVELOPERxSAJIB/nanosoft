@@ -1,45 +1,110 @@
+import { useRef, useState } from "react";
 import Layout from "../components/Layout/Layout";
+import { Link } from "react-router-dom";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { RxCross1 } from "react-icons/rx";
+import PageTitle from "../components/PageTitle";
 
 const Contact = () => {
+
+  const contactSchema = yup.object().shape({
+    firstName: yup.string().required("Fist name is required"),
+    lastName: yup.string().required("Last name is required"),
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    phone: yup.string().required("Phone number is required"),
+    message: yup
+      .string("Optional")
+      .max(500, "Message cannot exceed 500 characters"),
+  });
+
+  const {
+    register: registerContact,
+    handleSubmit: handleSubmitContact,
+    formState: { errors: contactErrors },
+    reset: resetContactForm,
+  } = useForm({
+    resolver: yupResolver(contactSchema),
+  });
+
+  const contactForm = useRef();
+
+  const [contactLoading, setContactLoading] = useState(false);
+  const [successMessageContact, setSucessMessageContact] = useState(false);
+
+  const sendContactEmail = () => {
+    setContactLoading(true);
+    emailjs
+      .sendForm("service_3kfcfro", "template_zm4w45p", contactForm.current, {
+        publicKey: "GAQ_Vq4tSYF9xubIj",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setSucessMessageContact(true);
+          resetContactForm();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      )
+      .finally(() => {
+        setContactLoading(false);
+      });
+  };
+
   return (
     <>
       <Layout>
+      <PageTitle title={"NanoSoft - Contact Us"}/>
         {/* Breadcrumbs Start */}
         <div className="rs-breadcrumbs img6">
           <div className="breadcrumbs-inner text-center">
             <h1 className="page-title">Contact</h1>
             <ul>
-              <li title="Braintech - IT Solutions and Technology Startup HTML Template">
-                <a className="active" href="index.html">
+              <li title="">
+                <Link className="active" to={"/"}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>Contact</li>
             </ul>
           </div>
         </div>
         {/* Breadcrumbs End */}
-        {/* Contact Section Start */}
-        <div className="rs-contact pt-120 md-pt-80">
+        {/* Contact section Start */}
+        <div
+          id="rs-contact"
+          className="rs-contact gray-color pt-80 pb-80 md-pt-60"
+        >
           <div className="container">
             <div className="row">
-              <div className="col-lg-4 md-mb-60">
+              <div className="col-lg-4">
                 <div className="contact-box">
                   <div className="sec-title mb-45">
-                    <span className="sub-text new-text white-color">
-                      Let&apos;s Talk
+                    <span
+                      style={{ padding: "0" }}
+                      className="sub-text style-bg white-color"
+                    >
+                      Let&quot;s Talk
                     </span>
                     <h2 className="title white-color">
-                      Speak With Expert Engineers.
+                      Talk with Our Expert Engineers!
                     </h2>
                   </div>
+
                   <div className="address-box mb-25">
                     <div className="address-icon">
                       <i className="fa fa-home" />
                     </div>
                     <div className="address-text">
                       <span className="label">Email:</span>
-                      <a href="tel:123222-8888">(123) 222-8888</a>
+                      <a href="mailto:123222-8888">contact@nanosoft.agency</a>
                     </div>
                   </div>
                   <div className="address-box mb-25">
@@ -48,7 +113,7 @@ const Contact = () => {
                     </div>
                     <div className="address-text">
                       <span className="label">Phone:</span>
-                      <a href="#">info@yourmail.com</a>
+                      <a href="tel:01789557538">01789557538</a>
                     </div>
                   </div>
                   <div className="address-box">
@@ -57,22 +122,45 @@ const Contact = () => {
                     </div>
                     <div className="address-text">
                       <span className="label">Address:</span>
-                      <div className="desc">New Jesrsy, 1201, USA</div>
+                      <div className="desc">19 South Tootpara, Khulna</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-8 pl-70 md-pl-15">
-                <div className="contact-widget">
+              <div className="col-lg-8 pl-70 md-pl-15 md-mt-40">
+                <div className="contact-widget onepage-style">
                   <div className="sec-title2 mb-40">
-                    <span className="sub-text contact mb-15">Get In Touch</span>
-                    <h2 className="title testi-title">Fill The Form Below</h2>
+                    <span className="sub-text style-bg contact mb-15">
+                      Contact Us
+                    </span>
+                    {successMessageContact ? (
+                      <div className="d-flex mt-3 justify-content-between alert alert-success text-center">
+                        <span
+                          className="text-success"
+                          style={{ fontWeight: "700px" }}
+                        >
+                          Thanks for contac with us. You will get an Email from
+                          us soon.
+                        </span>
+
+                        <span
+                          style={{ cursor: "pointer", paddingLeft: "3px" }}
+                          onClick={() => setSucessMessageContact(false)}
+                        >
+                          <RxCross1 color="#000" />
+                        </span>
+                      </div>
+                    ) : (
+                      <h2 className="title testi-title">
+                        We'd Love to Hear From You!
+                      </h2>
+                    )}
                   </div>
                   <div id="form-messages" />
                   <form
+                    ref={contactForm}
+                    onSubmit={handleSubmitContact(sendContactEmail)}
                     id="contact-form"
-                    method="post"
-                    action="https://rstheme.com/products/html/braintech/mailer.php"
                   >
                     <fieldset>
                       <div className="row">
@@ -81,59 +169,79 @@ const Contact = () => {
                             className="from-control"
                             type="text"
                             id="name"
-                            name="name"
-                            placeholder="Name"
-                            required
+                            placeholder="First Name"
+                            {...registerContact("firstName")}
                           />
+                          {contactErrors.firstName && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.firstName.message} *
+                            </div>
+                          )}
+                        </div>
+                        <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
+                          <input
+                            className="from-control"
+                            type="text"
+                            id="name"
+                            placeholder="Last Name"
+                            {...registerContact("lastName")}
+                          />
+                          {contactErrors.lastName && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.lastName.message} *
+                            </div>
+                          )}
                         </div>
                         <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
                           <input
                             className="from-control"
                             type="text"
                             id="email"
-                            name="email"
                             placeholder="E-Mail"
-                            required
+                            {...registerContact("email")}
                           />
+                          {contactErrors.email && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.email.message} *
+                            </div>
+                          )}
                         </div>
                         <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
                           <input
                             className="from-control"
                             type="text"
                             id="phone"
-                            name="phone"
                             placeholder="Phone Number"
-                            required
+                            {...registerContact("phone")}
                           />
-                        </div>
-                        <div className="col-lg-6 mb-30 col-md-6 col-sm-6">
-                          <input
-                            className="from-control"
-                            type="text"
-                            id="website"
-                            name="website"
-                            placeholder="Your Website"
-                            required
-                          />
+                          {contactErrors.phone && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.phone.message} *
+                            </div>
+                          )}
                         </div>
                         <div className="col-lg-12 mb-30">
                           <textarea
                             className="from-control"
                             id="message"
-                            name="message"
                             placeholder="Your message Here"
-                            required
-                            defaultValue={""}
+                            {...registerContact("message")}
                           />
+                          {contactErrors.message && (
+                            <div className="text-danger pl-2">
+                              {contactErrors.message.message} *
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div className="btn-part">
                         <div className="form-group mb-0">
-                          <input
+                          <button
                             className="readon learn-more submit"
                             type="submit"
-                            defaultValue="Submit Now"
-                          />
+                          >
+                            {contactLoading ? "Sending Email . . ." : "Submit Now"}
+                          </button>
                         </div>
                       </div>
                     </fieldset>
@@ -142,11 +250,11 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="map-canvas pt-120 md-pt-80">
+          {/* <div className="map-canvas pt-120 md-pt-70">
             <iframe src="https://maps.google.com/maps?q=rstheme&t=&z=13&ie=UTF8&iwloc=&output=embed" />
-          </div>
+          </div> */}
         </div>
-        {/* Contact Section End */}
+        {/* Contact section End */}
       </Layout>
     </>
   );

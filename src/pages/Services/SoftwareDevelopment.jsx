@@ -3,11 +3,14 @@ import Layout from "../../components/Layout/Layout";
 import MenuList from "../../components/Services/MenuList";
 import CountUp from "react-countup";
 import service1 from "../../assets/images/blog/inner/4.jpg"
+import PageTitle from "../../components/PageTitle";
 
 const SoftwareDevelopment = () => {
   return (
     <>
       <Layout>
+      <PageTitle title={"NanoSoft - Services | Software development"} />
+
         <div>
           {/* Breadcrumbs Start */}
           <div className="rs-breadcrumbs img2">

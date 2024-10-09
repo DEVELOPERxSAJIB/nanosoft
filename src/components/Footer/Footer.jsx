@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import footerLogo from "../../assets/images/logo/logotext.png";
 
 const Footer = () => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <footer id="rs-footer" className="rs-footer">
@@ -114,10 +117,10 @@ const Footer = () => {
                     type="email"
                     name="EMAIL"
                     placeholder="Your email address"
-                    required
+                    onClick={() => navigate('/contact')}
                   />
                   <em className="paper-plane">
-                    <input type="submit" defaultValue="Sign up" />
+                    <input type="submit" defaultValue="Sign up" onClick={() => navigate('/contact')} />
                   </em>
                   <i className="flaticon-send" />
                 </p>

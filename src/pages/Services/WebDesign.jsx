@@ -6,10 +6,14 @@ import serviceImg3 from "../../assets/images/services/style7/3.png";
 import Layout from "../../components/Layout/Layout";
 import MenuList from "../../components/Services/MenuList";
 import service1 from "../../assets/images/banner/webdesign.png";
+import CountUp from "react-countup";
+import PageTitle from "../../components/PageTitle";
 
 const WebDesign = () => {
   return (
     <Layout>
+            <PageTitle title={"NanoSoft - Services | Web design"} />
+
       <div>
         {/* Breadcrumbs Start */}
         <div className="rs-breadcrumbs img2">
@@ -122,8 +126,10 @@ const WebDesign = () => {
                   <div className="counter-list">
                     <div className="counter-text">
                       <div className="count-number">
-                        <span className="rs-count">450</span>
-                        <span className="prefix">k</span>
+                        <span className="rs-count">
+                          <CountUp delay={2} end={30} />
+                        </span>
+                        <span className="prefix">+</span>
                       </div>
                       <h3 className="title">Happy Clients</h3>
                     </div>
@@ -133,8 +139,10 @@ const WebDesign = () => {
                   <div className="counter-list">
                     <div className="counter-text">
                       <div className="count-number">
-                        <span className="rs-count">750</span>
-                        <span className="prefix">+</span>
+                        <span className="rs-count">
+                          <CountUp delay={2} end={175} />
+                        </span>
+                        {/* <span className="prefix">+</span> */}
                       </div>
                       <h3 className="title">Project Delivered</h3>
                     </div>
@@ -144,10 +152,12 @@ const WebDesign = () => {
                   <div className="counter-list">
                     <div className="counter-text">
                       <div className="count-number">
-                        <span className="rs-count">750</span>
-                        <span className="prefix">+</span>
+                        <span className="rs-count">
+                          <CountUp delay={2} end={7.5} />
+                        </span>
+                        <span className="prefix">k</span>
                       </div>
-                      <h3 className="title">Project Delivered</h3>
+                      <h3 className="title">Global Reach</h3>
                     </div>
                   </div>
                 </div>
@@ -155,10 +165,12 @@ const WebDesign = () => {
                   <div className="counter-list">
                     <div className="counter-text">
                       <div className="count-number">
-                        <span className="rs-count">750</span>
-                        <span className="prefix">+</span>
+                        <span className="rs-count">
+                          <CountUp delay={2} end={12} />
+                        </span>
+                        {/* <span className="prefix">+</span> */}
                       </div>
-                      <h3 className="title">Project Delivered</h3>
+                      <h3 className="title">Expert Team Members</h3>
                     </div>
                   </div>
                 </div>

@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
-import service1 from "../../assets/images/gif/graphchart.gif"
+import service1 from "../../assets/images/gif/graphchart.gif";
 import serviceImg1 from "../../assets/images/services/style7/1.png";
 import serviceImg2 from "../../assets/images/services/style7/2.png";
 import serviceImg3 from "../../assets/images/services/style7/3.png";
 import Layout from "../../components/Layout/Layout";
 import MenuList from "../../components/Services/MenuList";
 import CountUp from "react-countup";
+import PageTitle from "../../components/PageTitle";
 
 const CustomCrmSrm = () => {
   return (
     <Layout>
+      <PageTitle title={"NanoSoft - Services | Custom CMS SRM development"} />
+
       <div>
         {/* Breadcrumbs Start */}
         <div className="rs-breadcrumbs img7">

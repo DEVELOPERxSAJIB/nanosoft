@@ -9,15 +9,12 @@ import team1 from "../assets/images/team/style1/1.jpg";
 import team2 from "../assets/images/team/style1/2.jpg";
 import team3 from "../assets/images/team/style1/3.jpg";
 import team4 from "../assets/images/team/style1/4.jpg";
-import team5 from "../assets/images/team/style1/5.jpg";
-import team6 from "../assets/images/team/style1/6.jpg";
-import team7 from "../assets/images/team/style1/7.jpg";
-import team8 from "../assets/images/team/style1/8.jpg";
 
 // import OwlCarousel from "react-owl-carousel";
 // import "owl.carousel/dist/assets/owl.carousel.css";
 // import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from "react-router-dom";
+import PageTitle from "../components/PageTitle";
 
 const About = () => {
   const options = {
@@ -43,6 +40,7 @@ const About = () => {
   return (
     <>
       <Layout>
+        <PageTitle title={"NanoSoft - About Us"} />
         <div>
           {/* Breadcrumbs Start */}
           <div className="rs-breadcrumbs img1">
@@ -59,14 +57,28 @@ const About = () => {
             </div>
           </div>
           {/* Breadcrumbs End */}
-          {/* About Section Start */}
-          <div className="rs-about gray-color pt-120 pb-120 md-pt-80 md-pb-80">
+          {/* About Start */}
+          <div className="rs-about gray-color pt-80 pb-80 md-pt-40 md-pb-40">
             <div className="container">
+              <div className="sec-title2 text-center mb-45">
+                <span className="sub-text style-bg">About Us</span>
+                <h2 className="title">
+                  Empowering Business Growth with Technology
+                </h2>
+              </div>
               <div className="row align-items-center">
                 <div className="col-lg-6 md-mb-30">
                   <div className="rs-animation-shape">
-                    <div className="images">
-                      <img src={about3} alt />
+                    <div style={{}} className="images">
+                      <img
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          borderRadius: "50%",
+                        }}
+                        src={about3}
+                        alt
+                      />
                     </div>
                     <div className="middle-image2">
                       <img className="dance" src={aboutEffect1} alt />
@@ -76,40 +88,34 @@ const About = () => {
                 <div className="col-lg-6 pl-60 md-pl-15">
                   <div className="contact-wrap">
                     <div className="sec-title mb-30">
-                      <div className="sub-text style-bg">About Us</div>
-                      <h2 className="title pb-38">
-                        We Are Increasing Business Success With Technology
-                      </h2>
                       <div className="desc pb-35">
-                        Over 25 years working in IT services developing software
-                        applications and mobile apps for clients all over the
-                        world.
+                        At NanoSoft, we are passionate about leveraging
+                        technology to drive business success. We specialize in
+                        developing tailored software solutions and mobile
+                        applications that help our clients streamline
+                        operations, boost productivity, and achieve their goals.
+                        Our approach combines innovation, dedication, and a deep
+                        understanding of industry needs to deliver exceptional
+                        results.
                       </div>
-                      <p className="margin-0 pb-15">
-                        We denounce with righteous indignation and dislike men
-                        who are so beguiled and demoralized by the charms of
-                        pleasure of the moment, so blinded by desire, that they
-                        cannot foresee the pain and trouble that are bound to
-                        ensue; and equal blame belongs to those who fail in
-                        their duty through weakness of will, which is the same
-                        as saying.
-                      </p>
-                    </div>
-                    <div className="btn-part">
-                      <Link className="readon learn-more" to="/contact">
-                        Contact Now
-                      </Link>
+                      <div className="desc pb-35">
+                        We pride ourselves on building long-lasting partnerships
+                        with our clients, focusing on their unique challenges
+                        and turning them into opportunities for growth. Let’s
+                        work together to bring your vision to life and pave the
+                        way for a successful future.
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="shape-image">
-                <img className="top dance" src={dotted3} alt />
-                <img className="bottom dance" src={shape3} alt />
-              </div>
+              {/* <div className="shape-image">
+              <img className="top dance" src={dotted3} alt />
+              <img className="bottom dance" src={shape3} alt />
+            </div> */}
             </div>
           </div>
-          {/* About Section End */}
+          {/* About End */}
           {/* Team Section */}
           {/* <div
             id="rs-team"
