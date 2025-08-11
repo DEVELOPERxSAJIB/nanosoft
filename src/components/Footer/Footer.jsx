@@ -1,17 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import footerLogo from "../../assets/images/logo/logotext.png";
 
 const Footer = () => {
-
-  const navigate = useNavigate()
-
   return (
     <>
       <footer id="rs-footer" className="rs-footer">
         <div className="footer-top">
           <div className="container">
             <div className="row">
-              <div className="col-lg-3 col-md-12 col-sm-12 footer-widget">
+              <div className="col-lg-4 col-md-12 col-sm-12 footer-widget">
                 <div className="footer-logo mb-30">
                   <Link to="/">
                     <img style={{ objectFit: "cover" }} src={footerLogo} alt />
@@ -20,7 +17,7 @@ const Footer = () => {
                 <div className="textwidget pb-30">
                   <p>
                     Your success is our mission. Connect with us for
-                    cutting-edge development, web design, and support services.
+                    creative development, web design, and support services.
                   </p>
                 </div>
                 <ul className="footer-social md-mb-30">
@@ -50,7 +47,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-lg-3 col-md-12 col-sm-12 pl-45 md-pl-15 md-mb-30">
+              <div className="col-lg-4 col-md-12 col-sm-12 pl-45 md-pl-15 md-mb-30">
                 <h3 className="widget-title">IT Services</h3>
                 <ul className="site-map">
                   <li>
@@ -76,15 +73,9 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-lg-3 col-md-12 col-sm-12 md-mb-30">
+              <div className="col-lg-4 col-md-12 col-sm-12 md-mb-30">
                 <h3 className="widget-title">Contact Info</h3>
                 <ul className="address-widget">
-                  <li>
-                    <i className="flaticon-location" />
-                    <div className="desc">
-                      19 South Tootpara, 2 no cross raod. Khulna - 9100
-                    </div>
-                  </li>
                   <li>
                     <i className="flaticon-call" />
                     <div className="desc">
@@ -103,27 +94,13 @@ const Footer = () => {
                     <i className="flaticon-clock-1" />
                     <div className="desc">Opening Hours: 10:00 - 19:00</div>
                   </li>
+                  <li>
+                    <i className="flaticon-location" />
+                    <div className="desc">
+                      19 South Tootpara, 2 no cross raod. Khulna - 9100
+                    </div>
+                  </li>
                 </ul>
-              </div>
-              <div className="col-lg-3 col-md-12 col-sm-12">
-                <h3 className="widget-title">Newsletter</h3>
-                <p className="widget-desc">
-                  Stay updated with the latest in software development and
-                  digital solutions. Subscribe to the NanoSoft newsletter to
-                  your inbox.
-                </p>
-                <p>
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    placeholder="Your email address"
-                    onClick={() => navigate('/contact')}
-                  />
-                  <em className="paper-plane">
-                    <input type="submit" defaultValue="Sign up" onClick={() => navigate('/contact')} />
-                  </em>
-                  <i className="flaticon-send" />
-                </p>
               </div>
             </div>
           </div>

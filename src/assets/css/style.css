@@ -919,16 +919,42 @@ blockquote cite:before {
   background-image: linear-gradient(250deg, #03228f 0%, #4e95ed 100%);
   color: #ffffff;
 }
+
 .readon.learn-more.submit {
   background-image: linear-gradient(90deg, #03228f 0%, #4e95ed 100%);
   padding: 16px 40px 16px 40px;
   font-weight: 500;
   font-size: 16px;
+  margin: 0 5px;
 }
 .readon.learn-more.submit:hover {
   background-image: linear-gradient(200deg, #03228f 0%, #4e95ed 100%);
   color: #ffffff;
 }
+
+.none-readon.learn-more.submit {
+  background-image: linear-gradient(90deg, #F6F7F9 0%, #E2EBF8 100%);
+  padding: 16px 40px 16px 40px;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 5px;
+  color: #0a0a0a;
+  transition: all .3s ease-in;
+}
+.none-readon.learn-more.submit:hover {
+  background-image: linear-gradient(200deg, #03228f 0%, #4e95ed 100%);
+  color: #ffffff;
+  transition: all .3s ease-in;
+}
+.none-readon.learn-more:focus {
+  outline: none;
+  box-shadow: none;
+}
+.readon.learn-more:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .readon.learn-more.post {
   background-image: linear-gradient(50deg, #03228f 10%, #0e73e4 100%);
   padding: 12px 30px;

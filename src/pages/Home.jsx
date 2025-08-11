@@ -3,12 +3,12 @@ import banner4 from "../assets/images/banner/banner-4.png";
 
 import tech1png from "../assets/images/technology/style3/1.png";
 import tech2png from "../assets/images/technology/style3/2.png";
-import tech3png from "../assets/images/technology/style3/3.png";
-import tech4png from "../assets/images/technology/style3/4.png";
-import tech5png from "../assets/images/technology/style3/5.png";
+import tech3png from "../assets/images/technology/style3/image.png";
+import tech4png from "../assets/images/technology/style3/real-state.png";
+import tech5png from "../assets/images/technology/style3/travel.png";
 import tech6png from "../assets/images/technology/style3/6.png";
 import tech7png from "../assets/images/technology/style3/7.png";
-import tech8png from "../assets/images/technology/style3/8.png";
+import tech8png from "../assets/images/technology/style3/event.png";
 import tech9png from "../assets/images/technology/style3/9.png";
 import tech10png from "../assets/images/technology/style3/10.png";
 
@@ -38,10 +38,10 @@ import service5 from "../assets/images/services/main-home/icons/5.png";
 import service6 from "../assets/images/services/main-home/icons/6.png";
 import imgS2 from "../assets/images/services/s2.png";
 
-import process1 from "../assets/images/process/discover.jpg";
-import process2 from "../assets/images/process/planning.jpg";
-import process3 from "../assets/images/process/execute.jpg";
-import process4 from "../assets/images/process/calender.png";
+import process1 from "../assets/images/process/disc.png";
+import process2 from "../assets/images/process/pencil.png";
+import process3 from "../assets/images/process/tree.jpg";
+import process4 from "../assets/images/process/cal.svg";
 
 import { Link, useLocation } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -51,6 +51,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { RxCross1 } from "react-icons/rx";
 import PageTitle from "../components/PageTitle";
+import Portfolio from "../components/Home/Portfolio";
 
 // import OwlCarousel from "react-owl-carousel";
 // import "owl.carousel/dist/assets/owl.carousel.css";
@@ -192,7 +193,10 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <PageTitle title={"NanoSoft - Home"}/>
+        <PageTitle
+          title="NanoSoft - Home"
+          description="NanoSoft is your trusted partner for innovative software solutions. We deliver tailored web and software development services worldwide."
+        />
         {/* Bannar Start */}
         <div className="rs-banner style3 rs-rain-animate modify1">
           <div className="container">
@@ -209,41 +213,29 @@ const Home = () => {
                     We deliver top-notch web solutions worldwide, driving
                     success with creativity and technical mastery.
                   </p>
-                  {/* <ul className="banner-btn">
-                    <li>
-                      <a className="readon started" href="about.html">
-                        Get Started
-                      </a>
-                    </li>
-                  </ul> */}
-
-                  {/* <div className="rs-videos">
-                    <div className="animate-border white-color style3">
-                      <a
-                        className="popup-border popup-videos"
-                        // href="https://www.youtube.com/watch?v=YLN1Argi7ik"
-                      >
-                        <i className="fa fa-play" />
-                      </a>
-                    </div>
-                  </div> */}
+                  {/* Buttons and videos commented out */}
                 </div>
               </div>
               <div className="col-lg-5 col-md-12 pl-70 md-pl-15">
                 <div className="rs-contact">
                   <div className="contact-wrap">
                     {successMessage ? (
-                      <div className="d-flex justify-content-between alert alert-success text-center">
+                      <div
+                        className="d-flex justify-content-between alert alert-success text-center"
+                        role="alert"
+                      >
                         {successMessage ? (
                           <span
                             className="text-success"
-                            style={{ fontWeight: "700px" }}
+                            style={{ fontWeight: "700" }}
                           >
-                            Thanks for contac with us. You will get an Email
-                            from us soon.
+                            Thanks for contacting us. You will get an email from
+                            us soon.
                           </span>
                         ) : null}
                         <span
+                          role="button"
+                          aria-label="Close success message"
                           style={{ cursor: "pointer", paddingLeft: "3px" }}
                           onClick={() => setSucessMessage(false)}
                         >
@@ -266,62 +258,90 @@ const Home = () => {
                       ref={form}
                       onSubmit={handleSubmit(sendEmail)}
                       id="appointment-form"
+                      aria-label="Schedule an appointment form"
                     >
-                      <div className="my-3"></div>
                       <fieldset>
                         <div className="row">
                           <div className="col-lg-12 mb-15">
+                            <label
+                              htmlFor="appointment_name"
+                              className="sr-only"
+                            >
+                              Name
+                            </label>
                             <input
                               className="from-control"
                               type="text"
                               id="appointment_name"
                               placeholder="Name"
+                              aria-required="true"
                               {...register("name")}
                             />
                             {errors.name && (
-                              <div className="text-danger pl-2">
+                              <div className="text-danger pl-2" role="alert">
                                 {errors.name.message} *
                               </div>
                             )}
                           </div>
                           <div className="col-lg-12 mb-15">
+                            <label
+                              htmlFor="appointment_email"
+                              className="sr-only"
+                            >
+                              Email
+                            </label>
                             <input
                               className="from-control"
-                              type="text"
+                              type="email"
                               id="appointment_email"
                               placeholder="E-Mail"
+                              aria-required="true"
                               {...register("email")}
                             />
                             {errors.email && (
-                              <div className="text-danger pl-2">
+                              <div className="text-danger pl-2" role="alert">
                                 {errors.email.message} *
                               </div>
                             )}
                           </div>
                           <div className="col-lg-12 mb-15">
+                            <label
+                              htmlFor="appointment_phone"
+                              className="sr-only"
+                            >
+                              Phone
+                            </label>
                             <input
                               className="from-control"
-                              type="text"
+                              type="tel"
                               id="appointment_phone"
                               placeholder="Phone"
+                              aria-required="true"
                               {...register("phone")}
                             />
                             {errors.phone && (
-                              <div className="text-danger pl-2">
+                              <div className="text-danger pl-2" role="alert">
                                 {errors.phone.message} *
                               </div>
                             )}
                           </div>
                           <div className="col-lg-12 mb-25">
+                            <label
+                              htmlFor="appointment_message"
+                              className="sr-only"
+                            >
+                              Your Message
+                            </label>
                             <input
                               className="from-control"
                               type="text"
-                              id="appointment_website"
+                              id="appointment_message"
                               placeholder="Your Message"
+                              aria-required="true"
                               {...register("message")}
                             />
                             {errors.message && (
-                              <div className="text-danger pl-2">
+                              <div className="text-danger pl-2" role="alert">
                                 {errors.message.message} *
                               </div>
                             )}
@@ -360,19 +380,25 @@ const Home = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 md-mb-30">
                 <div className="rs-animation-shape">
-                  <div style={{}} className="images">
+                  <div className="images" style={{}}>
                     <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754833544/Nanosoft/Home/about_rzkzek.jpg"
+                      alt="Team collaborating on innovative software solutions"
                       style={{
                         height: "100%",
                         width: "100%",
                         borderRadius: "50%",
                       }}
-                      src={about3}
-                      alt
+                      loading="lazy"
                     />
                   </div>
                   <div className="middle-image2">
-                    <img className="dance" src={aboutEffect1} alt />
+                    <img
+                      className="dance"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754833802/Nanosoft/Home/effect-1_iuv8g4.png"
+                      alt="Animated decorative technology effect"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -398,9 +424,9 @@ const Home = () => {
                   </div>
                   <div className="btn-part">
                     <Link
-                      to={"/about"}
+                      to="/about"
                       className="readon learn-more"
-                      href="contact.html"
+                      title="Learn more about NanoSoft"
                     >
                       Learn More
                     </Link>
@@ -408,37 +434,51 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            {/* Uncomment and add alt if you bring these shapes back */}
             {/* <div className="shape-image">
-              <img className="top dance" src={dotted3} alt />
-              <img className="bottom dance" src={shape3} alt />
-            </div> */}
+      <img className="top dance" src={dotted3} alt="Decorative dotted shape" />
+      <img className="bottom dance" src={shape3} alt="Decorative shape" />
+    </div> */}
           </div>
         </div>
         {/* About End */}
 
         {/* Service Start */}
-        <div className="rs-services style2 pt-80 pb-80 md-pt-60 md-pb-60">
+        <div
+          className="rs-services style2 pt-80 pb-80 md-pt-60 md-pb-60"
+          style={{ background: "inherit" }}
+        >
           <div className="container">
             <div className="sec-title2 text-center mb-45">
               <span className="sub-text style-bg">Services</span>
               <h2 className="title">
-                Your Trusted IT Partner for Innovative Solutions{" "}
+                Your Trusted IT Partner for Innovative Solutions
               </h2>
             </div>
-            <div className="row">
-              <div className="col-lg-4 col-md-6 mb-25">
+            <div className="row" role="list">
+              {/* Web Development */}
+              <div className="col-lg-4 col-md-6 mb-25" role="listitem">
                 <div className="flip-box-inner">
                   <div className="flip-box-wrap">
                     <div className="front-part">
                       <div className="front-content-part">
                         <div className="front-icon-part">
                           <div className="icon-part">
-                            <img src={service2} alt />
+                            <img
+                              src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754907565/Nanosoft/Home/Services/2_sagcqn.png"
+                              alt="Web Development Icon"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a href="web-development.html"> Web Development</a>
+                            <a
+                              href="web-development.html"
+                              title="Web Development Services"
+                            >
+                              Web Development
+                            </a>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -453,45 +493,57 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <Link to="/services/web-development">
-                              {" "}
+                            <a
+                              href="web-development.html"
+                              title="Learn More About Web Development Services"
+                            >
                               Web Development
-                            </Link>
+                            </a>
                           </h3>
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
                             Our web development services focus on building
                             dynamic, user-friendly websites that effectively
-                            represent your brand.
+                            represent your brand and grow your business online.
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <Link
+                          <a
                             className="readon view-more"
-                            to="/services/web-development"
+                            href="web-development.html"
+                            title="Learn More About Web Development"
                           >
                             Learn More
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 mb-25">
+
+              {/* Software Development */}
+              <div className="col-lg-4 col-md-6 mb-25" role="listitem">
                 <div className="flip-box-inner">
                   <div className="flip-box-wrap">
                     <div className="front-part">
                       <div className="front-content-part">
                         <div className="front-icon-part">
                           <div className="icon-part">
-                            <img src={service1} alt />
+                            <img
+                              src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754907564/Nanosoft/Home/Services/1_uc2mbb.png"
+                              alt="Software Development Icon"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a href="software-development.html">
+                            <a
+                              href="software-development.html"
+                              title="Software Development Services"
+                            >
                               Software Development
                             </a>
                           </h3>
@@ -508,52 +560,66 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <Link to="/services/software-development">
+                            <a
+                              href="software-development.html"
+                              title="Learn More About Software Development"
+                            >
                               Software Development
-                            </Link>
+                            </a>
                           </h3>
                         </div>
                         <div className="back-desc-part">
                           <p className="back-desc">
                             Our software development services are tailored to
                             meet your business needs, providing scalable and
-                            secure solutions. We focus on innovation and
-                            efficiency to ensure your success in the digital
-                            landscape.
+                            secure solutions focused on innovation and
+                            efficiency.
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <Link
+                          <a
                             className="readon view-more"
-                            to="/services/software-development"
+                            href="software-development.html"
+                            title="Learn More About Software Development"
                           >
                             Learn More
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 mb-25">
+
+              {/* Custom CRM/SRM */}
+              <div className="col-lg-4 col-md-6 mb-25" role="listitem">
                 <div className="flip-box-inner">
                   <div className="flip-box-wrap">
                     <div className="front-part">
                       <div className="front-content-part">
                         <div className="front-icon-part">
                           <div className="icon-part">
-                            <img src={service3} alt />
+                            <img
+                              src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754907566/Nanosoft/Home/Services/3_lubj46.png"
+                              alt="Custom CRM/SRM Icon"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a href="analytic-solutions.html">Custom CRM/SRM</a>
+                            <a
+                              href="analytic-solutions.html"
+                              title="Custom CRM and SRM Solutions"
+                            >
+                              Custom CRM/SRM
+                            </a>
                           </h3>
                         </div>
                         <div className="front-desc-part">
                           <p>
                             Tailored CRM/SRM solutions to enhance customer
-                            relationships and streamline management.{" "}
+                            relationships and streamline management.
                           </p>
                         </div>
                       </div>
@@ -562,9 +628,12 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <Link to="/services/custom-crm-srm">
+                            <a
+                              href="analytic-solutions.html"
+                              title="Learn More About Custom CRM/SRM"
+                            >
                               Custom CRM/SRM
-                            </Link>
+                            </a>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -576,40 +645,49 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <Link
+                          <a
                             className="readon view-more"
-                            to="/services/custom-crm-srm"
+                            href="analytic-solutions.html"
+                            title="Learn More About Custom CRM/SRM"
                           >
                             Learn More
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
+
+              {/* E-commerce Development */}
+              <div className="col-lg-4 col-md-6" role="listitem">
                 <div className="flip-box-inner">
                   <div className="flip-box-wrap">
                     <div className="front-part">
                       <div className="front-content-part">
                         <div className="front-icon-part">
                           <div className="icon-part">
-                            <img src={service6} alt />
+                            <img
+                              src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754907564/Nanosoft/Home/Services/5_szr8lc.png"
+                              alt="E-commerce Development Icon"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a href="data-center.html">
+                            <a
+                              href="data-center.html"
+                              title="E-commerce Development Services"
+                            >
                               E-commerce Development
                             </a>
                           </h3>
                         </div>
                         <div className="front-desc-part">
                           <p>
-                            E-commerce development solutions designed to
-                            engaging online stores that boost sales and enhance
-                            user experience{" "}
+                            This solutions designed to create engaging online
+                            stores that boost sales and enhance user experience.
                           </p>
                         </div>
                       </div>
@@ -618,49 +696,59 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <Link to="/services/ecommerce-development">
+                            <a
+                              href="data-center.html"
+                              title="Learn More About E-commerce Development"
+                            >
                               E-commerce Development
-                            </Link>
+                            </a>
                           </h3>
-                          <Link to="/services/ecommerce-development"></Link>
                         </div>
-                        <a href="data-center.html">
-                          <div className="back-desc-part">
-                            <p className="back-desc">
-                              Our e-commerce development services deliver
-                              tailored platforms for seamless transactions and
-                              customer satisfaction, helping your business
-                              succeed online.
-                            </p>
-                          </div>
-                        </a>
+                        <div className="back-desc-part">
+                          <p className="back-desc">
+                            Our e-commerce development services deliver tailored
+                            platforms for seamless transactions and customer
+                            satisfaction, helping your business succeed online.
+                          </p>
+                        </div>
                         <div className="back-btn-part">
-                          <a href="data-center.html"></a>
-                          <Link
+                          <a
                             className="readon view-more"
-                            to="/services/ecommerce-development"
+                            href="data-center.html"
+                            title="Learn More About E-commerce Development"
                           >
                             Learn More
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 md-mb-25">
+
+              {/* Cloud and DevOps */}
+              <div className="col-lg-4 col-md-6 md-mb-25" role="listitem">
                 <div className="flip-box-inner">
                   <div className="flip-box-wrap">
                     <div className="front-part">
                       <div className="front-content-part">
                         <div className="front-icon-part">
                           <div className="icon-part">
-                            <img src={service4} alt />
+                            <img
+                              src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754907567/Nanosoft/Home/Services/4_ftv9jy.png"
+                              alt="Cloud and DevOps Icon"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a href="cloud-and-devops.html">Cloud and DevOps</a>
+                            <a
+                              href="cloud-and-devops.html"
+                              title="Cloud and DevOps Services"
+                            >
+                              Cloud and DevOps
+                            </a>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -676,9 +764,12 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <Link to="/services/cloud-and-devops">
+                            <a
+                              href="cloud-and-devops.html"
+                              title="Learn More About Cloud and DevOps"
+                            >
                               Cloud and DevOps
-                            </Link>
+                            </a>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -690,33 +781,43 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <Link
+                          <a
                             className="readon view-more"
-                            to="/services/cloud-and-devops"
+                            href="cloud-and-devops.html"
+                            title="Learn More About Cloud and DevOps"
                           >
                             Learn More
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 sm-mb-25">
+
+              {/* Website Design */}
+              <div className="col-lg-4 col-md-6 sm-mb-25" role="listitem">
                 <div className="flip-box-inner">
                   <div className="flip-box-wrap">
                     <div className="front-part">
                       <div className="front-content-part">
                         <div className="front-icon-part">
                           <div className="icon-part">
-                            <img src={service5} alt />
+                            <img
+                              src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754907564/Nanosoft/Home/Services/6_scwu73.png"
+                              alt="Website Design Icon"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <Link to="/services/web-design">
+                            <a
+                              href="/services/web-design"
+                              title="Website Design Services"
+                            >
                               Website Design
-                            </Link>
+                            </a>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -731,9 +832,12 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <Link to="/services/web-design">
+                            <a
+                              href="/services/web-design"
+                              title="Learn More About Website Design"
+                            >
                               Website Design
-                            </Link>
+                            </a>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -745,12 +849,13 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <Link
+                          <a
                             className="readon view-more"
-                            to="/services/web-design"
+                            href="/services/web-design"
+                            title="Learn More About Website Design"
                           >
                             Learn More
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -759,11 +864,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="shape-animation">
-            <div className="shape-part">
-              <img className="dance" src={imgS2} alt="images" />
-            </div>
-          </div>
+          {/* <div className="shape-animation">
+    <div className="shape-part">
+      <img className="dance" src="" alt="Decorative shape animation" />
+    </div>
+  </div> */}
         </div>
         {/* Service End */}
 
@@ -779,7 +884,11 @@ const Home = () => {
                 <div className="addon-process">
                   <div className="process-wrap">
                     <div className="process-img">
-                      <img src={process1} alt />
+                      <img
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919439/Nanosoft/Home/Process/disc_onmewc.png"
+                        alt="Discovery process icon"
+                        title="Discovery phase of the project"
+                      />
                     </div>
                     <div className="process-text">
                       <h3 className="title">Discovery</h3>
@@ -787,28 +896,36 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+
               <div className="col-lg-3 col-sm-6 md-mb-50">
                 <div className="addon-process">
                   <div className="process-wrap">
                     <div className="process-img">
-                      <img src={process2} alt />
+                      <img
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919440/Nanosoft/Home/Process/pencil_oquxrx.png"
+                        alt="Project planning icon"
+                        title="Planning stage of the project"
+                      />
                     </div>
                     <div className="process-text">
-                      <h3 className="title"> Planning</h3>
+                      <h3 className="title">Planning</h3>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div className="col-lg-3 col-sm-6">
                 <div className="addon-process">
                   <div className="process-wrap">
                     <div className="process-img">
                       <img
                         style={{
-                          filter: "sepia(50) saturate(1000%) brightness(90%)",
+                          filter:
+                            "sepia(70) saturate(120%) brightness(90%) hue-rotate(90deg)",
                         }}
-                        src={process3}
-                        alt=""
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919442/Nanosoft/Home/Process/tree_ssrusu.jpg"
+                        alt="Execution process graphic"
+                        title="Execution phase of the project"
                       />
                     </div>
                     <div className="process-text">
@@ -817,17 +934,43 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+
               <div className="col-lg-3 col-sm-6">
                 <div className="addon-process">
                   <div className="process-wrap">
-                    <div className="process-img">
-                      <img src={process4} alt />
+                    <div
+                      className="process-img"
+                      style={{
+                        height: "20.5rem",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919438/Nanosoft/Home/Process/cal_emyupk.svg"
+                        alt="Project delivery icon"
+                        title="Deliverables phase of the project"
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "cover",
+                          display: "block",
+                        }}
+                      />
                     </div>
                     <div className="process-text">
                       <h3 className="title">Deliver</h3>
                     </div>
                   </div>
                 </div>
+                <style>
+                  {`
+        @media (min-width: 1024px) {
+          .process-img {
+            height: 17.5rem !important;
+          }
+        }
+      `}
+                </style>
               </div>
             </div>
           </div>
@@ -846,104 +989,144 @@ const Home = () => {
                 Delivering the Best to Every Organization
               </h2>
             </div>
-            <div className="all-services">
-              <div className="services-item">
+            <div className="all-services" role="list">
+              <div className="services-item" role="listitem">
                 <div className="services-wrap">
                   <div className="services-icon">
-                    <img src={tech1png} alt />
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913700/Nanosoft/Home/Industry/1_ekgz5k.png"
+                      alt="Software Industry Solutions"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="services-text">
                     <h4 className="title">Software</h4>
                   </div>
                 </div>
               </div>
-              <div className="services-item">
+              <div className="services-item" role="listitem">
                 <div className="services-wrap">
                   <div className="services-icon">
-                    <img src={tech2png} alt />
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913700/Nanosoft/Home/Industry/2_v6qusw.png"
+                      alt="E-commerce Industry Solutions"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="services-text">
-                    <h4 className="title">Fintech</h4>
+                    <h4 className="title">E-commerce</h4>
                   </div>
                 </div>
               </div>
-              <div className="services-item">
+              <div className="services-item" role="listitem">
                 <div className="services-wrap">
                   <div className="services-icon">
-                    <img src={tech3png} alt />
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913707/Nanosoft/Home/Industry/image_qmuq8g.png"
+                      alt="Healthcare Industry Solutions"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="services-text">
                     <h4 className="title">Healthcare</h4>
                   </div>
                 </div>
               </div>
-              <div className="services-item">
+              <div className="services-item" role="listitem">
                 <div className="services-wrap">
                   <div className="services-icon">
-                    <img src={tech4png} alt />
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913708/Nanosoft/Home/Industry/real-state_pmp5dy.png"
+                      alt="Real Estate Industry Solutions"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="services-text">
-                    <h4 className="title">Data Mining</h4>
+                    <h4 className="title">Real Estate</h4>
                   </div>
                 </div>
               </div>
-              <div className="services-item">
+              <div className="services-item" role="listitem">
                 <div className="services-wrap">
                   <div className="services-icon">
-                    <img src={tech5png} alt />
-                  </div>
-                  <div className="services-text">
-                    <h4 className="title">Machine learning</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="services-item">
-                <div className="services-wrap">
-                  <div className="services-icon">
-                    <img src={tech6png} alt />
-                  </div>
-                  <div className="services-text">
-                    <h4 className="title">Medical</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="services-item">
-                <div className="services-wrap">
-                  <div className="services-icon">
-                    <img src={tech7png} alt />
-                  </div>
-                  <div className="services-text">
-                    <h4 className="title">Entertainment</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="services-item">
-                <div className="services-wrap">
-                  <div className="services-icon">
-                    <img src={tech8png} alt />
-                  </div>
-                  <div className="services-text">
-                    <h4 className="title">AI</h4>
-                  </div>
-                </div>
-              </div>
-              <div className="services-item">
-                <div className="services-wrap">
-                  <div className="services-icon">
-                    <img src={tech9png} alt />
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913703/Nanosoft/Home/Industry/9_kfyhwt.png"
+                      alt="Manufacturing Industry Solutions"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="services-text">
                     <h4 className="title">Manufacturing</h4>
                   </div>
                 </div>
               </div>
-              <div className="services-item">
+              <div className="services-item" role="listitem">
                 <div className="services-wrap">
                   <div className="services-icon">
-                    <img src={tech10png} alt />
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913705/Nanosoft/Home/Industry/10_zbeuce.png"
+                      alt="Logistics Industry Solutions"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="services-text">
                     <h4 className="title">Logistics</h4>
+                  </div>
+                </div>
+              </div>
+              <div className="services-item" role="listitem">
+                <div className="services-wrap">
+                  <div className="services-icon">
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913709/Nanosoft/Home/Industry/travel_rs5bmx.png"
+                      alt="Travel Industry Solutions"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="services-text">
+                    <h4 className="title">Travel</h4>
+                  </div>
+                </div>
+              </div>
+              <div className="services-item" role="listitem">
+                <div className="services-wrap">
+                  <div className="services-icon">
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913701/Nanosoft/Home/Industry/6_wv7iba.png"
+                      alt="News Portal Industry Solutions"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="services-text">
+                    <h4 className="title">News Portal</h4>
+                  </div>
+                </div>
+              </div>
+              <div className="services-item" role="listitem">
+                <div className="services-wrap">
+                  <div className="services-icon">
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913702/Nanosoft/Home/Industry/7_xelxgi.png"
+                      alt="Entertainment Industry Solutions"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="services-text">
+                    <h4 className="title">Entertainment</h4>
+                  </div>
+                </div>
+              </div>
+              <div className="services-item" role="listitem">
+                <div className="services-wrap">
+                  <div className="services-icon">
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913706/Nanosoft/Home/Industry/event_tcwtns.png"
+                      alt="Events Industry Solutions"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="services-text">
+                    <h4 className="title">Events</h4>
                   </div>
                 </div>
               </div>
@@ -1568,7 +1751,9 @@ const Home = () => {
                             className="readon learn-more submit"
                             type="submit"
                           >
-                            {contactLoading ? "Sending Email . . ." : "Submit Now"}
+                            {contactLoading
+                              ? "Sending Email . . ."
+                              : "Submit Now"}
                           </button>
                         </div>
                       </div>
@@ -1583,6 +1768,10 @@ const Home = () => {
           </div> */}
         </div>
         {/* Contact section End */}
+
+        {/* Portfolio start */}
+        <Portfolio />
+        {/* Portfolio End */}
 
         {/* CTA Start */}
         <div className="rs-cta style1 bg7 pt-70 pb-70">
