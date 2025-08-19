@@ -4061,16 +4061,16 @@ body .search-modal .close:hover {
   transform: rotate(26deg);
 }
 .rs-breadcrumbs.img1 {
-  background: url(../images/breadcrumbs/about.png);
-  background-position: top top;
+  background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552127/Nanosoft/About/blue-light-portrait-background_1_tbtv25.jpg");
+  background-position: center center;
   object-fit: cover;
 }
 .rs-breadcrumbs.img2 {
-  background: url(../images/breadcrumbs/2.jpg);
+  background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755550699/Nanosoft/portfolio_xuquu9.jpg");
 }
 .rs-breadcrumbs.img3 {
-  background: url(../images/breadcrumbs/service.jpg);
-  background-position: top center;
+  background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755563885/Nanosoft/Services/6865528_bpders.jpg");
+  background-position: center bottom;
   object-fit: cover;
 }
 .rs-breadcrumbs.img4 {
@@ -4083,8 +4083,8 @@ body .search-modal .close:hover {
   background: url(../images/breadcrumbs/5.jpg) center center;
 }
 .rs-breadcrumbs.img6 {
-  background: url(../images/breadcrumbs/contact.png);
-  background-position: bottom center;
+  background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755563488/Nanosoft/Contact/c0f4e6ff-82a4-45d8-a3d5-8996247af5d0_lifnil.jpg");
+  background-position: center center;
   object-fit: cover;
 }
 .rs-breadcrumbs.img7 {

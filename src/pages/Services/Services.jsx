@@ -1,22 +1,4 @@
 import Layout from "../../components/Layout/Layout";
-
-import price1 from "../../assets/images/pricing/main-home/icons/1.png";
-import price2 from "../../assets/images/pricing/main-home/icons/2.png";
-import price3 from "../../assets/images/pricing/main-home/icons/3.png";
-
-import png1 from "../../assets/images/services/style2/main-img/1.png";
-import png2 from "../../assets/images/services/style2/main-img/2.png";
-import png3 from "../../assets/images/services/style2/main-img/3.png";
-import png4 from "../../assets/images/services/style2/main-img/4.png";
-import png5 from "../../assets/images/services/style2/main-img/5.png";
-import png6 from "../../assets/images/services/style2/main-img/6.png";
-
-import png1hover from "../../assets/images/services/style2/hover-img/1.png";
-import png2hover from "../../assets/images/services/style2/hover-img/2.png";
-import png3hover from "../../assets/images/services/style2/hover-img/3.png";
-import png4hover from "../../assets/images/services/style2/hover-img/4.png";
-import png5hover from "../../assets/images/services/style2/hover-img/5.png";
-import png6hover from "../../assets/images/services/style2/hover-img/6.png";
 import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 
@@ -24,7 +6,10 @@ const Services = () => {
   return (
     <>
       <Layout>
-        <PageTitle title={"NanoSoft - Services"} />
+        <PageTitle
+          title="NanoSoft - Services"
+          description="Discover NanoSoft's wide range of software services including web development, mobile apps, cloud solutions, and AI-driven technologies. We help businesses grow with reliable, scalable, and future-ready solutions."
+        />
         <div>
           {/* Breadcrumbs Start */}
           <div className="rs-breadcrumbs img3">
@@ -54,8 +39,20 @@ const Services = () => {
                   <div className="services-item">
                     <div className="services-icon">
                       <div className="image-part">
-                        <img className="main-img" src={png1} alt />
-                        <img className="hover-img" src={png1hover} alt />
+                        <img
+                          className="main-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552984/Nanosoft/Services/1_sw2sl6.png"
+                          }
+                          alt
+                        />
+                        <img
+                          className="hover-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553113/Nanosoft/Services/1_ehfr3v.png"
+                          }
+                          alt
+                        />
                       </div>
                     </div>
                     <div className="services-content">
@@ -80,8 +77,20 @@ const Services = () => {
                   <div className="services-item pink-bg">
                     <div className="services-icon">
                       <div className="image-part">
-                        <img className="main-img" src={png2} alt />
-                        <img className="hover-img" src={png2hover} alt />
+                        <img
+                          className="main-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552951/Nanosoft/Services/2_psdsl4.png"
+                          }
+                          alt
+                        />
+                        <img
+                          className="hover-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553114/Nanosoft/Services/2_snnkre.png"
+                          }
+                          alt
+                        />
                       </div>
                     </div>
                     <div className="services-content">
@@ -107,8 +116,20 @@ const Services = () => {
                   <div className="services-item aqua-bg">
                     <div className="services-icon">
                       <div className="image-part">
-                        <img className="main-img" src={png3} alt />
-                        <img className="hover-img" src={png3hover} alt />
+                        <img
+                          className="main-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552953/Nanosoft/Services/3_iysdfe.png"
+                          }
+                          alt
+                        />
+                        <img
+                          className="hover-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553117/Nanosoft/Services/3_whwkfj.png"
+                          }
+                          alt
+                        />
                       </div>
                     </div>
                     <div className="services-content">
@@ -133,8 +154,20 @@ const Services = () => {
                   <div className="services-item paste-bg">
                     <div className="services-icon">
                       <div className="image-part">
-                        <img className="main-img" src={png4} alt />
-                        <img className="hover-img" src={png4hover} alt />
+                        <img
+                          className="main-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552955/Nanosoft/Services/4_hctuy8.png"
+                          }
+                          alt
+                        />
+                        <img
+                          className="hover-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553131/Nanosoft/Services/4_nfewca.png"
+                          }
+                          alt
+                        />
                       </div>
                     </div>
                     <div className="services-content">
@@ -160,8 +193,20 @@ const Services = () => {
                   <div className="services-item purple-bg">
                     <div className="services-icon">
                       <div className="image-part">
-                        <img className="main-img" src={png5} alt />
-                        <img className="hover-img" src={png5hover} alt />
+                        <img
+                          className="main-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552958/Nanosoft/Services/5_ecpev0.png"
+                          }
+                          alt
+                        />
+                        <img
+                          className="hover-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553133/Nanosoft/Services/5_eejuap.png"
+                          }
+                          alt
+                        />
                       </div>
                     </div>
                     <div className="services-content">
@@ -187,8 +232,20 @@ const Services = () => {
                   <div className="services-item green-bg">
                     <div className="services-icon">
                       <div className="image-part">
-                        <img className="main-img" src={png6} alt />
-                        <img className="hover-img" src={png6hover} alt />
+                        <img
+                          className="main-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552981/Nanosoft/Services/6_v7nbjp.png"
+                          }
+                          alt
+                        />
+                        <img
+                          className="hover-img"
+                          src={
+                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553137/Nanosoft/Services/6_i9ejzu.png"
+                          }
+                          alt
+                        />
                       </div>
                     </div>
                     <div className="services-content">
@@ -313,7 +370,12 @@ const Services = () => {
                   <div className="pricing-table">
                     <div className="pricing-badge">Silver</div>
                     <div className="pricing-icon">
-                      <img src={price1} alt />
+                      <img
+                        src={
+                          "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553255/Nanosoft/Services/1_oqshkb.png"
+                        }
+                        alt
+                      />
                     </div>
                     <div className="pricing-table-price">
                       <div className="pricing-table-bags">
@@ -368,7 +430,12 @@ const Services = () => {
                   <div className="pricing-table primary-bg">
                     <div className="pricing-badge white-color-bg">Gold</div>
                     <div className="pricing-icon">
-                      <img src={price2} alt />
+                      <img
+                        src={
+                          "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553249/Nanosoft/Services/2_wqqgow.png"
+                        }
+                        alt
+                      />
                     </div>
                     <div className="pricing-table-price">
                       <div className="pricing-table-bags">
@@ -431,7 +498,12 @@ const Services = () => {
                   <div className="pricing-table">
                     <div className="pricing-badge">Platinum</div>
                     <div className="pricing-icon">
-                      <img src={price3} alt />
+                      <img
+                        src={
+                          "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553252/Nanosoft/Services/3_lmd9wh.png"
+                        }
+                        alt
+                      />
                     </div>
                     <div className="pricing-table-price">
                       <div className="pricing-table-bags">

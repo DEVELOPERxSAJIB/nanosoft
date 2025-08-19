@@ -260,13 +260,14 @@ const Navbar = () => {
               <div className="line"></div>
               <li
                 style={{ width: "100%" }}
+                onClick={() => setServiceListShow((prev) => !prev)}
                 className={
                   pathname === "/services/software-development"
                     ? "current-menu-item menu-item-has-children"
                     : "menu-item-has-children"
                 }
               >
-                <Link onClick={() => setServiceListShow((prev) => !prev)}>
+                <Link>
                   Services
                   {serviceListShow ? <FaCaretUp /> : <FaCaretDown />}
                 </Link>
@@ -274,11 +275,18 @@ const Navbar = () => {
                   <ul
                     style={{
                       backgroundImage:
-                        "linear-gradient(90deg, #e9e9e9 10%, #0e73e4 100%)",
+                        "linear-gradient(90deg, #03228F 10%, #0e73e4 100%)",
                       padding: "10px 0 10px 15px",
                     }}
                     className="m-0"
                   >
+                    <li
+                      className={
+                        pathname === "/services" ? "current-menu-item" : null
+                      }
+                    >
+                      <Link to="/services">Our Services</Link>{" "}
+                    </li>
                     <li
                       className={
                         pathname === "/services/web-development"
@@ -349,7 +357,9 @@ const Navbar = () => {
               <div className="line"></div>
 
               <li
-                className={pathname === "/our-team" ? "current-menu-item" : null}
+                className={
+                  pathname === "/our-team" ? "current-menu-item" : null
+                }
               >
                 <Link to="/our-team">Team</Link>
               </li>

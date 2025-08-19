@@ -1,49 +1,5 @@
-import Layout from "../components/Layout/Layout";
-import banner4 from "../assets/images/banner/banner-4.png";
-
-import tech1png from "../assets/images/technology/style3/1.png";
-import tech2png from "../assets/images/technology/style3/2.png";
-import tech3png from "../assets/images/technology/style3/image.png";
-import tech4png from "../assets/images/technology/style3/real-state.png";
-import tech5png from "../assets/images/technology/style3/travel.png";
-import tech6png from "../assets/images/technology/style3/6.png";
-import tech7png from "../assets/images/technology/style3/7.png";
-import tech8png from "../assets/images/technology/style3/event.png";
-import tech9png from "../assets/images/technology/style3/9.png";
-import tech10png from "../assets/images/technology/style3/10.png";
-
-import tech11png from "../assets/images/technology/style4/main-img/1.png";
-import tech12png from "../assets/images/technology/style4/main-img/2.png";
-import tech13png from "../assets/images/technology/style4/main-img/3.png";
-import tech14png from "../assets/images/technology/style4/main-img/4.png";
-import tech15png from "../assets/images/technology/style4/main-img/5.png";
-import tech16png from "../assets/images/technology/style4/main-img/6.png";
-import techHover11png from "../assets/images/technology/style4/hover-img/1.png";
-import techHover12png from "../assets/images/technology/style4/hover-img/2.png";
-import techHover13png from "../assets/images/technology/style4/hover-img/3.png";
-import techHover14png from "../assets/images/technology/style4/hover-img/4.png";
-import techHover15png from "../assets/images/technology/style4/hover-img/5.png";
-import techHover16png from "../assets/images/technology/style4/hover-img/6.png";
-
-import aboutEffect1 from "../assets/images/about/effect-1.png";
-import about3 from "../assets/images/about/about-3.png";
-import dotted3 from "../assets/images/about/dotted-3.png";
-import shape3 from "../assets/images/about/shape3.png";
-
-import service1 from "../assets/images/services/main-home/icons/1.png";
-import service2 from "../assets/images/services/main-home/icons/2.png";
-import service3 from "../assets/images/services/main-home/icons/3.png";
-import service4 from "../assets/images/services/main-home/icons/4.png";
-import service5 from "../assets/images/services/main-home/icons/5.png";
-import service6 from "../assets/images/services/main-home/icons/6.png";
-import imgS2 from "../assets/images/services/s2.png";
-
-import process1 from "../assets/images/process/disc.png";
-import process2 from "../assets/images/process/pencil.png";
-import process3 from "../assets/images/process/tree.jpg";
-import process4 from "../assets/images/process/cal.svg";
-
-import { Link, useLocation } from "react-router-dom";
+import Layout from "../components/Layout/Layout"
+import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -53,32 +9,10 @@ import { RxCross1 } from "react-icons/rx";
 import PageTitle from "../components/PageTitle";
 import Portfolio from "../components/Home/Portfolio";
 import Testimonial from "../components/Home/Testimonial";
+import AboutUs from "../components/AboutUs";
 
-// import OwlCarousel from "react-owl-carousel";
-// import "owl.carousel/dist/assets/owl.carousel.css";
-// import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Home = () => {
-  // const options = {
-  //   loop: true,
-  //   margin: 30,
-  //   autoplay: true,
-  //   autoplayTimeout: 5000,
-  //   smartSpeed: 800,
-  //   dots: true,
-  //   nav: false,
-  //   responsive: {
-  //     0: {
-  //       items: 1,
-  //     },
-  //     600: {
-  //       items: 2,
-  //     },
-  //     1000: {
-  //       items: 3,
-  //     },
-  //   },
-  // };
 
   const schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -105,18 +39,6 @@ const Home = () => {
       .max(500, "Message cannot exceed 500 characters"),
   });
 
-  // const heroSectionRef = useRef(null);
-
-  // const scrollToHeroSection = () => {
-  //   heroSectionRef.current.scrollIntoView({ behavior: "smooth" });
-  // };
-
-  const { pathname } = useLocation();
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [pathname]);
-
   const {
     register,
     handleSubmit,
@@ -138,10 +60,6 @@ const Home = () => {
 
   const form = useRef();
   const contactForm = useRef();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
 
   const [successMessage, setSucessMessage] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -370,78 +288,7 @@ const Home = () => {
         {/* Bannar End */}
 
         {/* About Start */}
-        <div className="rs-about gray-color pt-80 pb-80 md-pt-40 md-pb-40">
-          <div className="container">
-            <div className="sec-title2 text-center mb-45">
-              <span className="sub-text style-bg">About Us</span>
-              <h2 className="title">
-                Empowering Business Growth with Technology
-              </h2>
-            </div>
-            <div className="row align-items-center">
-              <div className="col-lg-6 md-mb-30">
-                <div className="rs-animation-shape">
-                  <div className="images" style={{}}>
-                    <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754833544/Nanosoft/Home/about_rzkzek.jpg"
-                      alt="Team collaborating on innovative software solutions"
-                      style={{
-                        height: "100%",
-                        width: "100%",
-                        borderRadius: "50%",
-                      }}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="middle-image2">
-                    <img
-                      className="dance"
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754833802/Nanosoft/Home/effect-1_iuv8g4.png"
-                      alt="Animated decorative technology effect"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 pl-60 md-pl-15">
-                <div className="contact-wrap">
-                  <div className="sec-title mb-30">
-                    <div className="desc pb-35">
-                      At NanoSoft, we are passionate about leveraging technology
-                      to drive business success. We specialize in developing
-                      tailored software solutions and mobile applications that
-                      help our clients streamline operations, boost
-                      productivity, and achieve their goals. Our approach
-                      combines innovation, dedication, and a deep understanding
-                      of industry needs to deliver exceptional results.
-                    </div>
-                    <div className="desc pb-35">
-                      We pride ourselves on building long-lasting partnerships
-                      with our clients, focusing on their unique challenges and
-                      turning them into opportunities for growth. Let’s work
-                      together to bring your vision to life and pave the way for
-                      a successful future.
-                    </div>
-                  </div>
-                  <div className="btn-part">
-                    <Link
-                      to="/about"
-                      className="readon learn-more"
-                      title="Learn more about NanoSoft"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Uncomment and add alt if you bring these shapes back */}
-            {/* <div className="shape-image">
-      <img className="top dance" src={dotted3} alt="Decorative dotted shape" />
-      <img className="bottom dance" src={shape3} alt="Decorative shape" />
-    </div> */}
-          </div>
-        </div>
+        <AboutUs />
         {/* About End */}
 
         {/* Service Start */}
@@ -873,111 +720,6 @@ const Home = () => {
         </div>
         {/* Service End */}
 
-        {/* Process Start */}
-        <div className="rs-process style2 pb-120 md-pt-80 md-pb-73">
-          <div className="container">
-            <div className="sec-title2 text-center mb-45">
-              <span className="sub-text style-bg">Process</span>
-              <h2 className="title title2">Our Working Process</h2>
-            </div>
-            <div className="row">
-              <div className="col-lg-3 col-sm-6 md-mb-50">
-                <div className="addon-process">
-                  <div className="process-wrap">
-                    <div className="process-img">
-                      <img
-                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919439/Nanosoft/Home/Process/disc_onmewc.png"
-                        alt="Discovery process icon"
-                        title="Discovery phase of the project"
-                      />
-                    </div>
-                    <div className="process-text">
-                      <h3 className="title">Discovery</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-sm-6 md-mb-50">
-                <div className="addon-process">
-                  <div className="process-wrap">
-                    <div className="process-img">
-                      <img
-                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919440/Nanosoft/Home/Process/pencil_oquxrx.png"
-                        alt="Project planning icon"
-                        title="Planning stage of the project"
-                      />
-                    </div>
-                    <div className="process-text">
-                      <h3 className="title">Planning</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-sm-6">
-                <div className="addon-process">
-                  <div className="process-wrap">
-                    <div className="process-img">
-                      <img
-                        style={{
-                          filter:
-                            "sepia(70) saturate(120%) brightness(90%) hue-rotate(90deg)",
-                        }}
-                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919442/Nanosoft/Home/Process/tree_ssrusu.jpg"
-                        alt="Execution process graphic"
-                        title="Execution phase of the project"
-                      />
-                    </div>
-                    <div className="process-text">
-                      <h3 className="title">Execute</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-sm-6">
-                <div className="addon-process">
-                  <div className="process-wrap">
-                    <div
-                      className="process-img"
-                      style={{
-                        height: "20.5rem",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <img
-                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919438/Nanosoft/Home/Process/cal_emyupk.svg"
-                        alt="Project delivery icon"
-                        title="Deliverables phase of the project"
-                        style={{
-                          height: "100%",
-                          width: "100%",
-                          objectFit: "cover",
-                          display: "block",
-                        }}
-                      />
-                    </div>
-                    <div className="process-text">
-                      <h3 className="title">Deliver</h3>
-                    </div>
-                  </div>
-                </div>
-                <style>
-                  {`
-        @media (min-width: 1024px) {
-          .process-img {
-            height: 17.5rem !important;
-          }
-        }
-      `}
-                </style>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Process End */}
-
         {/* Industry Start */}
         <div
           style={{ background: "#F6F7F9" }}
@@ -1136,7 +878,7 @@ const Home = () => {
         </div>
         {/* Industry End */}
 
-        {/* Technology Section Start */}
+        {/* Portfolio Section Start */}
         <div>
           <div className="rs-technology style2 pt-110 pb-115 md-pt-75 md-pb-80">
             <div className="container">
@@ -1151,10 +893,119 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* Technology Section End */}
-        {/* Technology Section Start */}
+        {/* Portfolio Section End */}
+
+        {/* Process Start */}
+        <div
+          style={{ background: "#F6F7F9" }}
+          className="rs-process style2 pt-80 pb-80 md-pt-60 md-pb-60"
+        >
+          <div className="container">
+            <div className="sec-title2 text-center mb-45">
+              <span className="sub-text style-bg">Process</span>
+              <h2 className="title title2">Our Working Process</h2>
+            </div>
+            <div className="row">
+              <div className="col-lg-3 col-sm-6 md-mb-50">
+                <div className="addon-process">
+                  <div className="process-wrap">
+                    <div className="process-img">
+                      <img
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919439/Nanosoft/Home/Process/disc_onmewc.png"
+                        alt="Discovery process icon"
+                        title="Discovery phase of the project"
+                      />
+                    </div>
+                    <div className="process-text">
+                      <h3 className="title">Discovery</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-3 col-sm-6 md-mb-50">
+                <div className="addon-process">
+                  <div className="process-wrap">
+                    <div className="process-img">
+                      <img
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919440/Nanosoft/Home/Process/pencil_oquxrx.png"
+                        alt="Project planning icon"
+                        title="Planning stage of the project"
+                      />
+                    </div>
+                    <div className="process-text">
+                      <h3 className="title">Planning</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-3 col-sm-6">
+                <div className="addon-process">
+                  <div className="process-wrap">
+                    <div className="process-img">
+                      <img
+                        style={{
+                          filter:
+                            "sepia(70) saturate(120%) brightness(90%) hue-rotate(90deg)",
+                        }}
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919442/Nanosoft/Home/Process/tree_ssrusu.jpg"
+                        alt="Execution process graphic"
+                        title="Execution phase of the project"
+                      />
+                    </div>
+                    <div className="process-text">
+                      <h3 className="title">Execute</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-3 col-sm-6">
+                <div className="addon-process">
+                  <div className="process-wrap">
+                    <div
+                      className="process-img"
+                      style={{
+                        height: "20.5rem",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754919438/Nanosoft/Home/Process/cal_emyupk.svg"
+                        alt="Project delivery icon"
+                        title="Deliverables phase of the project"
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "cover",
+                          display: "block",
+                        }}
+                      />
+                    </div>
+                    <div className="process-text">
+                      <h3 className="title">Deliver</h3>
+                    </div>
+                  </div>
+                </div>
+                <style>
+                  {`
+                    @media (min-width: 1024px) {
+                      .process-img {
+                        height: 17.5rem !important;
+                      }
+                    }
+                  `}
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Process End */}
+
+        {/* Testimonail Section Start */}
         <div>
-          <div className="rs-technology style2 pb-115 md-pt-75 md-pb-80">
+          <div className="rs-technology style2 pt-80 pb-115 md-pt-75 md-pb-80">
             <div className="container">
               <div className="sec-title2 text-center mb-45">
                 <span className="sub-text style-bg">TESTIMONIAL</span>
@@ -1165,7 +1016,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* Technology Section End */}
+        {/* Testimonial Section End */}
 
         {/* Contact section Start */}
         <div
@@ -1242,7 +1093,7 @@ const Home = () => {
                       </div>
                     ) : (
                       <h2 className="title testi-title">
-                        We'd Love to Hear From You!
+                        We&rsquo;d Love to Hear From You!
                       </h2>
                     )}
                   </div>
@@ -1373,184 +1224,6 @@ const Home = () => {
           </div>
         </div>
         {/* CTA End */}
-
-        {/* Partner Section Start */}
-        {/* <div className="rs-partner pt-80 pb-70">
-          <div className="container">
-            <div
-              className="rs-carousel owl-carousel"
-              data-loop="true"
-              data-items={5}
-              data-margin={30}
-              data-autoplay="true"
-              data-hoverpause="true"
-              data-autoplay-timeout={5000}
-              data-smart-speed={800}
-              data-dots="false"
-              data-nav="false"
-              data-nav-speed="false"
-              data-center-mode="false"
-              data-mobile-device={2}
-              data-mobile-device-nav="false"
-              data-mobile-device-dots="false"
-              data-ipad-device={3}
-              data-ipad-device-nav="false"
-              data-ipad-device-dots="false"
-              data-ipad-device2={3}
-              data-ipad-device-nav2="false"
-              data-ipad-device-dots2="false"
-              data-md-device={5}
-              data-md-device-nav="false"
-              data-md-device-dots="false"
-            >
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src={partner1}
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src={partner1}
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src={partner2}
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src={partner2}
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src={partner3}
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src={partner3}
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src={partner4}
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src={partner4}
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src={partner5}
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src={partner5}
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src="assets/images/partner/6.png"
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src="assets/images/partner/6.png"
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src="assets/images/partner/7.png"
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src="assets/images/partner/7.png"
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src="assets/images/partner/8.png"
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src="assets/images/partner/8.png"
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="partner-item">
-                <div className="logo-img">
-                  <a href="https://rstheme.com/">
-                    <img
-                      className="hover-logo"
-                      src="assets/images/partner/9.png"
-                      alt
-                    />
-                    <img
-                      className="main-logo"
-                      src="assets/images/partner/9.png"
-                      alt
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* Partner Section End */}
       </Layout>
     </>
   );
