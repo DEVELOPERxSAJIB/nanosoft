@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import serviceImg1 from "../../assets/images/services/style7/1.png";
-import serviceImg2 from "../../assets/images/services/style7/2.png";
-import serviceImg3 from "../../assets/images/services/style7/3.png";
 import Layout from "../../components/Layout/Layout";
 import MenuList from "../../components/Services/MenuList";
 import CountUp from "react-countup";
@@ -10,7 +7,10 @@ import PageTitle from "../../components/PageTitle";
 const CloudAndDevOps = () => {
   return (
     <Layout>
-      <PageTitle title={"NanoSoft - Services | Cloud and devops"} />
+      <PageTitle
+        title="NanoSoft - Cloud & DevOps Services | Infrastructure Optimization"
+        description="Discover NanoSoft's Cloud and DevOps services to optimize infrastructure, automate workflows, and scale efficiently. Expert solutions for AWS, Azure, and Google Cloud."
+      />
 
       <div>
         {/* Breadcrumbs Start */}
@@ -18,12 +18,12 @@ const CloudAndDevOps = () => {
           <div className="breadcrumbs-inner text-center">
             <h1 className="page-title">Cloud and DevOps</h1>
             <ul>
-              <li title="">
+              <li title="Back to Home">
                 <Link className="active" to="/">
                   Home
                 </Link>
               </li>
-              <li title="Go To Services">
+              <li title="Explore Our Services">
                 <Link className="active" to="/services">
                   Services
                 </Link>
@@ -33,10 +33,11 @@ const CloudAndDevOps = () => {
           </div>
         </div>
         {/* Breadcrumbs End */}
+
         {/* About Section Start */}
-        <div className="rs-about pt-120 pb-120 md-pt-80 md-pb-80">
+        <div className="rs-services-single rs-about pt-120 pb-120 md-pt-80 md-pb-80">
           <div className="container">
-            <div className="row align-items-center">
+            <div className="row align-items-start">
               <div className="col-lg-8 pr-40 md-pr-15 md-mb-50">
                 <div className="sec-title4">
                   <span className="sub-text">Cloud and DevOps Solutions</span>
@@ -51,7 +52,18 @@ const CloudAndDevOps = () => {
                     deployment, efficient resource management, and seamless
                     collaboration.
                   </div>
-                  <div className="desc">
+
+                  <div className="services-img">
+                    <img
+                      style={{ width: "100%", objectFit: "cover" }}
+                      src={
+                        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755637727/Nanosoft/Services/7060483_gv05jt.jpg"
+                      }
+                      alt="NanoSoft Cloud and DevOps services with infrastructure automation"
+                    />
+                  </div>
+
+                  <div className="desc mt-5">
                     We help you choose the right cloud platform (AWS, Azure,
                     Google Cloud) and implement CI/CD pipelines to automate
                     testing, integration, and deployment, ensuring quick and
@@ -75,9 +87,23 @@ const CloudAndDevOps = () => {
               </div>
               <div className="col-lg-4 pl-32 md-pl-15">
                 <MenuList />
+                <div className="services-add mb-50 mt-50">
+                  <div className="address-item mb-35">
+                    <div className="address-icon">
+                      <i className="fa fa-phone" />
+                    </div>
+                  </div>
+                  <h2 className="title">
+                    Have any Questions? <br /> Call us Today!
+                  </h2>
+                  <div className="contact">
+                    <Link to="tel:01789557538">01789-557538</Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
           {/* Services Section Start */}
           <div className="rs-services style5 pt-120 md-pt-80">
             <div className="container">
@@ -85,7 +111,12 @@ const CloudAndDevOps = () => {
                 <div className="col-lg-4 md-mb-30">
                   <div className="services-item">
                     <div className="services-icon">
-                      <img src={serviceImg1} alt="Images" />
+                      <img
+                        src={
+                          "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755634993/Nanosoft/Services/1_k2954i.png"
+                        }
+                        alt="Expert Cloud and DevOps teams at NanoSoft"
+                      />
                     </div>
                     <div className="services-content">
                       <h3 className="services-title">
@@ -102,7 +133,12 @@ const CloudAndDevOps = () => {
                 <div className="col-lg-4 md-mb-30">
                   <div className="services-item">
                     <div className="services-icon">
-                      <img src={serviceImg2} alt="Images" />
+                      <img
+                        src={
+                          "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755634995/Nanosoft/Services/2_eobzyt.png"
+                        }
+                        alt="Seamless business growth with NanoSoft Cloud and DevOps"
+                      />
                     </div>
                     <div className="services-content">
                       <h3 className="services-title">
@@ -119,7 +155,12 @@ const CloudAndDevOps = () => {
                 <div className="col-lg-4">
                   <div className="services-item">
                     <div className="services-icon">
-                      <img src={serviceImg3} alt="Images" />
+                      <img
+                        src={
+                          "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755634998/Nanosoft/Services/3_muxfil.png"
+                        }
+                        alt="Innovative DevOps and cloud solutions by NanoSoft"
+                      />
                     </div>
                     <div className="services-content">
                       <h3 className="services-title">
@@ -164,7 +205,6 @@ const CloudAndDevOps = () => {
                         <span className="rs-count">
                           <CountUp delay={2} end={175} />
                         </span>
-                        {/* <span className="prefix">+</span> */}
                       </div>
                       <h3 className="title">Project Delivered</h3>
                     </div>
@@ -190,7 +230,6 @@ const CloudAndDevOps = () => {
                         <span className="rs-count">
                           <CountUp delay={2} end={12} />
                         </span>
-                        {/* <span className="prefix">+</span> */}
                       </div>
                       <h3 className="title">Expert Team Members</h3>
                     </div>

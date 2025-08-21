@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+.title {
+  font-family: "Arial", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-display: swap; /* ensures immediate paint */
+}
+
 .owl-carousel {
   display: block !important;
 }
@@ -31,6 +37,22 @@
     position: absolute;
     top: 18px;
     left: 20px;
+  }
+
+  button.nav-toggle-btn {
+    background: transparent !important;
+    border: none !important;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .nav-toggle-btn:focus,
+  .nav-toggle-btn:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
   }
 
   ul {
@@ -85,8 +107,8 @@
 }
 
 .custom-progressbar {
-  background-color: #DFEDFE !important;
-  height: 10px; 
+  background-color: #dfedfe !important;
+  height: 10px;
   border-radius: 0;
 }
 

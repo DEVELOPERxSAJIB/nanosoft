@@ -1,7 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo/logomain.png";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
-import { useState } from "react";
+import React, { Suspense, useState } from "react";
+import { LogoDesk, LogoMobile } from "./Logo.jsx";
+
+const logo = React.lazy(() => import("./Logo.jsx"));
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -25,11 +27,14 @@ const Navbar = () => {
             >
               <div className="col-lg-2">
                 <div className="logo-part">
-                  <Link to="/">
-                    <img src={logo} alt />
-                  </Link>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Link to="/">
+                      <LogoDesk />
+                    </Link>
+                  </Suspense>
                 </div>
               </div>
+
               <div className="col-lg-10 d-flex align-items-end justify-content-end">
                 <ul className="rs-contact-info">
                   <li className="contact-part">
@@ -61,24 +66,34 @@ const Navbar = () => {
           </div>
         </div>
         {/* Topbar Area End */}
+
         {/* Menu Start */}
         <div className="menu-area menu-sticky">
           <div className="container">
             <div className="logo-area">
-              <Link to="/">
-                <img className="sticky-logo" src={logo} alt="logo" />
+              <Link to="/" aria-label="Go to homepage">
+                <img className="sticky-logo" src={logo} alt="" />
               </Link>
             </div>
+
             <div className="rs-menu-area">
               <div className="main-menu">
                 <div className="mobile-menu">
                   <div className="d-flex justify-content-between">
-                    <Link to="/" className="mobile-logo">
-                      <img src={logo} alt="logo" />
-                    </Link>
-                    <a
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <Link to="/" className="mobile-logo">
+                        <LogoMobile />
+                      </Link>
+                    </Suspense>
+                    <button
                       onClick={() => setPhoneNav((prev) => !prev)}
-                      className=""
+                      className="nav-toggle-btn"
+                      style={{ border: "none", background: "transparent" }}
+                      aria-label={
+                        phoneNav
+                          ? "Close navigation menu"
+                          : "Open navigation menu"
+                      } // 👈 accessible name
                     >
                       <i
                         style={{
@@ -88,10 +103,12 @@ const Navbar = () => {
                           borderRadius: "5px",
                           cursor: "pointer",
                           fontSize: "16px",
+                          border: "0",
+                          outline: "0",
                         }}
                         className={`fa ${phoneNav ? "fa-times" : "fa-bars"}`}
                       />
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <nav className="rs-menu">
@@ -192,10 +209,12 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        pathname === "/our-team" ? "current-menu-item" : null
+                        pathname === "/our-portfolio"
+                          ? "current-menu-item"
+                          : null
                       }
                     >
-                      <Link to="/our-team">Team</Link>
+                      <Link to="/our-portfolio">Our Portfolio</Link>
                     </li>
                     <li
                       className={
@@ -217,6 +236,7 @@ const Navbar = () => {
                     <a
                       target="_blank"
                       href="https://web.facebook.com/nanosoft.agency"
+                      aria-label="Visit our Facebook page"
                     >
                       <i className="fa fa-facebook" />
                     </a>
@@ -225,6 +245,7 @@ const Navbar = () => {
                     <a
                       target="_blank"
                       href="https://www.linkedin.com/company/nanosoftagency"
+                      aria-label="Visit our LinkedIn page"
                     >
                       <i className="fa fa-linkedin" />
                     </a>
@@ -233,6 +254,7 @@ const Navbar = () => {
                     <a
                       target="_blank"
                       href="https://www.instagram.com/nanosoft.agency"
+                      aria-label="Visit our Instagram page"
                     >
                       <i className="fa fa-instagram" />
                     </a>
@@ -358,10 +380,10 @@ const Navbar = () => {
 
               <li
                 className={
-                  pathname === "/our-team" ? "current-menu-item" : null
+                  pathname === "/our-portfolio" ? "current-menu-item" : null
                 }
               >
-                <Link to="/our-team">Team</Link>
+                <Link to="/our-portfolio">Our Portfolio</Link>
               </li>
               <div className="line"></div>
               <li

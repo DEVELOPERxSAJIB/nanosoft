@@ -1,33 +1,34 @@
 import Layout from "../../components/Layout/Layout";
-
-import service1 from "../../assets/images/blog/inner/2.jpg";
 import MenuList from "../../components/Services/MenuList";
 import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 
-
-
 const Ecommerce = () => {
   return (
     <Layout>
-            <PageTitle title={"NanoSoft - Services | Ecommerce development"} />
-
+      <PageTitle
+        title={"NanoSoft - E-commerce Development Services | Custom Online Store Solutions"}
+        description={
+          "Boost your business with NanoSoft's custom e-commerce development services. We create secure, scalable, and user-friendly online stores tailored to your needs."
+        }
+      />
       <div>
         {/* Breadcrumbs Start */}
         <div className="rs-breadcrumbs img5">
-          <div className="breadcrumbs-inner text-center">
+          <div style={{ zIndex : 3, position : "relative" }} className="breadcrumbs-inner text-center">
             <h1 className="page-title">E-commerce Development</h1>
             <ul>
               <li>
-                <a className="active" href="index.html">
+                <Link className="active" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li>E-commerce Development</li>
             </ul>
           </div>
         </div>
         {/* Breadcrumbs End */}
+        
         {/* Services Section Start */}
         <div className="rs-services-single pt-120 pb-120 md-pt-80 md-pb-80">
           <div className="container">
@@ -46,14 +47,19 @@ const Ecommerce = () => {
                     tailored to fit your unique needs, ensuring an exceptional
                     user experience and streamlined operations.
                   </div>
-                  <div className="desc"></div>
                 </div>
                 <div className="services-img">
-                  <img style={{ width : "100%", objectFit : "cover" }} src={service1} alt />
+                  <img
+                    style={{ width: "100%", objectFit: "cover" }}
+                    src={
+                      "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755625649/Nanosoft/Services/2_rojgng.jpg"
+                    }
+                    alt="NanoSoft Custom E-commerce Development Service Banner"
+                  />
                 </div>
-                <h2 className="mt-34">In today's competitive market</h2>
+                <h2 className="mt-34">In today’s competitive market</h2>
                 <p>
-                  having a robust e-commerce platform is essential to building a
+                  Having a robust e-commerce platform is essential to building a
                   successful online business. At NanoSoft, we specialize in
                   creating custom e-commerce solutions that are tailored to meet
                   your business goals. Our development team focuses on building
@@ -76,9 +82,8 @@ const Ecommerce = () => {
 
                 <h3 className="mt-30">24/7 Smart Support</h3>
                 <p>
-                  {" "}
                   Our 24/7 Smart Support ensures that your business is never
-                  left stranded. Whether it's a minor query or a critical issue,
+                  left stranded. Whether it’s a minor query or a critical issue,
                   our team is always ready to assist you around the clock. We
                   provide real-time solutions to keep your systems running
                   smoothly, ensuring minimal downtime and maximum efficiency.
@@ -105,6 +110,7 @@ const Ecommerce = () => {
             </div>
           </div>
         </div>
+
         {/* Cta section start */}
         <div className="rs-cta style1 bg7 pt-80 pb-80">
           <div className="container">
@@ -118,7 +124,7 @@ const Ecommerce = () => {
                 </div>
                 <div className="col-lg-3 text-right col-md-12">
                   <div className="button-wrap">
-                  <Link className="readon learn-more" to="/contact">
+                    <Link className="readon learn-more" to="/contact">
                       Get In Touch
                     </Link>
                   </div>

@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title (SEO optimized) -->
+    <title>NanoSoft | Software Solutions & Web Development Agency</title>
+
+    <!-- Meta Description (SEO) -->
+    <meta
+      name="description"
+      content="NanoSoft is a professional software solutions and web development agency. We provide modern, scalable, and secure digital solutions for businesses worldwide."
+    />
+
+    <!-- Keywords (optional, less important for SEO nowadays) -->
+    <meta
+      name="keywords"
+      content="NanoSoft, software solutions, web development, digital agency, IT services"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="NanoSoft | Software Solutions" />
+    <meta
+      property="og:description"
+      content="Professional software and web development solutions tailored for your business."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755699113/Nanosoft/favicon_yneqfn.png"
+    />
+    <meta property="og:url" content="https://nanosoft.agency" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NanoSoft | Software Solutions" />
+    <meta
+      name="twitter:description"
+      content="NanoSoft provides expert web development & IT solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755699113/Nanosoft/favicon_yneqfn.png"
+    />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
-      href="./src/assets/images/logo/favicon.png"
+      href="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755699113/Nanosoft/favicon_yneqfn.png"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NanoSoft | Software Solution</title>
 
-    <!-- Bootstrap v4.4.1 css -->
-    <link rel="stylesheet" href="./src/assets/css/bootstrap.min.css" />
+    <!-- Bootstrap 5 (modern, no jQuery needed) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Flaticon.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
     <!-- font-awesome css -->
     <link rel="stylesheet" href="./src/assets/css/font-awesome.min.css" />
     <!-- flaticon css -->
-    <link rel="stylesheet" href="./src/assets/fonts/flaticon.css" />
+    <link
+      rel="stylesheet"
+      href="./src/assets/fonts/flaticon.css"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <!-- animate css -->
     <link rel="stylesheet" href="./src/assets/css/animate.css" />
     <!-- owl.carousel css -->
@@ -35,9 +95,26 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="./src/assets/css/responsive.css" />
   </head>
-  <body class="defult-home">
+
+  <body class="default-home">
     <div id="root"></div>
+
+    <!-- React entry -->
     <script type="module" src="/src/main.jsx"></script>
-    <script src="./src/assets/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap 5 JS (no jQuery required) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
+<style>
+  .banner-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+</style>

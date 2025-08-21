@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { GiSparkles } from "react-icons/gi";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import { ColorRing } from "react-loader-spinner";
 
@@ -9,7 +8,7 @@ const Portfolio = () => {
   const categories = [
     "All",
     "E-commerce",
-    "Booking System",
+    "Booking",
     "Marketplace",
     "Real Estate",
     "Clinic",
@@ -35,7 +34,7 @@ const Portfolio = () => {
     {
       id: 2,
       src: "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755293215/Nanosoft/Home/Portfolio/cineplex-booking-system_eydpxf.png",
-      category: "Booking System",
+      category: "Booking",
       title: "Cineplex Book a Show",
       description:
         "An Online Ticket Booking Application as well as purchase tickets, reserve seats for your favorite shows, and even create personalized Halls and Theatres - Node Js, Express Js, React Js, Mongo DB, Stripe, RTK, Ant Design, Bootstrap, CSS & HTML",
@@ -123,11 +122,6 @@ const Portfolio = () => {
     filterImages(category, images);
   };
 
-  // Handle "Search Images" button click (re-filters based on current selection)
-  const handleSearchImages = () => {
-    filterImages(selectedCategory, images);
-  };
-
   const handleToggleShow = () => {
     setShowAll((prev) => !prev);
   };
@@ -140,22 +134,20 @@ const Portfolio = () => {
         className="card bg-transparent mb-4"
       >
         <div className="card-body">
-          <div className="d-flex flex-wrap justify-items-center justify-content-center gap-2 pe-2">
-            {categories.map((category) => (
-              <>
-                <button
-                  key={category}
-                  className={`btn btn-sm rounded-pill 
-                  ${
-                    selectedCategory === category
-                      ? "readon learn-more submit"
-                      : "none-readon learn-more submit"
-                  }`}
-                  onClick={() => handleCategoryClick(category)}
-                >
-                  {category}
-                </button>
-              </>
+          <div className="d-flex flex-wrap justify-items-center justify-content-center gap-1">
+            {categories?.map((category) => (
+              <button
+                key={category} // unique key
+                className={`btn btn-sm rounded-pill mb-2
+                ${
+                  selectedCategory === category
+                    ? "readon learn-more submit"
+                    : "none-readon learn-more submit"
+                }`}
+                onClick={() => handleCategoryClick(category)}
+              >
+                {category}
+              </button>
             ))}
           </div>
         </div>
@@ -185,10 +177,10 @@ const Portfolio = () => {
       {/* Gallery */}
       {!loading && !message && (
         <>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-2 mb-4">
-            {(showAll ? filteredImages : filteredImages.slice(0, 6)).map(
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 mb-4">
+            {(showAll ? filteredImages : filteredImages.slice(0, 6))?.map(
               (image) => (
-                <div key={image.id} className="col my-3">
+                <div key={image?.id} className="col my-3">
                   <div
                     className="card h-100 position-relative border-0 shadow-sm"
                     style={{
@@ -210,6 +202,7 @@ const Portfolio = () => {
                     {/* Image */}
                     <img
                       src={image.src}
+                      alt={image.title || "Portfolio image"}
                       className="w-100"
                       style={{
                         height: "230px",
@@ -224,9 +217,12 @@ const Portfolio = () => {
 
                     {/* Content */}
                     <div className="card-body p-3">
-                      <h5 className="fw-bold mb-2" style={{ color: "#061340" }}>
+                      <div
+                        className="fw-bold mb-2"
+                        style={{ color: "#061340", fontSize: "1.1rem" }}
+                      >
                         {image?.title || "No title"}
-                      </h5>
+                      </div>
                       <p
                         className="mb-0 text-muted"
                         style={{ fontSize: "0.95rem" }}

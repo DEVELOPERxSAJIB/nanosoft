@@ -1,0 +1,24 @@
+# robots.txt for NanoSoft
+# This file instructs search engine crawlers how to index the site
+
+# Allow all well-behaved crawlers to access everything
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /dashboard/
+Disallow: /checkout/
+Disallow: /private/
+
+# Prevent crawling of Vite dev & source files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /@vite/
+Disallow: /dist/
+Disallow: /vite/
+
+# Sitemap for search engines
+Sitemap: https://nanosoft.agency/sitemap.xml
+
+# Optional: Crawl-delay for heavy traffic sites (seconds)
+# Crawl-delay: 10

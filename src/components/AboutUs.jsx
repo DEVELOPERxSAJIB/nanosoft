@@ -57,12 +57,8 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <div className="btn-part">
-                  <Link
-                    to="/about"
-                    className="readon learn-more"
-                    title="Learn more about NanoSoft"
-                  >
-                    Learn More
+                  <Link to="/about" className="readon learn-more">
+                    Learn More About NanoSoft
                   </Link>
                 </div>
               </div>

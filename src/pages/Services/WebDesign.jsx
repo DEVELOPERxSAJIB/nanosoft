@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
-import about1 from "../../assets/images/about/about-us/1.jpg";
-import serviceImg1 from "../../assets/images/services/style7/1.png";
-import serviceImg2 from "../../assets/images/services/style7/2.png";
-import serviceImg3 from "../../assets/images/services/style7/3.png";
 import Layout from "../../components/Layout/Layout";
 import MenuList from "../../components/Services/MenuList";
-import service1 from "../../assets/images/banner/webdesign.png";
 import CountUp from "react-countup";
 import PageTitle from "../../components/PageTitle";
 
 const WebDesign = () => {
   return (
     <Layout>
-            <PageTitle title={"NanoSoft - Services | Web design"} />
+      <PageTitle 
+        title={"NanoSoft - Web Design Services | Professional Website Design"} 
+        description={
+          "NanoSoft offers professional web design services to create stunning, responsive, and SEO-friendly websites. Boost your brand with custom website design solutions tailored to engage users and drive conversions."
+        }
+      />
 
       <div>
         {/* Breadcrumbs Start */}
@@ -35,8 +35,9 @@ const WebDesign = () => {
           </div>
         </div>
         {/* Breadcrumbs End */}
+
         {/* About Section Start */}
-        <div className="rs-about pt-120 pb-120 md-pt-80 md-pb-80">
+        <div className="rs-services-single rs-about pt-120 pb-120 md-pt-80 md-pb-80">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 pr-40 md-pr-15 md-mb-50">
@@ -61,7 +62,12 @@ const WebDesign = () => {
                     only looks great but performs flawlessly.
                   </div>
                   <div className="services-img mt-5">
-                    <img src={service1} alt />
+                    <img
+                      src={
+                        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755638504/Nanosoft/Services/5779073_dgoit4.jpg"
+                      }
+                      alt="Professional web design service by NanoSoft"
+                    />
                   </div>
 
                   <h2 className="mt-34">
@@ -110,12 +116,29 @@ const WebDesign = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Sidebar */}
               <div className="col-lg-4 pl-32 md-pl-15">
                 <MenuList />
+                <div className="services-add mb-50 mt-50">
+                  <div className="address-item mb-35">
+                    <div className="address-icon">
+                      <i className="fa fa-phone" />
+                    </div>
+                  </div>
+                  <h2 className="title">
+                    Have any Questions? <br /> Call us Today!
+                  </h2>
+                  <div className="contact">
+                    <Link to="tel:01789557538">01789-557538</Link>
+                  </div>
+                </div>
               </div>
+              {/* End Sidebar */}
             </div>
           </div>
         </div>
+        {/* About Section End */}
 
         {/* Counter Section Start */}
         <div className="rs-counter style3 modify1 pt-90 pb-80">
@@ -135,6 +158,7 @@ const WebDesign = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-3 col-md-6 md-mb-30">
                   <div className="counter-list">
                     <div className="counter-text">
@@ -142,12 +166,12 @@ const WebDesign = () => {
                         <span className="rs-count">
                           <CountUp delay={2} end={175} />
                         </span>
-                        {/* <span className="prefix">+</span> */}
                       </div>
                       <h3 className="title">Project Delivered</h3>
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-3 col-md-6 sm-mb-30">
                   <div className="counter-list">
                     <div className="counter-text">
@@ -161,6 +185,7 @@ const WebDesign = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-3 col-md-6">
                   <div className="counter-list">
                     <div className="counter-text">
@@ -168,7 +193,6 @@ const WebDesign = () => {
                         <span className="rs-count">
                           <CountUp delay={2} end={12} />
                         </span>
-                        {/* <span className="prefix">+</span> */}
                       </div>
                       <h3 className="title">Expert Team Members</h3>
                     </div>

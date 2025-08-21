@@ -25,7 +25,8 @@ const getBgColor = (letter) => {
   return colors[index];
 };
 
-const Testimonial = () => {
+// eslint-disable-next-line react/prop-types
+const Testimonial = ({ bg }) => {
   const testimonials = [
     {
       key: "review1",
@@ -52,7 +53,8 @@ const Testimonial = () => {
       rating: 5,
       review:
         "Everything was perfect. Communication was excellent. A big thank you for all their advice. They are full of great ideas and takes initiative. I'm extremely satisfied with the work delivered and won't hesitate to work with them again.",
-      avatar: "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755469770/Nanosoft/Home/Testimonial/testimonial_software_development_agency_rt5efg.jpg",
+      avatar:
+        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755469770/Nanosoft/Home/Testimonial/testimonial_software_development_agency_rt5efg.jpg",
     },
     {
       key: "review4",
@@ -61,7 +63,8 @@ const Testimonial = () => {
       rating: 5,
       review:
         "I loved your dedication and integrity to your work which is very important in professional life. Sometimes it is more important than the official task.",
-      avatar: "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755469794/Nanosoft/Home/Testimonial/testimonial_nanosfot_software_agency_paajvb.jpg",
+      avatar:
+        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755469794/Nanosoft/Home/Testimonial/testimonial_nanosfot_software_agency_paajvb.jpg",
     },
   ];
 
@@ -70,7 +73,7 @@ const Testimonial = () => {
   const nextRef = useRef(null);
 
   return (
-    <section className="bg-white">
+    <section>
       <div className="container">
         <div className="row align-items-center g-5">
           {/* Left - Slider */}
@@ -94,8 +97,11 @@ const Testimonial = () => {
               {testimonials.map((item) => (
                 <SwiperSlide key={item.name}>
                   <div
-                    style={{ minHeight: "290px" }}
-                    className="bg-light shadow-sm rounded-3 p-4"
+                    style={{
+                      minHeight: "290px",
+                      backgroundColor: bg || "#f8f9fa",
+                    }}
+                    className="shadow-sm rounded-3 p-4"
                   >
                     <div className="d-flex align-items-center mb-4">
                       <div className="me-3">
@@ -104,11 +110,17 @@ const Testimonial = () => {
                             className="rounded-circle object-fit-cover"
                             src={item.avatar}
                             alt="avatar"
-                            style={{ width: "64px", height: "64px" }}
+                            width={64}
+                            height={64} // tells browser "this is a square box"
+                            style={{ aspectRatio: "1 / 1" }} // explicitly declare aspect ratio
+                            loading="lazy"
                             onError={(e) => {
-                              e.target.onerror = null;
-                              e.target.style.display = "none"; // Hide broken img
-                              e.target.nextSibling.style.display = "flex"; // Show fallback
+                              e.currentTarget.onerror = null;
+                              e.currentTarget.style.display = "none";
+                              if (e.currentTarget.nextSibling) {
+                                e.currentTarget.nextSibling.style.display =
+                                  "flex";
+                              }
                             }}
                           />
                         ) : null}
@@ -135,8 +147,8 @@ const Testimonial = () => {
                       </div>
 
                       <div className="ml-3">
-                        <h5 className="m-0 fw-semibold">{item.name}</h5>
-                        <small className="text-muted fw-bold">
+                        <div className="fw-semibold">{item.name}</div>
+                        <small className="text-muted">
                           {item.positionAndCompany}
                         </small>
                       </div>
@@ -157,7 +169,7 @@ const Testimonial = () => {
 
           {/* Right - Actions */}
           <div className="col-lg-5 col-md-12">
-            <div className="mb-4">
+            <div className="mb-4 mt-5 sm:mt-0">
               <Link
                 to="https://maps.app.goo.gl/QcqQVJrLoETAszfq7"
                 target="_blank"
@@ -182,15 +194,19 @@ const Testimonial = () => {
                 ref={prevRef}
                 className="rounded-circle mr-2 d-flex align-items-center justify-content-center border"
                 style={{ width: "40px", height: "40px" }}
+                aria-label="Previous slide"
               >
                 <BsArrowLeft />
+                <span className="visually-hidden">Previous slide</span>
               </button>
               <button
                 ref={nextRef}
                 className="rounded-circle d-flex align-items-center justify-content-center border"
                 style={{ width: "40px", height: "40px" }}
+                aria-label="Next slide"
               >
                 <BsArrowRight />
+                <span className="visually-hidden">Next slide</span>
               </button>
             </div>
           </div>

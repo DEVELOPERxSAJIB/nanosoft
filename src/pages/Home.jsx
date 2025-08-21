@@ -1,4 +1,4 @@
-import Layout from "../components/Layout/Layout"
+import Layout from "../components/Layout/Layout";
 import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -11,9 +11,7 @@ import Portfolio from "../components/Home/Portfolio";
 import Testimonial from "../components/Home/Testimonial";
 import AboutUs from "../components/AboutUs";
 
-
 const Home = () => {
-
   const schema = yup.object().shape({
     name: yup.string().required("Name is required"),
     message: yup
@@ -123,11 +121,11 @@ const Home = () => {
               style={{ padding: "120px 0" }}
               className="row d-flex align-items-center"
             >
-              <div className="col-lg-7 col-md-12 pr-140 md-mb-140 md-pr-15">
+              <div className="col-lg-7 col-md-12 pr-140 md-mb-40 md-pr-15">
                 <div className="banner-content">
-                  <h1 className="title">
+                  <h2 className="title">
                     We Build Software that Shapes Tomorrow
-                  </h1>
+                  </h2>
                   <p className="desc">
                     We deliver top-notch web solutions worldwide, driving
                     success with creativity and technical mastery.
@@ -321,12 +319,9 @@ const Home = () => {
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a
-                              href="web-development.html"
-                              title="Web Development Services"
-                            >
+                            <Link to="/services/web-development">
                               Web Development
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -341,12 +336,9 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <a
-                              href="web-development.html"
-                              title="Learn More About Web Development Services"
-                            >
+                            <Link to="/services/web-development">
                               Web Development
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -357,13 +349,16 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <a
+                          <Link
                             className="readon view-more"
-                            href="web-development.html"
-                            title="Learn More About Web Development"
+                            to="/services/web-development"
                           >
                             Learn More
-                          </a>
+                            <span className="visually-hidden">
+                              {" "}
+                              about Web Development
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -388,12 +383,9 @@ const Home = () => {
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a
-                              href="software-development.html"
-                              title="Software Development Services"
-                            >
+                            <Link to="/services/software-development">
                               Software Development
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -408,12 +400,9 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <a
-                              href="software-development.html"
-                              title="Learn More About Software Development"
-                            >
+                            <Link to="/services/software-development">
                               Software Development
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -425,13 +414,16 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <a
+                          <Link
                             className="readon view-more"
-                            href="software-development.html"
-                            title="Learn More About Software Development"
+                            to="/services/software-development"
                           >
                             Learn More
-                          </a>
+                            <span className="visually-hidden">
+                              {" "}
+                              about Software Development
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -456,12 +448,9 @@ const Home = () => {
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a
-                              href="analytic-solutions.html"
-                              title="Custom CRM and SRM Solutions"
-                            >
+                            <Link to="/services/custom-crm-srm">
                               Custom CRM/SRM
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -476,12 +465,9 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <a
-                              href="analytic-solutions.html"
-                              title="Learn More About Custom CRM/SRM"
-                            >
+                            <Link to="/services/custom-crm-srm">
                               Custom CRM/SRM
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -493,13 +479,16 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <a
+                          <Link
                             className="readon view-more"
-                            href="analytic-solutions.html"
-                            title="Learn More About Custom CRM/SRM"
+                            to="/services/custom-crm-srm"
                           >
                             Learn More
-                          </a>
+                            <span className="visually-hidden">
+                              {" "}
+                              about Custom CRM/SRM
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -524,12 +513,9 @@ const Home = () => {
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a
-                              href="data-center.html"
-                              title="E-commerce Development Services"
-                            >
+                            <Link to="/services/ecommerce-development">
                               E-commerce Development
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -544,12 +530,9 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <a
-                              href="data-center.html"
-                              title="Learn More About E-commerce Development"
-                            >
+                            <Link to="/services/ecommerce-development">
                               E-commerce Development
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -560,13 +543,16 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <a
+                          <Link
                             className="readon view-more"
-                            href="data-center.html"
-                            title="Learn More About E-commerce Development"
+                            to="/services/ecommerce-development"
                           >
                             Learn More
-                          </a>
+                            <span className="visually-hidden">
+                              {" "}
+                              about E-commerce Development
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -591,12 +577,9 @@ const Home = () => {
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a
-                              href="cloud-and-devops.html"
-                              title="Cloud and DevOps Services"
-                            >
+                            <Link to="/services/cloud-and-devops">
                               Cloud and DevOps
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -612,12 +595,9 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <a
-                              href="cloud-and-devops.html"
-                              title="Learn More About Cloud and DevOps"
-                            >
+                            <Link to="/services/cloud-and-devops">
                               Cloud and DevOps
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -629,13 +609,16 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <a
+                          <Link
                             className="readon view-more"
-                            href="cloud-and-devops.html"
-                            title="Learn More About Cloud and DevOps"
+                            to="/services/cloud-and-devops"
                           >
                             Learn More
-                          </a>
+                            <span className="visually-hidden">
+                              {" "}
+                              about Cloud and DevOps
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -660,12 +643,9 @@ const Home = () => {
                         </div>
                         <div className="front-title-part">
                           <h3 className="title">
-                            <a
-                              href="/services/web-design"
-                              title="Website Design Services"
-                            >
+                            <Link to="/services/web-design">
                               Website Design
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="front-desc-part">
@@ -680,12 +660,9 @@ const Home = () => {
                       <div className="back-front-content">
                         <div className="back-title-part">
                           <h3 className="back-title">
-                            <a
-                              href="/services/web-design"
-                              title="Learn More About Website Design"
-                            >
+                            <Link to="/services/web-design">
                               Website Design
-                            </a>
+                            </Link>
                           </h3>
                         </div>
                         <div className="back-desc-part">
@@ -697,13 +674,16 @@ const Home = () => {
                           </p>
                         </div>
                         <div className="back-btn-part">
-                          <a
+                          <Link
                             className="readon view-more"
-                            href="/services/web-design"
-                            title="Learn More About Website Design"
+                            to="/services/web-design"
                           >
                             Learn More
-                          </a>
+                            <span className="visually-hidden">
+                              {" "}
+                              about Website Design
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -712,12 +692,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* <div className="shape-animation">
-    <div className="shape-part">
-      <img className="dance" src="" alt="Decorative shape animation" />
-    </div>
-  </div> */}
         </div>
+
         {/* Service End */}
 
         {/* Industry Start */}
@@ -743,7 +719,7 @@ const Home = () => {
                     />
                   </div>
                   <div className="services-text">
-                    <h4 className="title">Software</h4>
+                    <h3 className="title">Software</h3>
                   </div>
                 </div>
               </div>
@@ -1012,7 +988,7 @@ const Home = () => {
                 <h2 className="title">What our happy user says!</h2>
               </div>
 
-              <Testimonial />
+              <Testimonial bg={"#F6F7F9"} />
             </div>
           </div>
         </div>

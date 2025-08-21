@@ -9,7 +9,6 @@ import { RxCross1 } from "react-icons/rx";
 import PageTitle from "../components/PageTitle";
 
 const Contact = () => {
-
   const contactSchema = yup.object().shape({
     firstName: yup.string().required("Fist name is required"),
     lastName: yup.string().required("Last name is required"),
@@ -61,13 +60,17 @@ const Contact = () => {
   return (
     <>
       <Layout>
-      <PageTitle title={"NanoSoft - Contact Us"}/>
+        <PageTitle
+          title="NanoSoft - Contact"
+          description="Have questions about software development, web solutions, or digital transformation? Contact NanoSoft today and talk directly with our expert engineers for consultation and support."
+        />
+
         {/* Breadcrumbs Start */}
         <div className="rs-breadcrumbs img6">
           <div className="breadcrumbs-inner text-center">
-            <h1 className="page-title">Contact</h1>
+            <h1 className="page-title">Contact Us</h1>
             <ul>
-              <li title="">
+              <li>
                 <Link className="active" to={"/"}>
                   Home
                 </Link>
@@ -77,6 +80,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Breadcrumbs End */}
+
         {/* Contact section Start */}
         <div
           id="rs-contact"
@@ -152,7 +156,7 @@ const Contact = () => {
                       </div>
                     ) : (
                       <h2 className="title testi-title">
-                        We'd Love to Hear From You!
+                        We&apos;d Love to Hear From You!
                       </h2>
                     )}
                   </div>
@@ -240,7 +244,9 @@ const Contact = () => {
                             className="readon learn-more submit"
                             type="submit"
                           >
-                            {contactLoading ? "Sending Email . . ." : "Submit Now"}
+                            {contactLoading
+                              ? "Sending Email . . ."
+                              : "Submit Now"}
                           </button>
                         </div>
                       </div>

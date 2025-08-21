@@ -1,4 +1,3 @@
-import service1 from "../../assets/images/blog/inner/1.jpg";
 import MenuList from "../../components/Services/MenuList";
 import Layout from "../../components/Layout/Layout";
 import { Link } from "react-router-dom";
@@ -7,11 +6,14 @@ import PageTitle from "../../components/PageTitle";
 const WebDevelopment = () => {
   return (
     <Layout>
-      <PageTitle title={"NanoSoft - Services | Web development"} />
+      <PageTitle
+        title="Nanosoft - Web Development Services"
+        description="NanoSoft offers professional web development services to build fast, secure, and scalable websites. From business sites to custom web applications, we deliver solutions that drive growth and digital success."
+      />
 
       <div>
         {/* Breadcrumbs Start */}
-        <div className="rs-breadcrumbs img7">
+        <div className="rs-breadcrumbs img0">
           <div
             style={{
               position: "relative",
@@ -19,7 +21,7 @@ const WebDevelopment = () => {
             }}
             className="breadcrumbs-inner text-center"
           >
-            <h1 className="page-title">Web Development</h1>
+            <h1 className="page-title">Web Development Services</h1>
             <ul>
               <li>
                 <Link className="active" to="/">
@@ -36,6 +38,7 @@ const WebDevelopment = () => {
           </div>
         </div>
         {/* Breadcrumbs End */}
+
         {/* Services Single Start */}
         <div className="rs-services-single pt-120 pb-120 md-pt-80 md-pb-80">
           <div className="container">
@@ -58,18 +61,24 @@ const WebDevelopment = () => {
                   </div>
                   <div className="desc">
                     At NanoSoft, we deliver custom web applications tailored to
-                    your business needs. Whether it's an e-commerce platform, a
-                    complex enterprise solution, or a simple web portal, our
-                    team focuses on functionality, performance, and security. We
-                    use modern frameworks and technologies to ensure your web
-                    application is fast, secure, and user-friendly, providing
-                    your users with a seamless experience across devices.
+                    your business needs. Whether it&rsquo;s an e-commerce
+                    platform, a complex enterprise solution, or a simple web
+                    portal, our team focuses on functionality, performance, and
+                    security. We use modern frameworks and technologies to
+                    ensure your web application is fast, secure, and
+                    user-friendly, providing your users with a seamless
+                    experience across devices.
                   </div>
                 </div>
                 <div className="services-img mt-5">
-                  <img src={service1} alt />
+                  <img
+                    src={
+                      "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755625645/Nanosoft/Services/1_umpxoq.jpg"
+                    }
+                    alt="Web development service at NanoSoft"
+                  />
                 </div>
-                <h2 className="mt-34">Web application development</h2>
+                <h2 className="mt-34">Web Application Development</h2>
                 <p>
                   An engaging and well-structured website is essential for every
                   business’s online success. By developing a seamless and
@@ -118,14 +127,6 @@ const WebDevelopment = () => {
                   requirements, providing reliable and personalized assistance
                   whenever you need it.
                 </p>
-                {/* <div className="row mb-80">
-                  <div className="col-lg-6 col-md-12 md-mb-30">
-                    <img className="bdru-4" src={service2} alt />
-                  </div>
-                  <div className="col-lg-6 col-md-12">
-                    <img className="bdru-4" src={service3} alt />
-                  </div>
-                </div> */}
               </div>
               <div className="col-lg-4 pl-32 md-pl-15">
                 <MenuList />
@@ -147,6 +148,7 @@ const WebDevelopment = () => {
           </div>
         </div>
         {/* Services Single End */}
+
         {/* Cta section start */}
         <div className="rs-cta style1 bg7 pt-80 pb-80">
           <div className="container">
@@ -155,7 +157,9 @@ const WebDevelopment = () => {
                 <div className="col-lg-9 col-md-12 md-mb-30">
                   <span>Plan to Start a Project</span>
                   <div className="title-wrap">
-                    <h2 className="epx-title">Our Experts Ready to Help You</h2>
+                    <h2 className="epx-title">
+                      Our Experts Are Ready to Help You
+                    </h2>
                   </div>
                 </div>
                 <div className="col-lg-3 text-right col-md-12">

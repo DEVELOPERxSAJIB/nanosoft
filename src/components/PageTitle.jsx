@@ -1,5 +1,6 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
+// eslint-disable-next-line react/prop-types
 const PageTitle = ({ title, description }) => {
   return (
     <Helmet>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PageTitle from "../components/PageTitle";
 import AboutUs from "../components/AboutUs";
 import OurTeam from "../components/OurTeam";
+import Testimonial from "../components/Home/Testimonial";
 
 const About = () => {
   return (
@@ -35,6 +36,21 @@ const About = () => {
 
           {/* Team Section */}
           <OurTeam />
+          {/* Team Section */}
+
+          {/* Team Section */}
+          <div>
+            <div className="gray-color rs-technology style2 pt-80 pb-115 md-pt-75 md-pb-80">
+              <div className="container">
+                <div className="sec-title2 text-center mb-45">
+                  <span className="sub-text style-bg">TESTIMONIAL</span>
+                  <h2 className="title">What our happy user says!</h2>
+                </div>
+
+                <Testimonial bg={"#fff"} />
+              </div>
+            </div>
+          </div>
           {/* Team Section */}
         </div>
       </Layout>
