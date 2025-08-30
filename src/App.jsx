@@ -13,6 +13,7 @@ import WebDesign from "./pages/Services/WebDesign";
 import OurPortfolio from "./pages/OurPortfolio";
 import ScrollToTop from "./utils/ScrollToTop";
 import { HelmetProvider } from "react-helmet-async";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="/services/web-design" element={<WebDesign />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/our-portfolio" element={<OurPortfolio />} />
+            <Route path="/offers" element={<LandingPage />} />
           </Routes>
         </BrowserRouter>
       </HelmetProvider>

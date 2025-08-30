@@ -26,8 +26,8 @@ const Services = () => {
             </div>
           </div>
           {/* Breadcrumbs End */}
-          {/* Services Section Start */}
 
+          {/* Services Section Start */}
           <div className="rs-services style3 pt-80 pb-80 md-pt-75 md-pb-80">
             <div className="container">
               <div className="sec-title2 text-center mb-45">
@@ -36,22 +36,18 @@ const Services = () => {
               </div>
               <div className="row">
                 <div className="col-lg-4 col-md-6 mb-20">
-                  <div className="services-item">
+                  <div className="services-item shadow-sm">
                     <div className="services-icon">
                       <div className="image-part">
                         <img
                           className="main-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552984/Nanosoft/Services/1_sw2sl6.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552984/Nanosoft/Services/1_sw2sl6.png"
+                          alt="Web Development service icon"
                         />
                         <img
                           className="hover-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553113/Nanosoft/Services/1_ehfr3v.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553113/Nanosoft/Services/1_ehfr3v.png"
+                          alt="Web Development hover icon"
                         />
                       </div>
                     </div>
@@ -79,17 +75,13 @@ const Services = () => {
                       <div className="image-part">
                         <img
                           className="main-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552951/Nanosoft/Services/2_psdsl4.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552951/Nanosoft/Services/2_psdsl4.png"
+                          alt="Software Development service icon"
                         />
                         <img
                           className="hover-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553114/Nanosoft/Services/2_snnkre.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553114/Nanosoft/Services/2_snnkre.png"
+                          alt="Software Development hover icon"
                         />
                       </div>
                     </div>
@@ -97,7 +89,6 @@ const Services = () => {
                       <div className="services-text">
                         <h3 className="title">
                           <Link to="/services/software-development">
-                            {" "}
                             Software Development
                           </Link>
                         </h3>
@@ -118,17 +109,13 @@ const Services = () => {
                       <div className="image-part">
                         <img
                           className="main-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552953/Nanosoft/Services/3_iysdfe.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552953/Nanosoft/Services/3_iysdfe.png"
+                          alt="Customised CRM/SRM service icon"
                         />
                         <img
                           className="hover-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553117/Nanosoft/Services/3_whwkfj.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553117/Nanosoft/Services/3_whwkfj.png"
+                          alt="Customised CRM/SRM hover icon"
                         />
                       </div>
                     </div>
@@ -156,17 +143,13 @@ const Services = () => {
                       <div className="image-part">
                         <img
                           className="main-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552955/Nanosoft/Services/4_hctuy8.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552955/Nanosoft/Services/4_hctuy8.png"
+                          alt="E-commerce Development service icon"
                         />
                         <img
                           className="hover-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553131/Nanosoft/Services/4_nfewca.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553131/Nanosoft/Services/4_nfewca.png"
+                          alt="E-commerce Development hover icon"
                         />
                       </div>
                     </div>
@@ -195,17 +178,13 @@ const Services = () => {
                       <div className="image-part">
                         <img
                           className="main-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552958/Nanosoft/Services/5_ecpev0.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552958/Nanosoft/Services/5_ecpev0.png"
+                          alt="Cloud & DevOps service icon"
                         />
                         <img
                           className="hover-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553133/Nanosoft/Services/5_eejuap.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553133/Nanosoft/Services/5_eejuap.png"
+                          alt="Cloud & DevOps hover icon"
                         />
                       </div>
                     </div>
@@ -234,17 +213,13 @@ const Services = () => {
                       <div className="image-part">
                         <img
                           className="main-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552981/Nanosoft/Services/6_v7nbjp.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755552981/Nanosoft/Services/6_v7nbjp.png"
+                          alt="Database Administrator service icon"
                         />
                         <img
                           className="hover-img"
-                          src={
-                            "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553137/Nanosoft/Services/6_i9ejzu.png"
-                          }
-                          alt
+                          src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553137/Nanosoft/Services/6_i9ejzu.png"
+                          alt="Database Administrator hover icon"
                         />
                       </div>
                     </div>
@@ -270,6 +245,7 @@ const Services = () => {
             </div>
           </div>
           {/* Services Section End */}
+
           {/* Process Section Start */}
           <div className="rs-process style5 bg7 pt-120 pb-120 md-pt-80 md-pb-65">
             <div className="container">
@@ -358,6 +334,7 @@ const Services = () => {
             </div>
           </div>
           {/* Process Section End */}
+
           {/* Pricing section start */}
           <div className="rs-pricing style2 pt-120 pb-143 md-pt-80 md-pb-80">
             <div className="container">
@@ -374,7 +351,7 @@ const Services = () => {
                         src={
                           "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553255/Nanosoft/Services/1_oqshkb.png"
                         }
-                        alt
+                        alt={"Silver Plan Icon"}
                       />
                     </div>
                     <div className="pricing-table-price">
@@ -434,7 +411,7 @@ const Services = () => {
                         src={
                           "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553249/Nanosoft/Services/2_wqqgow.png"
                         }
-                        alt
+                        alt={"Gold Plan Icon"}
                       />
                     </div>
                     <div className="pricing-table-price">
@@ -502,7 +479,7 @@ const Services = () => {
                         src={
                           "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553252/Nanosoft/Services/3_lmd9wh.png"
                         }
-                        alt
+                        alt={"Platinum Plan Icon"}
                       />
                     </div>
                     <div className="pricing-table-price">
@@ -564,6 +541,7 @@ const Services = () => {
             </div>
           </div>
           {/* Pricing section end */}
+          
           {/* Cta section start */}
           <div className="rs-cta style1 bg7 pt-80 pb-80">
             <div className="container">

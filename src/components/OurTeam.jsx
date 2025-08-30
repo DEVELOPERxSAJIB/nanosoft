@@ -18,7 +18,7 @@ const OurTeam = () => {
             <div className="team-item-wrap">
               <div className="team-wrap">
                 <div className="image-inner">
-                  <a>
+                  <a href="#!">
                     <img
                       src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755551742/Nanosoft/About/Team/Sajib_Shikder_web_developer_agency_grha63.jpg"
                       alt="Md SaJib Shikder - Founder & Chief Executive Officer"
@@ -41,7 +41,7 @@ const OurTeam = () => {
             <div className="team-item-wrap">
               <div className="team-wrap">
                 <div className="image-inner">
-                  <a>
+                  <a href="#!">
                     <img
                       src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755551739/Nanosoft/About/Team/web_developer_development_ashraful_alom_zl6oom.jpg"
                       alt="Ashraful Alom - Chief Technology Officer & Full-Stack Engineer"
@@ -59,12 +59,33 @@ const OurTeam = () => {
             </div>
           </article>
 
+          {/* Team Member 5 */}
+          <article className="col-lg-4 col-md-6 mb-50" role="listitem">
+            <div className="team-item-wrap">
+              <div className="team-wrap">
+                <div className="image-inner">
+                  <a href="#!">
+                    <img
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756142939/Nanosoft/About/Team/lamp_stack_developer_software_agency_ivoey3.jpg"
+                      alt="Rajib Sarder - Lamp Stack Developer"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div className="team-content text-center">
+                <h3 className="person-name">Rajib Sarder</h3>
+                <p className="designation">Lamp Stack & Wordpress Developer</p>
+              </div>
+            </div>
+          </article>
+
           {/* Team Member 3 */}
           <article className="col-lg-4 col-md-6 mb-50" role="listitem">
             <div className="team-item-wrap">
               <div className="team-wrap">
                 <div className="image-inner">
-                  <a>
+                  <a href="#!">
                     <img
                       src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755551738/Nanosoft/About/Team/sajon_khan_Full_Stack_web_application_developer_jspuel.jpg"
                       alt="Sajol Khan - Full Stack Web Application Developer"
@@ -87,7 +108,7 @@ const OurTeam = () => {
             <div className="team-item-wrap">
               <div className="team-wrap">
                 <div className="image-inner">
-                  <a>
+                  <a href="#!">
                     <img
                       src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1755551739/Nanosoft/About/Team/Tohid_bin_azom_Dedicated_Backend_Developer_drfp2i.jpg"
                       alt="Tohid Bin Azam - Dedicated Backend Developer"

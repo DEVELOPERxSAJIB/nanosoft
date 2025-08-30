@@ -139,7 +139,7 @@ const Navbar = () => {
                           : "menu-item-has-children"
                       }
                     >
-                      <Link to="/services">Services</Link>
+                      <Link to="/services">Services & Pricing</Link>
                       <ul className="sub-menu">
                         <li
                           className={

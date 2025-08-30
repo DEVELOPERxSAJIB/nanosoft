@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const AboutUs = () => {
+
+  const { pathname } = useLocation();
+
   return (
     <>
       <div className="rs-about gray-color pt-80 pb-80 md-pt-40 md-pb-40">
@@ -56,11 +59,13 @@ const AboutUs = () => {
                     successful future.
                   </div>
                 </div>
-                <div className="btn-part">
-                  <Link to="/about" className="readon learn-more">
-                    Learn More About NanoSoft
-                  </Link>
-                </div>
+                {pathname !== "/about" && (
+                  <div className="btn-part">
+                    <Link to="/about" className="readon learn-more">
+                      Learn More About NanoSoft
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>

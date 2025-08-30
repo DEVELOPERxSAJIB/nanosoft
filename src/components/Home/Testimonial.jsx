@@ -188,7 +188,7 @@ const Testimonial = ({ bg }) => {
               See What Our Customers Say&rsquo;s about us
             </h3>
 
-            <div className="d-flex flex-row gap-5">
+            <div className="d-flex flex-row gap-3">
               {/* Custom Navigation Buttons */}
               <button
                 ref={prevRef}

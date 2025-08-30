@@ -1,10 +1,12 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
 /** 
 --------------------------------------------------------*
 
 /* Keep your Livvic font declarations as is */
 @font-face {
-  font-family: "Livvic";
+  font-family: "Livvic" !important;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -15,8 +17,8 @@
 @font-face {
   font-family: "Flaticon";
   src: url("../../assets/fonts/Flaticon.woff2") format("woff2"),
-       url("../../assets/fonts/Flaticon.woff") format("woff"),
-       url("../../assets/fonts/Flaticon.ttf") format("truetype");
+    url("../../assets/fonts/Flaticon.woff") format("woff"),
+    url("../../assets/fonts/Flaticon.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -1787,10 +1789,10 @@ blockquote cite:before {
   color: #f2541b !important;
 }
 .sec-title2 .sub-text.style-bg {
-    background-color: rgba(18, 115, 235, 0.2); /* ~20% opacity */
+  background-color: rgba(18, 115, 235, 0.2); /* ~20% opacity */
   display: inline-block;
   padding: 6px 25px;
-  color: #03228F;
+  color: #03228f;
   border-radius: 30px;
   text-transform: uppercase;
 }
@@ -4497,11 +4499,9 @@ body .search-modal .close:hover {
   top: 0; /* stick when reaching top */
   left: 0;
   width: 100%;
-  background: #fff;  /* ensure it doesn’t overlap transparently */
-  z-index: 1000;     /* make sure it stays above content */
+  background: #fff; /* ensure it doesn’t overlap transparently */
+  z-index: 1000; /* make sure it stays above content */
 }
-
-
 
 @-webkit-keyframes sticky-animation {
   0% {
@@ -5227,7 +5227,8 @@ body .search-modal .close:hover {
 }
 
 .rs-breadcrumbs.img5 {
-  background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755636032/Nanosoft/Services/black-friday-sales-sign-neon-light_1_uejxwp.jpg") center center;
+  background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755636032/Nanosoft/Services/black-friday-sales-sign-neon-light_1_uejxwp.jpg")
+    center center;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -5278,15 +5279,15 @@ body .search-modal .close:hover {
 }
 
 .rs-breadcrumbs.img0::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(2, 39, 158, 0.7);
-    z-index: 2;
-  }
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(2, 39, 158, 0.7);
+  z-index: 2;
+}
 
 .rs-breadcrumbs.img9 {
   background: url("https://res.cloudinary.com/djdkjrlp8/image/upload/v1755637556/Nanosoft/Services/7060468_lnzuvb.jpg");
@@ -7770,7 +7771,8 @@ body .search-modal .close:hover {
   font-size: 70px;
   font-weight: 600;
   line-height: 119px;
-  color: #02010108;
+  /* color: #02010108; */
+color: rgba(208, 227, 251, 0.5);
   margin-bottom: 10px;
 }
 .rs-services.style3 .services-item:hover {

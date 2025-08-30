@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { AiFillGithub } from "react-icons/ai";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import { ColorRing } from "react-loader-spinner";
 
@@ -30,6 +29,8 @@ const Portfolio = () => {
       title: "E-commerce Application",
       description:
         "It's an all-in-one Ecommerce and Inventory Management System for Discover Products, Making a purchase, Managing carts, Execute secure payments, and effortlessly completing checkouts MongoDB, Node.js, Express.js, React.js, Redux, and JavaScript",
+      github: "https://github.com/DEVELOPERxSAJIB/Bigbazar-ecommerce.git",
+      liveLink: "https://finalecommerce-chi.vercel.app/",
     },
     {
       id: 2,
@@ -38,6 +39,7 @@ const Portfolio = () => {
       title: "Cineplex Book a Show",
       description:
         "An Online Ticket Booking Application as well as purchase tickets, reserve seats for your favorite shows, and even create personalized Halls and Theatres - Node Js, Express Js, React Js, Mongo DB, Stripe, RTK, Ant Design, Bootstrap, CSS & HTML",
+      liveLink: "https://bookingsystem-tau.vercel.app/login",
     },
     {
       id: 3,
@@ -46,6 +48,8 @@ const Portfolio = () => {
       title: "FamClinic",
       description:
         "This app is built with React, featuring email integration via EmailJS, real-time data fetching from JSON, and a toaster for notifications. It includes pages like Home, About Us, Services, and Pricing, providing a seamless user experience.",
+      github: "https://github.com/DEVELOPERxSAJIB/FamClinic",
+      liveLink: "https://clinic-application-design-five.vercel.app/",
     },
     {
       id: 4,
@@ -54,6 +58,8 @@ const Portfolio = () => {
       title: "Bright Smile Centrum",
       description:
         "This app is built with React, featuring email integration via EmailJS, real-time data fetching from JSON, and a toaster for notifications. It includes pages like Home, About Us, Services, and Pricing, providing a seamless user experience.",
+      github: "https://github.com/DEVELOPERxSAJIB/Brightsmile",
+      liveLink: "https://brightsmile-iota.vercel.app/",
     },
     {
       id: 5,
@@ -62,6 +68,8 @@ const Portfolio = () => {
       title: "Propossed Offer",
       description:
         "Proposed Offer is a React-based property selling platform that streamlines real estate transactions. It features React Router for navigation, Formik & Yup for form validation, and EmailJS for seamless email communication.",
+      github: "https://github.com/DEVELOPERxSAJIB/FamClinic",
+      liveLink: "https://propossedoffer.vercel.app/",
     },
     {
       id: 6,
@@ -70,6 +78,7 @@ const Portfolio = () => {
       title: "Portfolio Website",
       description:
         "This portfolio website is built with React and features React Router for smooth navigation, React Tilt for interactive effects, and Formik & Yup for robust form validation. It includes EmailJS, providing a dynamic and engaging way to showcase the client’s work",
+      liveLink: "https://newportfoliodecember.vercel.app/",
     },
     {
       id: 7,
@@ -78,14 +87,16 @@ const Portfolio = () => {
       title: "Portfolio Website",
       description:
         "This portfolio website is built with React and features React Router for smooth navigation, React Tilt for interactive effects, and Formik & Yup for robust form validation. It includes EmailJS, providing a dynamic and engaging way to showcase the client’s work",
+      liveLink: "https://mdsajibshikder.vercel.app/",
     },
     {
       id: 8,
-      src: "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755377307/Nanosoft/Home/Portfolio/marketplace-application-developer_lnb7hd.png",
+      src: "https://res.cloudinary.com/djdkjrlp8/image/upload/v1756052108/Nanosoft/Home/Portfolio/Screenshot_1_otjb2g.png",
       category: "Marketplace",
       title: "SphereFlow - Marketplace Application",
       description:
         "A full-featured Workflow and Task Management Application designed to streamline projects, manage teams, track progress, and collaborate seamlessly — built with Node.js, Express.js, React.js, MongoDB, Redux Toolkit, TailwindCSS, and Shadcn UI.",
+      liveLink: "https://sphareflow-client.vercel.app/login",
     },
   ];
 
@@ -182,21 +193,26 @@ const Portfolio = () => {
               (image) => (
                 <div key={image?.id} className="col my-3">
                   <div
-                    className="card h-100 position-relative border-0 shadow-sm"
+                    className="card h-100 position-relative"
                     style={{
                       borderRadius: "15px",
                       overflow: "hidden",
-                      transition: "transform 0.25s ease, box-shadow 0.25s ease",
+                      transition:
+                        "transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease",
+                      boxShadow: "0px 10px 50px rgba(14, 112, 225, 0.1)",
+                      border: "2px solid transparent",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.transform = "translateY(-6px)";
                       e.currentTarget.style.boxShadow =
-                        "0 12px 25px rgba(0,0,0,0.15)";
+                        "0px 10px 50px rgba(14, 112, 225, 0.15)";
+                      e.currentTarget.style.border = "2px solid #0d6adbc8"; // ✅ Border works here
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = "translateY(0)";
                       e.currentTarget.style.boxShadow =
-                        "0 6px 15px rgba(0,0,0,0.08)";
+                        "0px 10px 50px rgba(14, 112, 225, 0.1)";
+                      e.currentTarget.style.border = "2px solid transparent"; // ✅ Reset border
                     }}
                   >
                     {/* Image */}
@@ -235,36 +251,17 @@ const Portfolio = () => {
                     <div
                       className="position-absolute"
                       style={{
-                        top: "20px",
-                        right: "20px",
+                        top: "10px",
+                        right: "10px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "8px",
                       }}
                     >
-                      {/* GitHub */}
-                      <div
-                        onClick={() =>
-                          window.open(allImages.liveLink, "_blank")
-                        }
-                        className="d-flex justify-content-center align-items-center rounded-circle"
-                        style={{
-                          width: "42px",
-                          height: "42px",
-                          cursor: "pointer",
-                          background:
-                            "linear-gradient(135deg, #4B91EA, #F6F7F9)",
-                        }}
-                      >
-                        <AiFillGithub size={25} color="#052592" />
-                      </div>
-
                       {/* Live Link */}
                       <div
-                        onClick={() =>
-                          window.open(allImages.liveLink, "_blank")
-                        }
-                        className="d-flex justify-content-center align-items-center rounded-circle"
+                        onClick={() => window.open(image.liveLink, "_blank")}
+                        className="d-flex justify-content-center shadow align-items-center rounded-circle"
                         style={{
                           width: "42px",
                           height: "42px",
@@ -275,6 +272,21 @@ const Portfolio = () => {
                       >
                         <HiOutlineStatusOnline size={20} color="#fff" />
                       </div>
+
+                      {/* GitHub */}
+                      {/* <div
+                        onClick={() => window.open(image.github, "_blank")}
+                        className="d-flex justify-content-center shadow align-items-center rounded-circle"
+                        style={{
+                          width: "42px",
+                          height: "42px",
+                          cursor: "pointer",
+                          background:
+                            "linear-gradient(135deg, #4B91EA, #F6F7F9)",
+                        }}
+                      >
+                        <AiFillGithub size={25} color="#052592" />
+                      </div> */}
                     </div>
                   </div>
                 </div>

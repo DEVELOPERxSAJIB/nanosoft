@@ -4,8 +4,7 @@
 }
 
 .title {
-  font-family: "Arial", "Helvetica Neue", sans-serif;
-  font-weight: 700;
+  font-family: "Livvic", sans-serif !important;
   font-display: swap; /* ensures immediate paint */
 }
 

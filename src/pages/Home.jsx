@@ -727,7 +727,7 @@ const Home = () => {
                 <div className="services-wrap">
                   <div className="services-icon">
                     <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913700/Nanosoft/Home/Industry/2_v6qusw.png"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756048784/Nanosoft/Home/Industry/shopping-cart_18392659_xw2qqh.png"
                       alt="E-commerce Industry Solutions"
                       loading="lazy"
                     />
@@ -741,7 +741,7 @@ const Home = () => {
                 <div className="services-wrap">
                   <div className="services-icon">
                     <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913707/Nanosoft/Home/Industry/image_qmuq8g.png"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756050044/Nanosoft/Home/Industry/medical-support_15091061_xhrrdd.png"
                       alt="Healthcare Industry Solutions"
                       loading="lazy"
                     />
@@ -769,7 +769,7 @@ const Home = () => {
                 <div className="services-wrap">
                   <div className="services-icon">
                     <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913703/Nanosoft/Home/Industry/9_kfyhwt.png"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756049704/Nanosoft/Home/Industry/automation_18386506_jilcjb.png"
                       alt="Manufacturing Industry Solutions"
                       loading="lazy"
                     />
@@ -783,7 +783,7 @@ const Home = () => {
                 <div className="services-wrap">
                   <div className="services-icon">
                     <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913705/Nanosoft/Home/Industry/10_zbeuce.png"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756049198/Nanosoft/Home/Industry/delivery-time_18386373_prh00w.png"
                       alt="Logistics Industry Solutions"
                       loading="lazy"
                     />
@@ -811,7 +811,7 @@ const Home = () => {
                 <div className="services-wrap">
                   <div className="services-icon">
                     <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913701/Nanosoft/Home/Industry/6_wv7iba.png"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756049497/Nanosoft/Home/Industry/time-save_17345401_ilqt0i.png"
                       alt="News Portal Industry Solutions"
                       loading="lazy"
                     />
@@ -825,7 +825,7 @@ const Home = () => {
                 <div className="services-wrap">
                   <div className="services-icon">
                     <img
-                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1754913702/Nanosoft/Home/Industry/7_xelxgi.png"
+                      src="https://res.cloudinary.com/djdkjrlp8/image/upload/v1756049639/Nanosoft/Home/Industry/thriller_16341859_akpjk6.png"
                       alt="Entertainment Industry Solutions"
                       loading="lazy"
                     />
@@ -872,7 +872,7 @@ const Home = () => {
         {/* Portfolio Section End */}
 
         {/* Process Start */}
-        <div
+        {/* <div
           style={{ background: "#F6F7F9" }}
           className="rs-process style2 pt-80 pb-80 md-pt-60 md-pb-60"
         >
@@ -976,8 +976,299 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Process End */}
+
+        {/* Process Section Start */}
+        <div className="rs-process style5 bg7 pt-120 pb-120 md-pt-80 md-pb-65">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-4 md-pb-50">
+                <div className="process-wrap bg3">
+                  <div className="sec-title mb-30">
+                    <div className="sub-text new">Working Process</div>
+                    <h2 className="title white-color">
+                      Our Working Process - How We Work For Our Customers
+                    </h2>
+                  </div>
+                  <div className="btn-part mt-40">
+                    <Link className="readon learn-more" to="/contact">
+                      Contact Us
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-8 pl-30 md-pl-15">
+                <div className="row">
+                  <div className="col-md-6 mb-40">
+                    <div className="rs-addon-number">
+                      <div className="number-text">
+                        <div className="number-area">1.</div>
+                        <div className="number-title">
+                          <h3 className="title"> Discovery</h3>
+                        </div>
+                        <p className="number-txt">
+                          {" "}
+                          We begin by understanding your unique business needs,
+                          analyzing the market, and identifying the best
+                          strategies to ensure a successful project.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 mb-40">
+                    <div className="rs-addon-number">
+                      <div className="number-text">
+                        <div className="number-area">2.</div>
+                        <div className="number-title">
+                          <h3 className="title">Planning</h3>
+                        </div>
+                        <p className="number-txt">
+                          Our team creates a detailed plan tailored to your
+                          objectives, outlining each phase of the project to
+                          ensure smooth progress and timely completion.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="rs-addon-number">
+                      <div className="number-text">
+                        <div className="number-area">3.</div>
+                        <div className="number-title">
+                          <h3 className="title">Execute</h3>
+                        </div>
+                        <p className="number-txt">
+                          With the plan in place, we move into development,
+                          applying industry-leading tools and practices to build
+                          a solution that meets your expectations.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="rs-addon-number">
+                      <div className="number-text">
+                        <div className="number-area">4.</div>
+                        <div className="number-title">
+                          <h3 className="title">Deliver</h3>
+                        </div>
+                        <p className="number-txt">
+                          After rigorous testing and review, we deliver the
+                          final product, ensuring it aligns with your vision and
+                          performs seamlessly across all platforms.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Process Section End */}
+
+        {/* Pricing section start */}
+        <div className="rs-pricing gray-color style2 pt-120 pb-143 md-pt-80 md-pb-80">
+          <div className="container">
+            <div className="sec-title2 text-center mb-45">
+              <span className="sub-text style-bg">Pricing</span>
+              <h2 className="title">Our Pricing Plan</h2>
+            </div>
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="pricing-table">
+                  <div className="pricing-badge">Silver</div>
+                  <div className="pricing-icon">
+                    <img
+                      src={
+                        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553255/Nanosoft/Services/1_oqshkb.png"
+                      }
+                      alt={"Silver Plan Icon"}
+                    />
+                  </div>
+                  <div className="pricing-table-price">
+                    <div className="pricing-table-bags">
+                      <span className="pricing-currency">$</span>
+                      <span className="table-price-text">1,499</span>
+                      <span className="table-period">Starting from</span>
+                    </div>
+                  </div>
+                  <div className="pricing-table-body">
+                    <ul>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Up to 20 Pages Designed (responsive layout)</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Fully Responsive Design (Optimized for all devices)
+                        </span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>SEO-Friendly Design</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Source Code with Detailed Comments</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Basic On-Page SEO</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>1 Month Free Maintenance & Support</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="btn-part">
+                    <a
+                      className="readon buy-now"
+                      href="https://forms.gle/t3DWM7pHoqNw7BCb7"
+                    >
+                      3 Slots Left
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 md-pb-30 md-pt-30">
+                <div className="pricing-table primary-bg">
+                  <div className="pricing-badge white-color-bg">Gold</div>
+                  <div className="pricing-icon">
+                    <img
+                      src={
+                        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553249/Nanosoft/Services/2_wqqgow.png"
+                      }
+                      alt={"Gold Plan Icon"}
+                    />
+                  </div>
+                  <div className="pricing-table-price">
+                    <div className="pricing-table-bags">
+                      <span className="pricing-currency">$</span>
+                      <span className="table-price-text">3,999</span>
+                      <span className="table-period">Starting from</span>
+                    </div>
+                  </div>
+                  <div className="pricing-table-body">
+                    <ul>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Custom Web Development (Frontend & Backend)</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Database Integration</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Advanced Web Application Features (Interactive
+                          multimedia, user authentication)
+                        </span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Custom API Integration</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>E-commerce Functionality (Optional)</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Powerful Admin Panel (For content and user management)
+                        </span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>3 Months Free Maintenance & Support</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="btn-part">
+                    <a
+                      className="readon buy-now"
+                      href="https://forms.gle/t3DWM7pHoqNw7BCb7"
+                    >
+                      1 Slots Left
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="pricing-table">
+                  <div className="pricing-badge">Platinum</div>
+                  <div className="pricing-icon">
+                    <img
+                      src={
+                        "https://res.cloudinary.com/djdkjrlp8/image/upload/v1755553252/Nanosoft/Services/3_lmd9wh.png"
+                      }
+                      alt={"Platinum Plan Icon"}
+                    />
+                  </div>
+                  <div className="pricing-table-price">
+                    <div className="pricing-table-bags">
+                      <span className="pricing-currency">$</span>
+                      <span className="table-price-text">7,999</span>
+                      <span className="table-period">Monthly Package</span>
+                    </div>
+                  </div>
+                  <div className="pricing-table-body">
+                    <ul>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Custom CRM/SRM Software Development</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Advanced Features (Client management, task management,
+                          financial tracking)
+                        </span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Third-Party Integrations (Payment gateways, email
+                          services)
+                        </span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Mobile App Integration (Android options available)
+                        </span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>Admin Dashboard for System Control</span>
+                      </li>
+                      <li>
+                        <i className="fa fa-check" />
+                        <span>
+                          Priority Maintenance & Support (3 Months Free)
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="btn-part">
+                    <a
+                      className="readon buy-now"
+                      href="https://forms.gle/t3DWM7pHoqNw7BCb7"
+                    >
+                      3 Slots Left
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Pricing section end */}
 
         {/* Testimonail Section Start */}
         <div>
