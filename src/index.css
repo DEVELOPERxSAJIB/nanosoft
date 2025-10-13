@@ -12,6 +12,47 @@
   display: block !important;
 }
 
+.whatsapp-btn {
+  width: 56px;
+  height: 56px;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(#0D68D9, #03228F); /* You can use #25d366 for WhatsApp green */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  z-index: 9999;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-ping {
+  width: 56px;
+  height: 56px;
+  top: 0;
+  left: 0;
+  background-color: #0844b37b;
+  animation: ping 3s infinite;
+  z-index: -1;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+
 .phone-menu {
   position: absolute;
   top: 65px;

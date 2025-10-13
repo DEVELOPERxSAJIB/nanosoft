@@ -14,6 +14,7 @@ import OurPortfolio from "./pages/OurPortfolio";
 import ScrollToTop from "./utils/ScrollToTop";
 import { HelmetProvider } from "react-helmet-async";
 import LandingPage from "./pages/LandingPage";
+import { FaWhatsapp } from "react-icons/fa6";
 
 function App() {
   return (
@@ -50,6 +51,15 @@ function App() {
           </Routes>
         </BrowserRouter>
       </HelmetProvider>
+      <a
+        href="https://wa.me/+8801789557538"
+        target="_blank"
+        rel="noreferrer noopener"
+        className="whatsapp-btn position-fixed d-flex align-items-center justify-content-center rounded-circle"
+      >
+        <FaWhatsapp size={25} color="#fff" />
+        <span className="whatsapp-ping position-absolute rounded-circle"></span>
+      </a>
     </>
   );
 }
