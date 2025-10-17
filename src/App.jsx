@@ -1,65 +1,66 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { FaWhatsapp } from "react-icons/fa6";
+import ReactPixel from "react-facebook-pixel";
+
+import ScrollToTop from "./utils/ScrollToTop";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Services from "./pages/Services/Services";
 import SoftwareDevelopment from "./pages/Services/SoftwareDevelopment";
 import WebDevelopment from "./pages/Services/WebDevelopment";
-import Services from "./pages/Services/Services";
-import NotFound from "./pages/NotFound";
 import Ecommerce from "./pages/Services/Ecommerce";
 import CustomCrmSrm from "./pages/Services/CustomCrmSrm";
 import CloudAndDevOps from "./pages/Services/CloudAndDevOps";
 import WebDesign from "./pages/Services/WebDesign";
 import OurPortfolio from "./pages/OurPortfolio";
-import ScrollToTop from "./utils/ScrollToTop";
-import { HelmetProvider } from "react-helmet-async";
 import LandingPage from "./pages/LandingPage";
-import { FaWhatsapp } from "react-icons/fa6";
-import { useEffect } from "react";
-import ReactPixel from "react-facebook-pixel";
+import NotFound from "./pages/NotFound";
 
-function App() {
-
+function PixelTracker() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactPixel.pageView(); // Track each route change
+    ReactPixel.pageView();
   }, [location.pathname]);
 
+  return null;
+}
+
+function App() {
+  // Initialize Pixel once
+  useEffect(() => {
+    const options = {
+      autoConfig: true,
+      debug: false,
+    };
+    ReactPixel.init("YOUR_PIXEL_ID", options);
+  }, []);
+
   return (
-    <>
-      <HelmetProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="*" element={<NotFound />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/custom-crm-srm" element={<CustomCrmSrm />} />
-            <Route
-              path="/services/software-development"
-              element={<SoftwareDevelopment />}
-            />
-            <Route
-              path="/services/web-development"
-              element={<WebDevelopment />}
-            />
-            <Route
-              path="/services/ecommerce-development"
-              element={<Ecommerce />}
-            />
-            <Route
-              path="/services/cloud-and-devops"
-              element={<CloudAndDevOps />}
-            />
-            <Route path="/services/web-design" element={<WebDesign />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/our-portfolio" element={<OurPortfolio />} />
-            <Route path="/offers" element={<LandingPage />} />
-          </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
+    <HelmetProvider>
+      <BrowserRouter>
+        <PixelTracker /> {/* ✅ Pixel now runs inside Router */}
+        <ScrollToTop />
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/custom-crm-srm" element={<CustomCrmSrm />} />
+          <Route path="/services/software-development" element={<SoftwareDevelopment />} />
+          <Route path="/services/web-development" element={<WebDevelopment />} />
+          <Route path="/services/ecommerce-development" element={<Ecommerce />} />
+          <Route path="/services/cloud-and-devops" element={<CloudAndDevOps />} />
+          <Route path="/services/web-design" element={<WebDesign />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/our-portfolio" element={<OurPortfolio />} />
+          <Route path="/offers" element={<LandingPage />} />
+        </Routes>
+      </BrowserRouter>
+
       <a
         href="https://wa.me/+8801789557538"
         target="_blank"
@@ -69,7 +70,7 @@ function App() {
         <FaWhatsapp size={25} color="#fff" />
         <span className="whatsapp-ping position-absolute rounded-circle"></span>
       </a>
-    </>
+    </HelmetProvider>
   );
 }
 
