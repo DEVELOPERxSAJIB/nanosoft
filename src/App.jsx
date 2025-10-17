@@ -36,7 +36,7 @@ function App() {
       autoConfig: true,
       debug: false,
     };
-    ReactPixel.init("YOUR_PIXEL_ID", options);
+    ReactPixel.init("1526798621796179", options);
   }, []);
 
   return (
