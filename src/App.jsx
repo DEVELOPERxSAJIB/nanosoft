@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -15,8 +15,17 @@ import ScrollToTop from "./utils/ScrollToTop";
 import { HelmetProvider } from "react-helmet-async";
 import LandingPage from "./pages/LandingPage";
 import { FaWhatsapp } from "react-icons/fa6";
+import { useEffect } from "react";
+import ReactPixel from "react-facebook-pixel";
 
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactPixel.pageView(); // Track each route change
+  }, [location.pathname]);
+
   return (
     <>
       <HelmetProvider>
