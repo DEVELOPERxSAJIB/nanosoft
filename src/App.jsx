@@ -1,8 +1,6 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { FaWhatsapp } from "react-icons/fa6";
-import ReactPixel from "react-facebook-pixel";
 
 import ScrollToTop from "./utils/ScrollToTop";
 import Home from "./pages/Home";
@@ -18,31 +16,23 @@ import WebDesign from "./pages/Services/WebDesign";
 import OurPortfolio from "./pages/OurPortfolio";
 import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
+import { initFacebookPixel, trackPageView } from "./MetaPixel";
+import { useEffect } from "react";
 
-function PixelTracker() {
+function App() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactPixel.pageView();
-  }, [location.pathname]);
-
-  return null;
-}
-
-function App() {
-  // Initialize Pixel once
-  useEffect(() => {
-    const options = {
-      autoConfig: true,
-      debug: false,
-    };
-    ReactPixel.init("1526798621796179", options);
+    initFacebookPixel();
   }, []);
+
+  useEffect(() => {
+    trackPageView();
+  }, [location]);
 
   return (
     <HelmetProvider>
-      <BrowserRouter>
-        <PixelTracker /> {/* ✅ Pixel now runs inside Router */}
+
         <ScrollToTop />
         <Routes>
           <Route path="*" element={<NotFound />} />
@@ -50,16 +40,27 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/custom-crm-srm" element={<CustomCrmSrm />} />
-          <Route path="/services/software-development" element={<SoftwareDevelopment />} />
-          <Route path="/services/web-development" element={<WebDevelopment />} />
-          <Route path="/services/ecommerce-development" element={<Ecommerce />} />
-          <Route path="/services/cloud-and-devops" element={<CloudAndDevOps />} />
+          <Route
+            path="/services/software-development"
+            element={<SoftwareDevelopment />}
+          />
+          <Route
+            path="/services/web-development"
+            element={<WebDevelopment />}
+          />
+          <Route
+            path="/services/ecommerce-development"
+            element={<Ecommerce />}
+          />
+          <Route
+            path="/services/cloud-and-devops"
+            element={<CloudAndDevOps />}
+          />
           <Route path="/services/web-design" element={<WebDesign />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/our-portfolio" element={<OurPortfolio />} />
           <Route path="/offers" element={<LandingPage />} />
         </Routes>
-      </BrowserRouter>
 
       <a
         href="https://wa.me/+8801789557538"
