@@ -26,41 +26,32 @@ function App() {
     initFacebookPixel();
   }, []);
 
+  // fire event when route changes
   useEffect(() => {
     trackPageView();
   }, [location]);
 
   return (
     <HelmetProvider>
-
-        <ScrollToTop />
-        <Routes>
-          <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/custom-crm-srm" element={<CustomCrmSrm />} />
-          <Route
-            path="/services/software-development"
-            element={<SoftwareDevelopment />}
-          />
-          <Route
-            path="/services/web-development"
-            element={<WebDevelopment />}
-          />
-          <Route
-            path="/services/ecommerce-development"
-            element={<Ecommerce />}
-          />
-          <Route
-            path="/services/cloud-and-devops"
-            element={<CloudAndDevOps />}
-          />
-          <Route path="/services/web-design" element={<WebDesign />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/our-portfolio" element={<OurPortfolio />} />
-          <Route path="/offers" element={<LandingPage />} />
-        </Routes>
+      <ScrollToTop />
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/custom-crm-srm" element={<CustomCrmSrm />} />
+        <Route
+          path="/services/software-development"
+          element={<SoftwareDevelopment />}
+        />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
+        <Route path="/services/ecommerce-development" element={<Ecommerce />} />
+        <Route path="/services/cloud-and-devops" element={<CloudAndDevOps />} />
+        <Route path="/services/web-design" element={<WebDesign />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/our-portfolio" element={<OurPortfolio />} />
+        <Route path="/offers" element={<LandingPage />} />
+      </Routes>
 
       <a
         href="https://wa.me/+8801789557538"

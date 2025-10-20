@@ -1,4 +1,4 @@
-import ReactPixel from 'react-facebook-pixel';
+import ReactPixel, { fbq } from 'react-facebook-pixel';
 
 export const initFacebookPixel = () => {
   const options = {
@@ -8,6 +8,14 @@ export const initFacebookPixel = () => {
   ReactPixel.init('1511842706385675', {}, options);
 };
 
+// export const trackPageView = () => {
+//   ReactPixel.pageView();
+// };
+
+
 export const trackPageView = () => {
-  ReactPixel.pageView();
+  if (typeof fbq === "function") {
+    fbq("track", "PageView");
+    console.log("📊 Meta Pixel: PageView tracked");
+  }
 };
