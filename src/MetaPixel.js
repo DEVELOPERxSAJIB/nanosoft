@@ -5,7 +5,7 @@ export const initFacebookPixel = () => {
     autoConfig: true,
     debug: false,
   };
-  ReactPixel.init("1511842706385675", {}, options);
+  ReactPixel.init("1526798621796179", {}, options);
 };
 
 // Track page view (for route changes)
