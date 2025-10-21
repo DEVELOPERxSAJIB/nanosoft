@@ -1,17 +1,25 @@
 import Layout from "../components/Layout/Layout";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { RxCross1 } from "react-icons/rx";
 import PageTitle from "../components/PageTitle";
 import Portfolio from "../components/Home/Portfolio";
 import Testimonial from "../components/Home/Testimonial";
 import AboutUs from "../components/AboutUs";
+import { VisitHomePage } from "../FacebookPixelEvents";
 
 const Home = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    VisitHomePage();
+  }, [location])
+
   const schema = yup.object().shape({
     name: yup.string().required("Name is required"),
     message: yup
