@@ -1,16 +1,17 @@
 import ReactPixel from "react-facebook-pixel";
 
 export const initFacebookPixel = () => {
+  if (window.fbqInitialized) return; // ✅ prevent re-init
+  window.fbqInitialized = true;
+
   const options = {
     autoConfig: true,
-    debug: true, // set true for console logs
+    debug: false,
   };
 
-  // Initialize once
   ReactPixel.init("1526798621796179", {}, options);
   console.log("✅ Meta Pixel initialized via ReactPixel");
 
-  // Track first page load
   ReactPixel.pageView();
 };
 

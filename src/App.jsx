@@ -28,7 +28,10 @@ function App() {
 
   // fire event when route changes
   useEffect(() => {
-    trackPageView();
+    const timer = setTimeout(() => {
+      trackPageView();
+    }, 500);
+    return () => clearTimeout(timer);
   }, [location]);
 
   return (
@@ -54,9 +57,11 @@ function App() {
       </Routes>
 
       <a
-        onClick={() => trackEvent("WhatsappButton", {
-          form: "Click on WhatsApp Contact Button",
-        })}
+        onClick={() =>
+          trackEvent("WhatsappButton", {
+            form: "Click on WhatsApp Contact Button",
+          })
+        }
         href="https://wa.me/+8801789557538"
         target="_blank"
         rel="noreferrer noopener"
