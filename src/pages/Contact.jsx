@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RxCross1 } from "react-icons/rx";
 import PageTitle from "../components/PageTitle";
+import { trackEvent } from "../MetaPixel";
 
 const Contact = () => {
   const contactSchema = yup.object().shape({
@@ -54,6 +55,9 @@ const Contact = () => {
       )
       .finally(() => {
         setContactLoading(false);
+        trackEvent("Lead", {
+          form: "Collect Lead from Home Contact Page",
+        });
       });
   };
 

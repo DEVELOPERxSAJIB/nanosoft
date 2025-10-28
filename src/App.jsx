@@ -16,7 +16,7 @@ import WebDesign from "./pages/Services/WebDesign";
 import OurPortfolio from "./pages/OurPortfolio";
 import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
-import { initFacebookPixel, trackPageView } from "./MetaPixel";
+import { initFacebookPixel, trackEvent, trackPageView } from "./MetaPixel";
 import { useEffect } from "react";
 
 function App() {
@@ -54,6 +54,9 @@ function App() {
       </Routes>
 
       <a
+        onClick={() => trackEvent("WhatsappButton", {
+          form: "Click on WhatsApp Contact Button",
+        })}
         href="https://wa.me/+8801789557538"
         target="_blank"
         rel="noreferrer noopener"

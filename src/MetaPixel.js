@@ -3,7 +3,7 @@ import ReactPixel from "react-facebook-pixel";
 export const initFacebookPixel = () => {
   const options = {
     autoConfig: true,
-    debug: false, // set true for console logs
+    debug: true, // set true for console logs
   };
 
   // Initialize once
@@ -27,9 +27,14 @@ export const trackPageView = () => {
 // Track custom events (optional)
 export const trackEvent = (eventName, data = {}) => {
   try {
-    ReactPixel.trackCustom(eventName, data);
-    console.log(`🎯 Meta Pixel: ${eventName} event sent`, data);
+    if (typeof window.fbq === "function") {
+      ReactPixel.trackCustom(eventName, data);
+      console.log(`🎯 Meta Pixel event sent: ${eventName}`, data);
+    } else {
+      console.warn("⚠️ Meta Pixel not yet loaded, retrying...");
+      setTimeout(() => ReactPixel.trackCustom(eventName, data), 1500);
+    }
   } catch (error) {
-    console.warn("⚠️ Meta Pixel custom event failed:", error);
+    console.error("⚠️ Meta Pixel custom event failed:", error);
   }
 };
