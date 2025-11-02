@@ -48,9 +48,9 @@ const Navbar = () => {
                     <i className="flaticon-email" />
                     <span className="contact-info">
                       <span>E-mail</span>
-                      <a href="mailto:info@contact.agency">
+                      <Link to="/contact" aria-label="Email NanoSoft">
                         contact@nanosoft.agency
-                      </a>
+                      </Link>
                     </span>
                   </li>
                   <li className="contact-part no-border">

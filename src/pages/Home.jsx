@@ -1122,7 +1122,7 @@ const Home = () => {
                     </div>
                     <div className="address-text">
                       <span className="label">Email:</span>
-                      <a href="mailto:123222-8888">contact@nanosoft.agency</a>
+                      <Link to="/contact">contact@nanosoft.agency</Link>
                     </div>
                   </div>
                   <div className="address-box mb-25">
