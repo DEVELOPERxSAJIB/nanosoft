@@ -119,7 +119,7 @@ const Home = () => {
     <>
       <Layout>
         <PageTitle
-          title="NanoSoft - Home"
+          title="NanoSoft - Premium Web Application Development & Custom Software Agency"
           description="NanoSoft is your trusted partner for innovative software solutions. We deliver tailored web and software development services worldwide."
         />
         {/* Bannar Start */}
