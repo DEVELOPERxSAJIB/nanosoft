@@ -4,6 +4,7 @@ import React, { Suspense, useState } from "react";
 import { LogoDesk, LogoMobile } from "./Logo.jsx";
 
 const logo = React.lazy(() => import("./Logo.jsx"));
+import { trackEvent } from "../../MetaPixel";
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -48,7 +49,16 @@ const Navbar = () => {
                     <i className="flaticon-email" />
                     <span className="contact-info">
                       <span>E-mail</span>
-                      <Link to="/contact" aria-label="Email NanoSoft">
+                      <Link
+                        to="/contact"
+                        aria-label="Email NanoSoft"
+                        onClick={() =>
+                          trackEvent("ButtonClick", {
+                            location: "NavbarTop",
+                            button: "Email Link",
+                          })
+                        }
+                      >
                         contact@nanosoft.agency
                       </Link>
                     </span>
@@ -57,7 +67,17 @@ const Navbar = () => {
                     <i className="flaticon-call" />
                     <span className="contact-info">
                       <span>Phone</span>
-                      <a href="tel:01789557538">01789557538</a>
+                      <a
+                        href="tel:01789557538"
+                        onClick={() =>
+                          trackEvent("ButtonClick", {
+                            location: "NavbarTop",
+                            button: "Phone Link",
+                          })
+                        }
+                      >
+                        01789557538
+                      </a>
                     </span>
                   </li>
                 </ul>
@@ -129,12 +149,12 @@ const Navbar = () => {
                     <li
                       className={
                         pathname === "/services" ||
-                        pathname === "/services/web-development" ||
-                        pathname === "/services/software-development" ||
-                        pathname === "/services/custom-crm-srm" ||
-                        pathname === "/services/ecommerce-development" ||
-                        pathname === "/services/cloud-and-devops" ||
-                        pathname === "/services/web-design"
+                          pathname === "/services/web-development" ||
+                          pathname === "/services/software-development" ||
+                          pathname === "/services/custom-crm-srm" ||
+                          pathname === "/services/ecommerce-development" ||
+                          pathname === "/services/cloud-and-devops" ||
+                          pathname === "/services/web-design"
                           ? "current-menu-item menu-item-has-children"
                           : "menu-item-has-children"
                       }
@@ -221,7 +241,17 @@ const Navbar = () => {
                         pathname === "/contact" ? "current-menu-item" : null
                       }
                     >
-                      <Link to="/contact">Contact</Link>
+                      <Link
+                        to="/contact"
+                        onClick={() =>
+                          trackEvent("ButtonClick", {
+                            location: "NavbarMain",
+                            button: "Contact Menu",
+                          })
+                        }
+                      >
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                   {/* //.nav-menu */}
@@ -389,7 +419,17 @@ const Navbar = () => {
               <li
                 className={pathname === "/contact" ? "current-menu-item" : null}
               >
-                <Link to="/contact">Contact</Link>
+                <Link
+                  to="/contact"
+                  onClick={() =>
+                    trackEvent("ButtonClick", {
+                      location: "NavbarMobile",
+                      button: "Contact Menu",
+                    })
+                  }
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

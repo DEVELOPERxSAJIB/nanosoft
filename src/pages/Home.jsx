@@ -65,7 +65,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   const sendEmail = () => {
-    trackEvent("SubmitFormCliked", {
+    trackEvent("SubmitFormClicked", {
       form: "Home Page Banner",
     });
     setLoading(true);
@@ -360,6 +360,12 @@ const Home = () => {
                           <Link
                             className="readon view-more"
                             to="/services/web-development"
+                            onClick={() =>
+                              trackEvent("ButtonClick", {
+                                location: "HomeServices",
+                                button: "Web Development Learn More",
+                              })
+                            }
                           >
                             Learn More
                             <span className="visually-hidden">
@@ -425,6 +431,12 @@ const Home = () => {
                           <Link
                             className="readon view-more"
                             to="/services/software-development"
+                            onClick={() =>
+                              trackEvent("ButtonClick", {
+                                location: "HomeServices",
+                                button: "Software Development Learn More",
+                              })
+                            }
                           >
                             Learn More
                             <span className="visually-hidden">
@@ -490,6 +502,12 @@ const Home = () => {
                           <Link
                             className="readon view-more"
                             to="/services/custom-crm-srm"
+                            onClick={() =>
+                              trackEvent("ButtonClick", {
+                                location: "HomeServices",
+                                button: "Custom CRM/SRM Learn More",
+                              })
+                            }
                           >
                             Learn More
                             <span className="visually-hidden">
@@ -554,6 +572,12 @@ const Home = () => {
                           <Link
                             className="readon view-more"
                             to="/services/ecommerce-development"
+                            onClick={() =>
+                              trackEvent("ButtonClick", {
+                                location: "HomeServices",
+                                button: "Commerce Development Learn More",
+                              })
+                            }
                           >
                             Learn More
                             <span className="visually-hidden">
@@ -620,6 +644,12 @@ const Home = () => {
                           <Link
                             className="readon view-more"
                             to="/services/cloud-and-devops"
+                            onClick={() =>
+                              trackEvent("ButtonClick", {
+                                location: "HomeServices",
+                                button: "Cloud and DevOps Learn More",
+                              })
+                            }
                           >
                             Learn More
                             <span className="visually-hidden">
@@ -685,6 +715,12 @@ const Home = () => {
                           <Link
                             className="readon view-more"
                             to="/services/web-design"
+                            onClick={() =>
+                              trackEvent("ButtonClick", {
+                                location: "HomeServices",
+                                button: "Web Design Learn More",
+                              })
+                            }
                           >
                             Learn More
                             <span className="visually-hidden">
