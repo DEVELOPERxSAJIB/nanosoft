@@ -1,4 +1,5 @@
 import GoogleAd from "../../../components/Ads/GoogleAds";
+import GoogleAutoAds from "../../../components/Ads/GoogleAutoAds";
 import Layout from "../../../components/Layout/Layout";
 import PageTitle from "../../../components/PageTitle";
 
@@ -9,6 +10,8 @@ const ImageBgRemover = () => {
         title="NanoSoft - Premium Image Background Remover & Web Development Tools"
         description="NanoSoft provides premium web development services and custom software solutions. Try our AI-powered Image Background Remover and other web tools to enhance productivity and design workflows."
       />
+
+      <GoogleAutoAds />
 
       <div className="container-fluid py-5">
         <div className="row">
