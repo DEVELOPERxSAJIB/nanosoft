@@ -18,6 +18,8 @@ import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
 import { initFacebookPixel, trackEvent, trackPageView } from "./MetaPixel";
 import { useEffect } from "react";
+import Tools from "./pages/Tools/Tools";
+import ImageBgRemover from "./pages/Tools/Images/ImageBgRemover";
 
 function App() {
   const location = useLocation();
@@ -54,6 +56,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/our-portfolio" element={<OurPortfolio />} />
         <Route path="/offers" element={<LandingPage />} />
+
+        <Route path="/tools" element={<Tools />} />
+        <Route path="/tools/image-background-remover" element={<ImageBgRemover />} />
       </Routes>
 
       <a
