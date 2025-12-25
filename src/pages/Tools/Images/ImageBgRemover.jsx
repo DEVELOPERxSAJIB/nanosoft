@@ -29,9 +29,9 @@ const ImageBgRemover = () => {
           <div className="col-lg-8 col-md-12">
             <div className="sticky-top pb-3" style={{ top: "100px" }}>
               {/* Replace this with your Google Ad code */}
-              <div className="bg-light p-2 text-center">
+              {/* <div className="bg-light p-2 text-center">
                 <GoogleAd />
-              </div>
+              </div> */}
             </div>
             <div className="tool-content mt-5 p-4 shadow-sm rounded">
               {/* Your tool UI here */}

@@ -16,7 +16,7 @@ const GoogleAd = () => {
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: "block" }}
+      style={{ display: "block", zIndex: "1" }}
       data-ad-client="ca-pub-9174321091222047"
       data-ad-slot="7105642350"
       data-ad-format="auto"

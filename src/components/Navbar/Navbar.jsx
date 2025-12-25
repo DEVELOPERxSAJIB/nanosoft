@@ -223,6 +223,88 @@ const Navbar = () => {
                     >
                       <Link to="/contact">Contact</Link>
                     </li>
+                    <li
+                      className={
+                        pathname === "/tools" ||
+                        pathname === "/tools/image-background-remover" ||
+                        pathname === "/tools/image-resize" ||
+                        pathname === "/services/software-development" ||
+                        pathname === "/services/custom-crm-srm" ||
+                        pathname === "/services/ecommerce-development" ||
+                        pathname === "/services/cloud-and-devops" ||
+                        pathname === "/services/web-design"
+                          ? "current-menu-item menu-item-has-children"
+                          : "menu-item-has-children"
+                      }
+                    >
+                      <Link to="/tools">Online Tools</Link>
+                      <ul className="sub-menu">
+                        <li
+                          className={
+                            pathname === "/tools/image-background-remover"
+                              ? "current-menu-item"
+                              : null
+                          }
+                        >
+                          <Link to="/tools/image-background-remover">
+                            Image bg Remover
+                          </Link>{" "}
+                        </li>
+                        <li
+                          className={
+                            pathname === "/tools/image-resize"
+                              ? "current-menu-item"
+                              : null
+                          }
+                        >
+                          <Link to="/tools/image-resize">
+                            Image Resizer
+                          </Link>{" "}
+                        </li>
+                        <li
+                          className={
+                            pathname === "/services/custom-crm-srm"
+                              ? "current-menu-item"
+                              : null
+                          }
+                        >
+                          <Link to="/services/custom-crm-srm">
+                            Custom ERM SRM System
+                          </Link>{" "}
+                        </li>
+                        <li
+                          className={
+                            pathname === "/services/ecommerce-development"
+                              ? "current-menu-item"
+                              : null
+                          }
+                        >
+                          <Link to="/services/ecommerce-development">
+                            E-commerce Development
+                          </Link>{" "}
+                        </li>
+                        <li
+                          className={
+                            pathname === "/services/cloud-and-devops"
+                              ? "current-menu-item"
+                              : null
+                          }
+                        >
+                          <Link to="/services/cloud-and-devops">
+                            Cloud and DevOps
+                          </Link>{" "}
+                        </li>
+                        <li
+                          className={
+                            pathname === "/services/web-design"
+                              ? "current-menu-item"
+                              : null
+                          }
+                        >
+                          <Link to="/services/web-design">Website Design</Link>{" "}
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
                   {/* //.nav-menu */}
                 </nav>
@@ -390,6 +472,13 @@ const Navbar = () => {
                 className={pathname === "/contact" ? "current-menu-item" : null}
               >
                 <Link to="/contact">Contact</Link>
+              </li>
+              <div className="line"></div>
+              <li
+                style={{ paddingBottom : "8px" }}
+                className={pathname === "/about" ? "current-menu-item" : null}
+              >
+                <Link to="/tools">Online Tools</Link>
               </li>
             </ul>
           </div>
