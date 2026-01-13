@@ -151,12 +151,12 @@ const Navbar = () => {
                     <li
                       className={
                         pathname === "/services" ||
-                          pathname === "/services/web-development" ||
-                          pathname === "/services/software-development" ||
-                          pathname === "/services/custom-crm-srm" ||
-                          pathname === "/services/ecommerce-development" ||
-                          pathname === "/services/cloud-and-devops" ||
-                          pathname === "/services/web-design"
+                        pathname === "/services/web-development" ||
+                        pathname === "/services/software-development" ||
+                        pathname === "/services/custom-crm-srm" ||
+                        pathname === "/services/ecommerce-development" ||
+                        pathname === "/services/cloud-and-devops" ||
+                        pathname === "/services/web-design"
                           ? "current-menu-item menu-item-has-children"
                           : "menu-item-has-children"
                       }
@@ -231,62 +231,12 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        pathname.includes("/ai-tools")
-                          ? "current-menu-item menu-item-has-children"
-                          : "menu-item-has-children"
-                      }
-                    >
-                      <Link to="/ai-tools">AI Tools</Link>
-                      <ul className="sub-menu">
-                        <li><Link to="/ai-tools">All AI Tools</Link></li>
-                        <li><Link to="/ai-tools/text-generator">Text Generator</Link></li>
-                        <li><Link to="/ai-tools/image-generator">Image Generator</Link></li>
-                        <li><Link to="/ai-tools/code-assistant">Code Assistant</Link></li>
-                        <li><Link to="/ai-tools/grammar-checker">Grammar Checker</Link></li>
-                        <li><Link to="/ai-tools/summarizer">Summarizer</Link></li>
-                        <li><Link to="/ai-tools/chat-bot">AI Chat Bot</Link></li>
-                      </ul>
-                    </li>
-                    <li
-                      className={
                         pathname === "/our-portfolio"
                           ? "current-menu-item"
                           : null
                       }
                     >
-                      <Link to="/our-portfolio">Our Portfolio</Link>
-                    </li>
-                    <li
-                      className={
-                        pathname.includes("/tools")
-                          ? "current-menu-item menu-item-has-children"
-                          : "menu-item-has-children"
-                      }
-                    >
-                      <Link to="/tools">Tools</Link>
-                      <ul className="sub-menu">
-                        <li><Link to="/tools">All Tools</Link></li>
-                        <li><Link to="/tools/pdf-to-word">PDF to Word</Link></li>
-                        <li><Link to="/tools/image-compressor">Image Compressor</Link></li>
-                        <li><Link to="/tools/merge-pdf">Merge PDF</Link></li>
-                        <li><Link to="/tools/split-pdf">Split PDF</Link></li>
-                        <li><Link to="/tools/word-to-pdf">Word to PDF</Link></li>
-                        <li><Link to="/tools/image-resizer">Image Resizer</Link></li>
-                        <li><Link to="/tools/compress-pdf">Compress PDF</Link></li>
-                        <li><Link to="/tools/pdf-to-jpg">PDF to JPG</Link></li>
-                        <li><Link to="/tools/word-counter">Word Counter</Link></li>
-                        <li><Link to="/tools/qr-code-generator">QR Code Generator</Link></li>
-                        <li><Link to="/tools/background-remover">Background Remover</Link></li>
-                        <li><Link to="/tools/pdf-editor">PDF Editor</Link></li>
-                        <li><Link to="/tools/online-ocr">Online OCR</Link></li>
-                        <li><Link to="/tools/excel-to-pdf">Excel to PDF</Link></li>
-                        <li><Link to="/tools/ppt-to-pdf">PPT to PDF</Link></li>
-                        <li><Link to="/tools/image-converter">Image Converter</Link></li>
-                        <li><Link to="/tools/case-converter">Case Converter</Link></li>
-                        <li><Link to="/tools/password-generator">Password Generator</Link></li>
-                        <li><Link to="/tools/code-formatter">Code Formatter</Link></li>
-                        <li><Link to="/tools/diff-checker">Diff Checker</Link></li>
-                      </ul>
+                      <Link to="/our-portfolio">Portfolio</Link>
                     </li>
                     <li
                       className={
@@ -307,91 +257,131 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
-                        pathname === "/tools" ||
-                        pathname === "/tools/image-background-remover" ||
-                        pathname === "/tools/image-resize" ||
-                        pathname === "/services/software-development" ||
-                        pathname === "/services/custom-crm-srm" ||
-                        pathname === "/services/ecommerce-development" ||
-                        pathname === "/services/cloud-and-devops" ||
-                        pathname === "/services/web-design"
+                        pathname.includes("/ai-tools")
                           ? "current-menu-item menu-item-has-children"
                           : "menu-item-has-children"
                       }
                     >
-                      <Link to="/tools">Online Tools</Link>
+                      <Link to="/ai-tools">AI Tools</Link>
                       <ul className="sub-menu">
-                        <li
-                          className={
-                            pathname === "/tools/image-background-remover"
-                              ? "current-menu-item"
-                              : null
-                          }
-                        >
-                          <Link to="/tools/image-background-remover">
-                            Image bg Remover
-                          </Link>{" "}
+                        <li>
+                          <Link to="/ai-tools">All AI Tools</Link>
                         </li>
-                        <li
-                          className={
-                            pathname === "/tools/image-resize"
-                              ? "current-menu-item"
-                              : null
-                          }
-                        >
-                          <Link to="/tools/image-resize">
-                            Image Resizer
-                          </Link>{" "}
+                        <li>
+                          <Link to="/ai-tools/text-generator">
+                            Text Generator
+                          </Link>
                         </li>
-                        <li
-                          className={
-                            pathname === "/services/custom-crm-srm"
-                              ? "current-menu-item"
-                              : null
-                          }
-                        >
-                          <Link to="/services/custom-crm-srm">
-                            Custom ERM SRM System
-                          </Link>{" "}
+                        <li>
+                          <Link to="/ai-tools/image-generator">
+                            Image Generator
+                          </Link>
                         </li>
-                        <li
-                          className={
-                            pathname === "/services/ecommerce-development"
-                              ? "current-menu-item"
-                              : null
-                          }
-                        >
-                          <Link to="/services/ecommerce-development">
-                            E-commerce Development
-                          </Link>{" "}
+                        <li>
+                          <Link to="/ai-tools/code-assistant">
+                            Code Assistant
+                          </Link>
                         </li>
-                        <li
-                          className={
-                            pathname === "/services/cloud-and-devops"
-                              ? "current-menu-item"
-                              : null
-                          }
-                        >
-                          <Link to="/services/cloud-and-devops">
-                            Cloud and DevOps
-                          </Link>{" "}
+                        <li>
+                          <Link to="/ai-tools/grammar-checker">
+                            Grammar Checker
+                          </Link>
                         </li>
-                        <li
-                          className={
-                            pathname === "/services/web-design"
-                              ? "current-menu-item"
-                              : null
-                          }
-                        >
-                          <Link to="/services/web-design">Website Design</Link>{" "}
+                        <li>
+                          <Link to="/ai-tools/summarizer">Summarizer</Link>
+                        </li>
+                        <li>
+                          <Link to="/ai-tools/chat-bot">AI Chat Bot</Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      className={
+                        pathname.includes("/tools")
+                          ? "current-menu-item menu-item-has-children"
+                          : "menu-item-has-children"
+                      }
+                    >
+                      <Link to="/tools">Tools</Link>
+                      <ul className="sub-menu">
+                        <li>
+                          <Link to="/tools">All Tools</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/pdf-to-word">PDF to Word</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/image-compressor">
+                            Image Compressor
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/merge-pdf">Merge PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/split-pdf">Split PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/word-to-pdf">Word to PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/image-resizer">Image Resizer</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/compress-pdf">Compress PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/pdf-to-jpg">PDF to JPG</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/word-counter">Word Counter</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/qr-code-generator">
+                            QR Code Generator
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/background-remover">
+                            Background Remover
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/pdf-editor">PDF Editor</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/online-ocr">Online OCR</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/excel-to-pdf">Excel to PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/ppt-to-pdf">PPT to PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/image-converter">
+                            Image Converter
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/case-converter">Case Converter</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/password-generator">
+                            Password Generator
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/code-formatter">Code Formatter</Link>
+                        </li>
+                        <li>
+                          <Link to="/tools/diff-checker">Diff Checker</Link>
                         </li>
                       </ul>
                     </li>
                   </ul>
-                  {/* //.nav-menu */}
                 </nav>
               </div>
-              {/* //.main-menu */}
             </div>
             <div className="expand-btn-inner search-icon hidden-sticky hidden-md">
               <div className="toolbar-sl-share">
@@ -572,27 +562,75 @@ const Navbar = () => {
                     }}
                     className="m-0"
                   >
-                    <li><Link to="/tools">All Tools</Link></li>
-                    <li><Link to="/tools/pdf-to-word">PDF to Word</Link></li>
-                    <li><Link to="/tools/image-compressor">Image Compressor</Link></li>
-                    <li><Link to="/tools/merge-pdf">Merge PDF</Link></li>
-                    <li><Link to="/tools/split-pdf">Split PDF</Link></li>
-                    <li><Link to="/tools/word-to-pdf">Word to PDF</Link></li>
-                    <li><Link to="/tools/image-resizer">Image Resizer</Link></li>
-                    <li><Link to="/tools/compress-pdf">Compress PDF</Link></li>
-                    <li><Link to="/tools/pdf-to-jpg">PDF to JPG</Link></li>
-                    <li><Link to="/tools/word-counter">Word Counter</Link></li>
-                    <li><Link to="/tools/qr-code-generator">QR Code Generator</Link></li>
-                    <li><Link to="/tools/background-remover">Background Remover</Link></li>
-                    <li><Link to="/tools/pdf-editor">PDF Editor</Link></li>
-                    <li><Link to="/tools/online-ocr">Online OCR</Link></li>
-                    <li><Link to="/tools/excel-to-pdf">Excel to PDF</Link></li>
-                    <li><Link to="/tools/ppt-to-pdf">PPT to PDF</Link></li>
-                    <li><Link to="/tools/image-converter">Image Converter</Link></li>
-                    <li><Link to="/tools/case-converter">Case Converter</Link></li>
-                    <li><Link to="/tools/password-generator">Password Generator</Link></li>
-                    <li><Link to="/tools/code-formatter">Code Formatter</Link></li>
-                    <li><Link to="/tools/diff-checker">Diff Checker</Link></li>
+                    <li>
+                      <Link to="/tools">All Tools</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/pdf-to-word">PDF to Word</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/image-compressor">Image Compressor</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/merge-pdf">Merge PDF</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/split-pdf">Split PDF</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/word-to-pdf">Word to PDF</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/image-resizer">Image Resizer</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/compress-pdf">Compress PDF</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/pdf-to-jpg">PDF to JPG</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/word-counter">Word Counter</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/qr-code-generator">
+                        QR Code Generator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/background-remover">
+                        Background Remover
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/pdf-editor">PDF Editor</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/online-ocr">Online OCR</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/excel-to-pdf">Excel to PDF</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/ppt-to-pdf">PPT to PDF</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/image-converter">Image Converter</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/case-converter">Case Converter</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/password-generator">
+                        Password Generator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/code-formatter">Code Formatter</Link>
+                    </li>
+                    <li>
+                      <Link to="/tools/diff-checker">Diff Checker</Link>
+                    </li>
                   </ul>
                 )}
               </li>
@@ -619,13 +657,31 @@ const Navbar = () => {
                     }}
                     className="m-0"
                   >
-                    <li><Link to="/ai-tools">All AI Tools</Link></li>
-                    <li><Link to="/ai-tools/text-generator">Text Generator</Link></li>
-                    <li><Link to="/ai-tools/image-generator">Image Generator</Link></li>
-                    <li><Link to="/ai-tools/code-assistant">Code Assistant</Link></li>
-                    <li><Link to="/ai-tools/grammar-checker">Grammar Checker</Link></li>
-                    <li><Link to="/ai-tools/summarizer">Summarizer</Link></li>
-                    <li><Link to="/ai-tools/chat-bot">AI Chat Bot</Link></li>
+                    <li>
+                      <Link to="/ai-tools">All AI Tools</Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-tools/text-generator">Text Generator</Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-tools/image-generator">
+                        Image Generator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-tools/code-assistant">Code Assistant</Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-tools/grammar-checker">
+                        Grammar Checker
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-tools/summarizer">Summarizer</Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-tools/chat-bot">AI Chat Bot</Link>
+                    </li>
                   </ul>
                 )}
               </li>
@@ -647,7 +703,7 @@ const Navbar = () => {
               </li>
               <div className="line"></div>
               <li
-                style={{ paddingBottom : "8px" }}
+                style={{ paddingBottom: "8px" }}
                 className={pathname === "/about" ? "current-menu-item" : null}
               >
                 <Link to="/tools">Online Tools</Link>
