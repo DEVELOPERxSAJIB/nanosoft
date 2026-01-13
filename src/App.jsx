@@ -16,6 +16,34 @@ import WebDesign from "./pages/Services/WebDesign";
 import OurPortfolio from "./pages/OurPortfolio";
 import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
+import Tools from "./pages/Tools/Tools";
+import PdfToWord from "./pages/Tools/PdfToWord";
+import ImageCompressor from "./pages/Tools/ImageCompressor";
+import MergePdf from "./pages/Tools/MergePdf";
+import SplitPdf from "./pages/Tools/SplitPdf";
+import WordToPdf from "./pages/Tools/WordToPdf";
+import ImageResizer from "./pages/Tools/ImageResizer";
+import CompressPdf from "./pages/Tools/CompressPdf";
+import PdfToJpg from "./pages/Tools/PdfToJpg";
+import WordCounter from "./pages/Tools/WordCounter";
+import QrCodeGenerator from "./pages/Tools/QrCodeGenerator";
+import BackgroundRemover from "./pages/Tools/BackgroundRemover";
+import PdfEditor from "./pages/Tools/PdfEditor";
+import OnlineOcr from "./pages/Tools/OnlineOcr";
+import ExcelToPdf from "./pages/Tools/ExcelToPdf";
+import PptToPdf from "./pages/Tools/PptToPdf";
+import ImageConverter from "./pages/Tools/ImageConverter";
+import CaseConverter from "./pages/Tools/CaseConverter";
+import PasswordGenerator from "./pages/Tools/PasswordGenerator";
+import CodeFormatter from "./pages/Tools/CodeFormatter";
+import DiffChecker from "./pages/Tools/DiffChecker";
+import AiTools from "./pages/AiTools/AiTools";
+import AiTextGenerator from "./pages/AiTools/AiTextGenerator";
+import AiImageGenerator from "./pages/AiTools/AiImageGenerator";
+import AiCodeAssistant from "./pages/AiTools/AiCodeAssistant";
+import AiGrammarChecker from "./pages/AiTools/AiGrammarChecker";
+import AiSummarizer from "./pages/AiTools/AiSummarizer";
+import AiChatBot from "./pages/AiTools/AiChatBot";
 import { initFacebookPixel, trackEvent, trackPageView } from "./MetaPixel";
 import { useEffect } from "react";
 
@@ -54,6 +82,35 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/our-portfolio" element={<OurPortfolio />} />
         <Route path="/offers" element={<LandingPage />} />
+        <Route path="/tools" element={<Tools />} />
+        <Route path="/tools/pdf-to-word" element={<PdfToWord />} />
+        <Route path="/tools/image-compressor" element={<ImageCompressor />} />
+        <Route path="/tools/merge-pdf" element={<MergePdf />} />
+        <Route path="/tools/split-pdf" element={<SplitPdf />} />
+        <Route path="/tools/word-to-pdf" element={<WordToPdf />} />
+        <Route path="/tools/image-resizer" element={<ImageResizer />} />
+        <Route path="/tools/compress-pdf" element={<CompressPdf />} />
+        <Route path="/tools/pdf-to-jpg" element={<PdfToJpg />} />
+        <Route path="/tools/word-counter" element={<WordCounter />} />
+        <Route path="/tools/qr-code-generator" element={<QrCodeGenerator />} />
+        <Route path="/tools/background-remover" element={<BackgroundRemover />} />
+        <Route path="/tools/pdf-editor" element={<PdfEditor />} />
+        <Route path="/tools/online-ocr" element={<OnlineOcr />} />
+        <Route path="/tools/excel-to-pdf" element={<ExcelToPdf />} />
+        <Route path="/tools/ppt-to-pdf" element={<PptToPdf />} />
+        <Route path="/tools/image-converter" element={<ImageConverter />} />
+        <Route path="/tools/case-converter" element={<CaseConverter />} />
+        <Route path="/tools/password-generator" element={<PasswordGenerator />} />
+        <Route path="/tools/code-formatter" element={<CodeFormatter />} />
+        <Route path="/tools/diff-checker" element={<DiffChecker />} />
+
+        <Route path="/ai-tools" element={<AiTools />} />
+        <Route path="/ai-tools/text-generator" element={<AiTextGenerator />} />
+        <Route path="/ai-tools/image-generator" element={<AiImageGenerator />} />
+        <Route path="/ai-tools/code-assistant" element={<AiCodeAssistant />} />
+        <Route path="/ai-tools/grammar-checker" element={<AiGrammarChecker />} />
+        <Route path="/ai-tools/summarizer" element={<AiSummarizer />} />
+        <Route path="/ai-tools/chat-bot" element={<AiChatBot />} />
       </Routes>
 
       <a

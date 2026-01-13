@@ -10,6 +10,8 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   const [serviceListShow, setServiceListShow] = useState(false);
+  const [toolsListShow, setToolsListShow] = useState(false);
+  const [aiToolsListShow, setAiToolsListShow] = useState(false);
   const [phoneNav, setPhoneNav] = useState(false);
 
   return (
@@ -229,12 +231,62 @@ const Navbar = () => {
                     </li>
                     <li
                       className={
+                        pathname.includes("/ai-tools")
+                          ? "current-menu-item menu-item-has-children"
+                          : "menu-item-has-children"
+                      }
+                    >
+                      <Link to="/ai-tools">AI Tools</Link>
+                      <ul className="sub-menu">
+                        <li><Link to="/ai-tools">All AI Tools</Link></li>
+                        <li><Link to="/ai-tools/text-generator">Text Generator</Link></li>
+                        <li><Link to="/ai-tools/image-generator">Image Generator</Link></li>
+                        <li><Link to="/ai-tools/code-assistant">Code Assistant</Link></li>
+                        <li><Link to="/ai-tools/grammar-checker">Grammar Checker</Link></li>
+                        <li><Link to="/ai-tools/summarizer">Summarizer</Link></li>
+                        <li><Link to="/ai-tools/chat-bot">AI Chat Bot</Link></li>
+                      </ul>
+                    </li>
+                    <li
+                      className={
                         pathname === "/our-portfolio"
                           ? "current-menu-item"
                           : null
                       }
                     >
                       <Link to="/our-portfolio">Our Portfolio</Link>
+                    </li>
+                    <li
+                      className={
+                        pathname.includes("/tools")
+                          ? "current-menu-item menu-item-has-children"
+                          : "menu-item-has-children"
+                      }
+                    >
+                      <Link to="/tools">Tools</Link>
+                      <ul className="sub-menu">
+                        <li><Link to="/tools">All Tools</Link></li>
+                        <li><Link to="/tools/pdf-to-word">PDF to Word</Link></li>
+                        <li><Link to="/tools/image-compressor">Image Compressor</Link></li>
+                        <li><Link to="/tools/merge-pdf">Merge PDF</Link></li>
+                        <li><Link to="/tools/split-pdf">Split PDF</Link></li>
+                        <li><Link to="/tools/word-to-pdf">Word to PDF</Link></li>
+                        <li><Link to="/tools/image-resizer">Image Resizer</Link></li>
+                        <li><Link to="/tools/compress-pdf">Compress PDF</Link></li>
+                        <li><Link to="/tools/pdf-to-jpg">PDF to JPG</Link></li>
+                        <li><Link to="/tools/word-counter">Word Counter</Link></li>
+                        <li><Link to="/tools/qr-code-generator">QR Code Generator</Link></li>
+                        <li><Link to="/tools/background-remover">Background Remover</Link></li>
+                        <li><Link to="/tools/pdf-editor">PDF Editor</Link></li>
+                        <li><Link to="/tools/online-ocr">Online OCR</Link></li>
+                        <li><Link to="/tools/excel-to-pdf">Excel to PDF</Link></li>
+                        <li><Link to="/tools/ppt-to-pdf">PPT to PDF</Link></li>
+                        <li><Link to="/tools/image-converter">Image Converter</Link></li>
+                        <li><Link to="/tools/case-converter">Case Converter</Link></li>
+                        <li><Link to="/tools/password-generator">Password Generator</Link></li>
+                        <li><Link to="/tools/code-formatter">Code Formatter</Link></li>
+                        <li><Link to="/tools/diff-checker">Diff Checker</Link></li>
+                      </ul>
                     </li>
                     <li
                       className={
@@ -414,6 +466,86 @@ const Navbar = () => {
                 }
               >
                 <Link to="/our-portfolio">Our Portfolio</Link>
+              </li>
+              <div className="line"></div>
+              <li
+                style={{ width: "100%" }}
+                onClick={() => setToolsListShow((prev) => !prev)}
+                className={
+                  pathname.includes("/tools")
+                    ? "current-menu-item menu-item-has-children"
+                    : "menu-item-has-children"
+                }
+              >
+                <Link>
+                  Tools
+                  {toolsListShow ? <FaCaretUp /> : <FaCaretDown />}
+                </Link>
+                {toolsListShow && (
+                  <ul
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(90deg, #03228F 10%, #0e73e4 100%)",
+                      padding: "10px 0 10px 15px",
+                    }}
+                    className="m-0"
+                  >
+                    <li><Link to="/tools">All Tools</Link></li>
+                    <li><Link to="/tools/pdf-to-word">PDF to Word</Link></li>
+                    <li><Link to="/tools/image-compressor">Image Compressor</Link></li>
+                    <li><Link to="/tools/merge-pdf">Merge PDF</Link></li>
+                    <li><Link to="/tools/split-pdf">Split PDF</Link></li>
+                    <li><Link to="/tools/word-to-pdf">Word to PDF</Link></li>
+                    <li><Link to="/tools/image-resizer">Image Resizer</Link></li>
+                    <li><Link to="/tools/compress-pdf">Compress PDF</Link></li>
+                    <li><Link to="/tools/pdf-to-jpg">PDF to JPG</Link></li>
+                    <li><Link to="/tools/word-counter">Word Counter</Link></li>
+                    <li><Link to="/tools/qr-code-generator">QR Code Generator</Link></li>
+                    <li><Link to="/tools/background-remover">Background Remover</Link></li>
+                    <li><Link to="/tools/pdf-editor">PDF Editor</Link></li>
+                    <li><Link to="/tools/online-ocr">Online OCR</Link></li>
+                    <li><Link to="/tools/excel-to-pdf">Excel to PDF</Link></li>
+                    <li><Link to="/tools/ppt-to-pdf">PPT to PDF</Link></li>
+                    <li><Link to="/tools/image-converter">Image Converter</Link></li>
+                    <li><Link to="/tools/case-converter">Case Converter</Link></li>
+                    <li><Link to="/tools/password-generator">Password Generator</Link></li>
+                    <li><Link to="/tools/code-formatter">Code Formatter</Link></li>
+                    <li><Link to="/tools/diff-checker">Diff Checker</Link></li>
+                  </ul>
+                )}
+              </li>
+              <div className="line"></div>
+              <li
+                style={{ width: "100%" }}
+                onClick={() => setAiToolsListShow((prev) => !prev)}
+                className={
+                  pathname.includes("/ai-tools")
+                    ? "current-menu-item menu-item-has-children"
+                    : "menu-item-has-children"
+                }
+              >
+                <Link>
+                  AI Tools
+                  {aiToolsListShow ? <FaCaretUp /> : <FaCaretDown />}
+                </Link>
+                {aiToolsListShow && (
+                  <ul
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(90deg, #03228F 10%, #0e73e4 100%)",
+                      padding: "10px 0 10px 15px",
+                    }}
+                    className="m-0"
+                  >
+                    <li><Link to="/ai-tools">All AI Tools</Link></li>
+                    <li><Link to="/ai-tools/text-generator">Text Generator</Link></li>
+                    <li><Link to="/ai-tools/image-generator">Image Generator</Link></li>
+                    <li><Link to="/ai-tools/code-assistant">Code Assistant</Link></li>
+                    <li><Link to="/ai-tools/grammar-checker">Grammar Checker</Link></li>
+                    <li><Link to="/ai-tools/summarizer">Summarizer</Link></li>
+                    <li><Link to="/ai-tools/chat-bot">AI Chat Bot</Link></li>
+                  </ul>
+                )}
               </li>
               <div className="line"></div>
               <li
