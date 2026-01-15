@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 
 const GoogleAds = () => {
@@ -5,16 +6,42 @@ const GoogleAds = () => {
   const hasPushed = useRef(false);
 
   useEffect(() => {
-    if (hasPushed.current) return;
-
-    if (window.adsbygoogle && adRef.current) {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        hasPushed.current = true;
-      } catch (e) {
-        console.error("Google Ads error:", e);
+    // Helper to inject adsbygoogle script if not present
+    const injectScript = () => {
+      if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
+        const script = document.createElement('script');
+        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9174321091222047";
+        script.async = true;
+        script.crossOrigin = "anonymous";
+        document.body.appendChild(script);
       }
+    };
+
+    injectScript();
+
+    const tryPush = () => {
+      if (window.adsbygoogle && adRef.current) {
+        try {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+          hasPushed.current = true;
+        } catch (e) {
+          // Retry after a short delay if push fails
+          setTimeout(tryPush, 500);
+        }
+      } else {
+        // Retry if adsbygoogle is not yet available
+        setTimeout(tryPush, 500);
+      }
+    };
+
+    if (!hasPushed.current) {
+      tryPush();
     }
+
+    // Clean up: remove ad markup if needed
+    return () => {
+      hasPushed.current = false;
+    };
   }, []);
 
   return (
