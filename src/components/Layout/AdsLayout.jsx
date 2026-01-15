@@ -1,10 +1,10 @@
 import GoogleAds from "../Ads/GoogleAds";
 import Layout from "./Layout";
 
+// eslint-disable-next-line react/prop-types
 const AdsLayout = ({ children }) => {
   return (
     <Layout>
-
       <div className="container-fluid py-5">
         <div className="row">
           {/* Left Ad Column */}
